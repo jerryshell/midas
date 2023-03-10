@@ -1,0 +1,5670 @@
+[
+  {
+    "date": "2019-05-09",
+    "closePoint": 683.96
+  },
+  {
+    "date": "2019-05-08",
+    "closePoint": 693.76
+  },
+  {
+    "date": "2019-05-07",
+    "closePoint": 704.12
+  },
+  {
+    "date": "2019-05-06",
+    "closePoint": 694.24
+  },
+  {
+    "date": "2019-04-30",
+    "closePoint": 767.07
+  },
+  {
+    "date": "2019-04-29",
+    "closePoint": 762.82
+  },
+  {
+    "date": "2019-04-26",
+    "closePoint": 795.41
+  },
+  {
+    "date": "2019-04-25",
+    "closePoint": 790.29
+  },
+  {
+    "date": "2019-04-24",
+    "closePoint": 815.62
+  },
+  {
+    "date": "2019-04-23",
+    "closePoint": 808.2
+  },
+  {
+    "date": "2019-04-22",
+    "closePoint": 803.38
+  },
+  {
+    "date": "2019-04-19",
+    "closePoint": 823.86
+  },
+  {
+    "date": "2019-04-18",
+    "closePoint": 813.27
+  },
+  {
+    "date": "2019-04-17",
+    "closePoint": 819.12
+  },
+  {
+    "date": "2019-04-16",
+    "closePoint": 826.67
+  },
+  {
+    "date": "2019-04-15",
+    "closePoint": 804.68
+  },
+  {
+    "date": "2019-04-12",
+    "closePoint": 821.75
+  },
+  {
+    "date": "2019-04-11",
+    "closePoint": 818.1
+  },
+  {
+    "date": "2019-04-10",
+    "closePoint": 837.11
+  },
+  {
+    "date": "2019-04-09",
+    "closePoint": 849.19
+  },
+  {
+    "date": "2019-04-08",
+    "closePoint": 848.23
+  },
+  {
+    "date": "2019-04-04",
+    "closePoint": 867.77
+  },
+  {
+    "date": "2019-04-03",
+    "closePoint": 867.37
+  },
+  {
+    "date": "2019-04-02",
+    "closePoint": 826.29
+  },
+  {
+    "date": "2019-04-01",
+    "closePoint": 828.83
+  },
+  {
+    "date": "2019-03-29",
+    "closePoint": 812.4
+  },
+  {
+    "date": "2019-03-28",
+    "closePoint": 753.29
+  },
+  {
+    "date": "2019-03-27",
+    "closePoint": 758.91
+  },
+  {
+    "date": "2019-03-26",
+    "closePoint": 755.01
+  },
+  {
+    "date": "2019-03-25",
+    "closePoint": 779.48
+  },
+  {
+    "date": "2019-03-22",
+    "closePoint": 810.48
+  },
+  {
+    "date": "2019-03-21",
+    "closePoint": 819.64
+  },
+  {
+    "date": "2019-03-20",
+    "closePoint": 807.32
+  },
+  {
+    "date": "2019-03-19",
+    "closePoint": 795.98
+  },
+  {
+    "date": "2019-03-18",
+    "closePoint": 804.38
+  },
+  {
+    "date": "2019-03-15",
+    "closePoint": 785.08
+  },
+  {
+    "date": "2019-03-14",
+    "closePoint": 774.47
+  },
+  {
+    "date": "2019-03-13",
+    "closePoint": 802.02
+  },
+  {
+    "date": "2019-03-12",
+    "closePoint": 817.09
+  },
+  {
+    "date": "2019-03-11",
+    "closePoint": 807.81
+  },
+  {
+    "date": "2019-03-08",
+    "closePoint": 797.21
+  },
+  {
+    "date": "2019-03-07",
+    "closePoint": 873.01
+  },
+  {
+    "date": "2019-03-06",
+    "closePoint": 841.35
+  },
+  {
+    "date": "2019-03-05",
+    "closePoint": 798.27
+  },
+  {
+    "date": "2019-03-04",
+    "closePoint": 796.26
+  },
+  {
+    "date": "2019-03-01",
+    "closePoint": 790.25
+  },
+  {
+    "date": "2019-02-28",
+    "closePoint": 764.17
+  },
+  {
+    "date": "2019-02-27",
+    "closePoint": 792.03
+  },
+  {
+    "date": "2019-02-26",
+    "closePoint": 797.74
+  },
+  {
+    "date": "2019-02-25",
+    "closePoint": 813.4
+  },
+  {
+    "date": "2019-02-22",
+    "closePoint": 739.45
+  },
+  {
+    "date": "2019-02-21",
+    "closePoint": 674.21
+  },
+  {
+    "date": "2019-02-20",
+    "closePoint": 668.94
+  },
+  {
+    "date": "2019-02-19",
+    "closePoint": 665.2
+  },
+  {
+    "date": "2019-02-18",
+    "closePoint": 660.95
+  },
+  {
+    "date": "2019-02-15",
+    "closePoint": 624.95
+  },
+  {
+    "date": "2019-02-14",
+    "closePoint": 638.79
+  },
+  {
+    "date": "2019-02-13",
+    "closePoint": 641.03
+  },
+  {
+    "date": "2019-02-12",
+    "closePoint": 619.53
+  },
+  {
+    "date": "2019-02-11",
+    "closePoint": 615.22
+  },
+  {
+    "date": "2019-02-01",
+    "closePoint": 604.81
+  },
+  {
+    "date": "2019-01-31",
+    "closePoint": 588.9
+  },
+  {
+    "date": "2019-01-30",
+    "closePoint": 581.98
+  },
+  {
+    "date": "2019-01-29",
+    "closePoint": 589.46
+  },
+  {
+    "date": "2019-01-28",
+    "closePoint": 594.93
+  },
+  {
+    "date": "2019-01-25",
+    "closePoint": 596.33
+  },
+  {
+    "date": "2019-01-24",
+    "closePoint": 598.42
+  },
+  {
+    "date": "2019-01-23",
+    "closePoint": 589.1
+  },
+  {
+    "date": "2019-01-22",
+    "closePoint": 590.09
+  },
+  {
+    "date": "2019-01-21",
+    "closePoint": 599.1
+  },
+  {
+    "date": "2019-01-18",
+    "closePoint": 602.65
+  },
+  {
+    "date": "2019-01-17",
+    "closePoint": 594.92
+  },
+  {
+    "date": "2019-01-16",
+    "closePoint": 601.04
+  },
+  {
+    "date": "2019-01-15",
+    "closePoint": 606.73
+  },
+  {
+    "date": "2019-01-14",
+    "closePoint": 591.59
+  },
+  {
+    "date": "2019-01-11",
+    "closePoint": 593.75
+  },
+  {
+    "date": "2019-01-10",
+    "closePoint": 590.26
+  },
+  {
+    "date": "2019-01-09",
+    "closePoint": 597.22
+  },
+  {
+    "date": "2019-01-08",
+    "closePoint": 596.23
+  },
+  {
+    "date": "2019-01-07",
+    "closePoint": 594.37
+  },
+  {
+    "date": "2019-01-04",
+    "closePoint": 593.74
+  },
+  {
+    "date": "2019-01-03",
+    "closePoint": 556.09
+  },
+  {
+    "date": "2019-01-02",
+    "closePoint": 544.01
+  },
+  {
+    "date": "2018-12-28",
+    "closePoint": 545.35
+  },
+  {
+    "date": "2018-12-27",
+    "closePoint": 534.83
+  },
+  {
+    "date": "2018-12-26",
+    "closePoint": 535.91
+  },
+  {
+    "date": "2018-12-25",
+    "closePoint": 539.3
+  },
+  {
+    "date": "2018-12-24",
+    "closePoint": 551.31
+  },
+  {
+    "date": "2018-12-21",
+    "closePoint": 556.35
+  },
+  {
+    "date": "2018-12-20",
+    "closePoint": 566.42
+  },
+  {
+    "date": "2018-12-19",
+    "closePoint": 561.04
+  },
+  {
+    "date": "2018-12-18",
+    "closePoint": 565.95
+  },
+  {
+    "date": "2018-12-17",
+    "closePoint": 575.47
+  },
+  {
+    "date": "2018-12-14",
+    "closePoint": 572.38
+  },
+  {
+    "date": "2018-12-13",
+    "closePoint": 589.19
+  },
+  {
+    "date": "2018-12-12",
+    "closePoint": 582.57
+  },
+  {
+    "date": "2018-12-11",
+    "closePoint": 580.82
+  },
+  {
+    "date": "2018-12-10",
+    "closePoint": 578.87
+  },
+  {
+    "date": "2018-12-07",
+    "closePoint": 586.85
+  },
+  {
+    "date": "2018-12-06",
+    "closePoint": 584.9
+  },
+  {
+    "date": "2018-12-05",
+    "closePoint": 600.79
+  },
+  {
+    "date": "2018-12-04",
+    "closePoint": 608.93
+  },
+  {
+    "date": "2018-12-03",
+    "closePoint": 602.5
+  },
+  {
+    "date": "2018-11-30",
+    "closePoint": 585.3
+  },
+  {
+    "date": "2018-11-29",
+    "closePoint": 576.12
+  },
+  {
+    "date": "2018-11-28",
+    "closePoint": 595.8
+  },
+  {
+    "date": "2018-11-27",
+    "closePoint": 580.83
+  },
+  {
+    "date": "2018-11-26",
+    "closePoint": 578.7
+  },
+  {
+    "date": "2018-11-23",
+    "closePoint": 581.32
+  },
+  {
+    "date": "2018-11-22",
+    "closePoint": 600.41
+  },
+  {
+    "date": "2018-11-21",
+    "closePoint": 606.46
+  },
+  {
+    "date": "2018-11-20",
+    "closePoint": 605.42
+  },
+  {
+    "date": "2018-11-19",
+    "closePoint": 634.38
+  },
+  {
+    "date": "2018-11-16",
+    "closePoint": 615.39
+  },
+  {
+    "date": "2018-11-15",
+    "closePoint": 600.34
+  },
+  {
+    "date": "2018-11-14",
+    "closePoint": 583.62
+  },
+  {
+    "date": "2018-11-13",
+    "closePoint": 593.07
+  },
+  {
+    "date": "2018-11-12",
+    "closePoint": 578.14
+  },
+  {
+    "date": "2018-11-09",
+    "closePoint": 567.95
+  },
+  {
+    "date": "2018-11-08",
+    "closePoint": 567.53
+  },
+  {
+    "date": "2018-11-07",
+    "closePoint": 576.66
+  },
+  {
+    "date": "2018-11-06",
+    "closePoint": 587.65
+  },
+  {
+    "date": "2018-11-05",
+    "closePoint": 592.42
+  },
+  {
+    "date": "2018-11-02",
+    "closePoint": 592.24
+  },
+  {
+    "date": "2018-11-01",
+    "closePoint": 577.33
+  },
+  {
+    "date": "2018-10-31",
+    "closePoint": 571.29
+  },
+  {
+    "date": "2018-10-30",
+    "closePoint": 577.76
+  },
+  {
+    "date": "2018-10-29",
+    "closePoint": 550.96
+  },
+  {
+    "date": "2018-10-26",
+    "closePoint": 555.67
+  },
+  {
+    "date": "2018-10-25",
+    "closePoint": 570.85
+  },
+  {
+    "date": "2018-10-24",
+    "closePoint": 548.75
+  },
+  {
+    "date": "2018-10-23",
+    "closePoint": 536.3
+  },
+  {
+    "date": "2018-10-22",
+    "closePoint": 537.5
+  },
+  {
+    "date": "2018-10-19",
+    "closePoint": 488.63
+  },
+  {
+    "date": "2018-10-18",
+    "closePoint": 472.62
+  },
+  {
+    "date": "2018-10-17",
+    "closePoint": 481.27
+  },
+  {
+    "date": "2018-10-16",
+    "closePoint": 475.56
+  },
+  {
+    "date": "2018-10-15",
+    "closePoint": 479.19
+  },
+  {
+    "date": "2018-10-12",
+    "closePoint": 485.61
+  },
+  {
+    "date": "2018-10-11",
+    "closePoint": 495.55
+  },
+  {
+    "date": "2018-10-10",
+    "closePoint": 534.35
+  },
+  {
+    "date": "2018-10-09",
+    "closePoint": 532.37
+  },
+  {
+    "date": "2018-10-08",
+    "closePoint": 533.21
+  },
+  {
+    "date": "2018-09-28",
+    "closePoint": 554.18
+  },
+  {
+    "date": "2018-09-27",
+    "closePoint": 549.4
+  },
+  {
+    "date": "2018-09-26",
+    "closePoint": 553.21
+  },
+  {
+    "date": "2018-09-25",
+    "closePoint": 550.21
+  },
+  {
+    "date": "2018-09-21",
+    "closePoint": 556.58
+  },
+  {
+    "date": "2018-09-20",
+    "closePoint": 543.72
+  },
+  {
+    "date": "2018-09-19",
+    "closePoint": 544.54
+  },
+  {
+    "date": "2018-09-18",
+    "closePoint": 541.09
+  },
+  {
+    "date": "2018-09-17",
+    "closePoint": 531.25
+  },
+  {
+    "date": "2018-09-14",
+    "closePoint": 533.67
+  },
+  {
+    "date": "2018-09-13",
+    "closePoint": 536.42
+  },
+  {
+    "date": "2018-09-12",
+    "closePoint": 529.03
+  },
+  {
+    "date": "2018-09-11",
+    "closePoint": 526.8
+  },
+  {
+    "date": "2018-09-10",
+    "closePoint": 524.04
+  },
+  {
+    "date": "2018-09-07",
+    "closePoint": 539.98
+  },
+  {
+    "date": "2018-09-06",
+    "closePoint": 539.19
+  },
+  {
+    "date": "2018-09-05",
+    "closePoint": 540.97
+  },
+  {
+    "date": "2018-09-04",
+    "closePoint": 549.47
+  },
+  {
+    "date": "2018-09-03",
+    "closePoint": 544.48
+  },
+  {
+    "date": "2018-08-31",
+    "closePoint": 546.76
+  },
+  {
+    "date": "2018-08-30",
+    "closePoint": 544.52
+  },
+  {
+    "date": "2018-08-29",
+    "closePoint": 552.45
+  },
+  {
+    "date": "2018-08-28",
+    "closePoint": 555.39
+  },
+  {
+    "date": "2018-08-27",
+    "closePoint": 558.98
+  },
+  {
+    "date": "2018-08-24",
+    "closePoint": 551.71
+  },
+  {
+    "date": "2018-08-23",
+    "closePoint": 550.66
+  },
+  {
+    "date": "2018-08-22",
+    "closePoint": 546.55
+  },
+  {
+    "date": "2018-08-21",
+    "closePoint": 550.07
+  },
+  {
+    "date": "2018-08-20",
+    "closePoint": 546.78
+  },
+  {
+    "date": "2018-08-17",
+    "closePoint": 537.24
+  },
+  {
+    "date": "2018-08-16",
+    "closePoint": 543.52
+  },
+  {
+    "date": "2018-08-15",
+    "closePoint": 538.14
+  },
+  {
+    "date": "2018-08-14",
+    "closePoint": 550.05
+  },
+  {
+    "date": "2018-08-13",
+    "closePoint": 551.06
+  },
+  {
+    "date": "2018-08-10",
+    "closePoint": 554.02
+  },
+  {
+    "date": "2018-08-09",
+    "closePoint": 553.68
+  },
+  {
+    "date": "2018-08-08",
+    "closePoint": 543.46
+  },
+  {
+    "date": "2018-08-07",
+    "closePoint": 552.93
+  },
+  {
+    "date": "2018-08-06",
+    "closePoint": 536.55
+  },
+  {
+    "date": "2018-08-03",
+    "closePoint": 543.81
+  },
+  {
+    "date": "2018-08-02",
+    "closePoint": 548.21
+  },
+  {
+    "date": "2018-08-01",
+    "closePoint": 563.92
+  },
+  {
+    "date": "2018-07-31",
+    "closePoint": 577.65
+  },
+  {
+    "date": "2018-07-30",
+    "closePoint": 576.4
+  },
+  {
+    "date": "2018-07-27",
+    "closePoint": 579.51
+  },
+  {
+    "date": "2018-07-26",
+    "closePoint": 583.01
+  },
+  {
+    "date": "2018-07-25",
+    "closePoint": 587.39
+  },
+  {
+    "date": "2018-07-24",
+    "closePoint": 591.19
+  },
+  {
+    "date": "2018-07-23",
+    "closePoint": 580.91
+  },
+  {
+    "date": "2018-07-20",
+    "closePoint": 573.28
+  },
+  {
+    "date": "2018-07-19",
+    "closePoint": 555.67
+  },
+  {
+    "date": "2018-07-18",
+    "closePoint": 558.1
+  },
+  {
+    "date": "2018-07-17",
+    "closePoint": 562.11
+  },
+  {
+    "date": "2018-07-16",
+    "closePoint": 566.48
+  },
+  {
+    "date": "2018-07-13",
+    "closePoint": 568.67
+  },
+  {
+    "date": "2018-07-12",
+    "closePoint": 570.48
+  },
+  {
+    "date": "2018-07-11",
+    "closePoint": 553.69
+  },
+  {
+    "date": "2018-07-10",
+    "closePoint": 571.23
+  },
+  {
+    "date": "2018-07-09",
+    "closePoint": 572.09
+  },
+  {
+    "date": "2018-07-06",
+    "closePoint": 561.59
+  },
+  {
+    "date": "2018-07-05",
+    "closePoint": 557.96
+  },
+  {
+    "date": "2018-07-04",
+    "closePoint": 564.39
+  },
+  {
+    "date": "2018-07-03",
+    "closePoint": 572.3
+  },
+  {
+    "date": "2018-07-02",
+    "closePoint": 563.9
+  },
+  {
+    "date": "2018-06-29",
+    "closePoint": 578.61
+  },
+  {
+    "date": "2018-06-28",
+    "closePoint": 566.85
+  },
+  {
+    "date": "2018-06-27",
+    "closePoint": 560.61
+  },
+  {
+    "date": "2018-06-26",
+    "closePoint": 566.09
+  },
+  {
+    "date": "2018-06-25",
+    "closePoint": 560.75
+  },
+  {
+    "date": "2018-06-22",
+    "closePoint": 567.95
+  },
+  {
+    "date": "2018-06-21",
+    "closePoint": 559.33
+  },
+  {
+    "date": "2018-06-20",
+    "closePoint": 577.48
+  },
+  {
+    "date": "2018-06-19",
+    "closePoint": 578.98
+  },
+  {
+    "date": "2018-06-15",
+    "closePoint": 622.13
+  },
+  {
+    "date": "2018-06-14",
+    "closePoint": 630.21
+  },
+  {
+    "date": "2018-06-13",
+    "closePoint": 625.7
+  },
+  {
+    "date": "2018-06-12",
+    "closePoint": 637.52
+  },
+  {
+    "date": "2018-06-11",
+    "closePoint": 635.02
+  },
+  {
+    "date": "2018-06-08",
+    "closePoint": 633.08
+  },
+  {
+    "date": "2018-06-07",
+    "closePoint": 647.86
+  },
+  {
+    "date": "2018-06-06",
+    "closePoint": 643.07
+  },
+  {
+    "date": "2018-06-05",
+    "closePoint": 644.04
+  },
+  {
+    "date": "2018-06-04",
+    "closePoint": 640.9
+  },
+  {
+    "date": "2018-06-01",
+    "closePoint": 644.11
+  },
+  {
+    "date": "2018-05-31",
+    "closePoint": 641.85
+  },
+  {
+    "date": "2018-05-30",
+    "closePoint": 631.42
+  },
+  {
+    "date": "2018-05-29",
+    "closePoint": 656.82
+  },
+  {
+    "date": "2018-05-28",
+    "closePoint": 667.24
+  },
+  {
+    "date": "2018-05-25",
+    "closePoint": 667.35
+  },
+  {
+    "date": "2018-05-24",
+    "closePoint": 675.21
+  },
+  {
+    "date": "2018-05-23",
+    "closePoint": 680.24
+  },
+  {
+    "date": "2018-05-22",
+    "closePoint": 688.3
+  },
+  {
+    "date": "2018-05-21",
+    "closePoint": 692.7
+  },
+  {
+    "date": "2018-05-18",
+    "closePoint": 687.98
+  },
+  {
+    "date": "2018-05-17",
+    "closePoint": 679.31
+  },
+  {
+    "date": "2018-05-16",
+    "closePoint": 684.31
+  },
+  {
+    "date": "2018-05-15",
+    "closePoint": 692.91
+  },
+  {
+    "date": "2018-05-14",
+    "closePoint": 695.7
+  },
+  {
+    "date": "2018-05-11",
+    "closePoint": 692.45
+  },
+  {
+    "date": "2018-05-10",
+    "closePoint": 701.89
+  },
+  {
+    "date": "2018-05-09",
+    "closePoint": 696.93
+  },
+  {
+    "date": "2018-05-08",
+    "closePoint": 704.33
+  },
+  {
+    "date": "2018-05-07",
+    "closePoint": 701.49
+  },
+  {
+    "date": "2018-05-04",
+    "closePoint": 693.84
+  },
+  {
+    "date": "2018-05-03",
+    "closePoint": 699.71
+  },
+  {
+    "date": "2018-05-02",
+    "closePoint": 682.52
+  },
+  {
+    "date": "2018-04-27",
+    "closePoint": 680.05
+  },
+  {
+    "date": "2018-04-26",
+    "closePoint": 669.59
+  },
+  {
+    "date": "2018-04-25",
+    "closePoint": 684.56
+  },
+  {
+    "date": "2018-04-24",
+    "closePoint": 688.72
+  },
+  {
+    "date": "2018-04-23",
+    "closePoint": 670.85
+  },
+  {
+    "date": "2018-04-20",
+    "closePoint": 664.23
+  },
+  {
+    "date": "2018-04-19",
+    "closePoint": 687.68
+  },
+  {
+    "date": "2018-04-18",
+    "closePoint": 683.84
+  },
+  {
+    "date": "2018-04-17",
+    "closePoint": 673.77
+  },
+  {
+    "date": "2018-04-16",
+    "closePoint": 673.24
+  },
+  {
+    "date": "2018-04-13",
+    "closePoint": 688.61
+  },
+  {
+    "date": "2018-04-12",
+    "closePoint": 696.25
+  },
+  {
+    "date": "2018-04-11",
+    "closePoint": 702.12
+  },
+  {
+    "date": "2018-04-10",
+    "closePoint": 706.67
+  },
+  {
+    "date": "2018-04-09",
+    "closePoint": 694.17
+  },
+  {
+    "date": "2018-04-04",
+    "closePoint": 690.25
+  },
+  {
+    "date": "2018-04-03",
+    "closePoint": 697.24
+  },
+  {
+    "date": "2018-04-02",
+    "closePoint": 696.33
+  },
+  {
+    "date": "2018-03-30",
+    "closePoint": 688.77
+  },
+  {
+    "date": "2018-03-29",
+    "closePoint": 685.24
+  },
+  {
+    "date": "2018-03-28",
+    "closePoint": 670.26
+  },
+  {
+    "date": "2018-03-27",
+    "closePoint": 678.09
+  },
+  {
+    "date": "2018-03-26",
+    "closePoint": 668.36
+  },
+  {
+    "date": "2018-03-23",
+    "closePoint": 664.07
+  },
+  {
+    "date": "2018-03-22",
+    "closePoint": 701.71
+  },
+  {
+    "date": "2018-03-21",
+    "closePoint": 702.4
+  },
+  {
+    "date": "2018-03-20",
+    "closePoint": 700.83
+  },
+  {
+    "date": "2018-03-19",
+    "closePoint": 701.31
+  },
+  {
+    "date": "2018-03-16",
+    "closePoint": 699.55
+  },
+  {
+    "date": "2018-03-15",
+    "closePoint": 708.74
+  },
+  {
+    "date": "2018-03-14",
+    "closePoint": 710.33
+  },
+  {
+    "date": "2018-03-13",
+    "closePoint": 716.43
+  },
+  {
+    "date": "2018-03-12",
+    "closePoint": 728.94
+  },
+  {
+    "date": "2018-03-09",
+    "closePoint": 718.43
+  },
+  {
+    "date": "2018-03-08",
+    "closePoint": 706.21
+  },
+  {
+    "date": "2018-03-07",
+    "closePoint": 703.94
+  },
+  {
+    "date": "2018-03-06",
+    "closePoint": 711.44
+  },
+  {
+    "date": "2018-03-05",
+    "closePoint": 696.68
+  },
+  {
+    "date": "2018-03-02",
+    "closePoint": 696.18
+  },
+  {
+    "date": "2018-03-01",
+    "closePoint": 704.1
+  },
+  {
+    "date": "2018-02-28",
+    "closePoint": 701.69
+  },
+  {
+    "date": "2018-02-27",
+    "closePoint": 705.38
+  },
+  {
+    "date": "2018-02-26",
+    "closePoint": 714.07
+  },
+  {
+    "date": "2018-02-23",
+    "closePoint": 696.85
+  },
+  {
+    "date": "2018-02-22",
+    "closePoint": 692.36
+  },
+  {
+    "date": "2018-02-14",
+    "closePoint": 685.63
+  },
+  {
+    "date": "2018-02-13",
+    "closePoint": 685.68
+  },
+  {
+    "date": "2018-02-12",
+    "closePoint": 680.34
+  },
+  {
+    "date": "2018-02-09",
+    "closePoint": 682.43
+  },
+  {
+    "date": "2018-02-08",
+    "closePoint": 735.77
+  },
+  {
+    "date": "2018-02-07",
+    "closePoint": 739.45
+  },
+  {
+    "date": "2018-02-06",
+    "closePoint": 749.72
+  },
+  {
+    "date": "2018-02-05",
+    "closePoint": 786.49
+  },
+  {
+    "date": "2018-02-02",
+    "closePoint": 782.77
+  },
+  {
+    "date": "2018-02-01",
+    "closePoint": 784.92
+  },
+  {
+    "date": "2018-01-31",
+    "closePoint": 793.5
+  },
+  {
+    "date": "2018-01-30",
+    "closePoint": 810.92
+  },
+  {
+    "date": "2018-01-29",
+    "closePoint": 821.44
+  },
+  {
+    "date": "2018-01-26",
+    "closePoint": 834.85
+  },
+  {
+    "date": "2018-01-25",
+    "closePoint": 835.64
+  },
+  {
+    "date": "2018-01-24",
+    "closePoint": 853.85
+  },
+  {
+    "date": "2018-01-23",
+    "closePoint": 822.96
+  },
+  {
+    "date": "2018-01-22",
+    "closePoint": 818.79
+  },
+  {
+    "date": "2018-01-19",
+    "closePoint": 820.73
+  },
+  {
+    "date": "2018-01-18",
+    "closePoint": 800.56
+  },
+  {
+    "date": "2018-01-17",
+    "closePoint": 794.69
+  },
+  {
+    "date": "2018-01-16",
+    "closePoint": 769.88
+  },
+  {
+    "date": "2018-01-15",
+    "closePoint": 751.7
+  },
+  {
+    "date": "2018-01-12",
+    "closePoint": 764.16
+  },
+  {
+    "date": "2018-01-11",
+    "closePoint": 766.2
+  },
+  {
+    "date": "2018-01-10",
+    "closePoint": 769.74
+  },
+  {
+    "date": "2018-01-09",
+    "closePoint": 771.8
+  },
+  {
+    "date": "2018-01-08",
+    "closePoint": 778.05
+  },
+  {
+    "date": "2018-01-05",
+    "closePoint": 761.72
+  },
+  {
+    "date": "2018-01-04",
+    "closePoint": 758.73
+  },
+  {
+    "date": "2018-01-03",
+    "closePoint": 761.05
+  },
+  {
+    "date": "2018-01-02",
+    "closePoint": 750
+  },
+  {
+    "date": "2017-12-29",
+    "closePoint": 739.12
+  },
+  {
+    "date": "2017-12-28",
+    "closePoint": 738.01
+  },
+  {
+    "date": "2017-12-27",
+    "closePoint": 733.97
+  },
+  {
+    "date": "2017-12-26",
+    "closePoint": 743.33
+  },
+  {
+    "date": "2017-12-25",
+    "closePoint": 736.83
+  },
+  {
+    "date": "2017-12-22",
+    "closePoint": 747.81
+  },
+  {
+    "date": "2017-12-21",
+    "closePoint": 754.69
+  },
+  {
+    "date": "2017-12-20",
+    "closePoint": 751.11
+  },
+  {
+    "date": "2017-12-19",
+    "closePoint": 762.01
+  },
+  {
+    "date": "2017-12-18",
+    "closePoint": 758.1
+  },
+  {
+    "date": "2017-12-15",
+    "closePoint": 761.77
+  },
+  {
+    "date": "2017-12-14",
+    "closePoint": 767.61
+  },
+  {
+    "date": "2017-12-13",
+    "closePoint": 780.51
+  },
+  {
+    "date": "2017-12-12",
+    "closePoint": 779.93
+  },
+  {
+    "date": "2017-12-11",
+    "closePoint": 793.87
+  },
+  {
+    "date": "2017-12-08",
+    "closePoint": 790.73
+  },
+  {
+    "date": "2017-12-07",
+    "closePoint": 792.92
+  },
+  {
+    "date": "2017-12-06",
+    "closePoint": 805
+  },
+  {
+    "date": "2017-12-05",
+    "closePoint": 805.45
+  },
+  {
+    "date": "2017-12-04",
+    "closePoint": 796.88
+  },
+  {
+    "date": "2017-12-01",
+    "closePoint": 803.49
+  },
+  {
+    "date": "2017-11-30",
+    "closePoint": 806.72
+  },
+  {
+    "date": "2017-11-29",
+    "closePoint": 809.25
+  },
+  {
+    "date": "2017-11-28",
+    "closePoint": 808.62
+  },
+  {
+    "date": "2017-11-27",
+    "closePoint": 809.67
+  },
+  {
+    "date": "2017-11-24",
+    "closePoint": 809.42
+  },
+  {
+    "date": "2017-11-23",
+    "closePoint": 807.94
+  },
+  {
+    "date": "2017-11-22",
+    "closePoint": 827.8
+  },
+  {
+    "date": "2017-11-21",
+    "closePoint": 825.93
+  },
+  {
+    "date": "2017-11-20",
+    "closePoint": 793.81
+  },
+  {
+    "date": "2017-11-17",
+    "closePoint": 806.32
+  },
+  {
+    "date": "2017-11-16",
+    "closePoint": 796.83
+  },
+  {
+    "date": "2017-11-15",
+    "closePoint": 811.02
+  },
+  {
+    "date": "2017-11-14",
+    "closePoint": 814.86
+  },
+  {
+    "date": "2017-11-13",
+    "closePoint": 822.99
+  },
+  {
+    "date": "2017-11-10",
+    "closePoint": 827.07
+  },
+  {
+    "date": "2017-11-09",
+    "closePoint": 826.95
+  },
+  {
+    "date": "2017-11-08",
+    "closePoint": 825.91
+  },
+  {
+    "date": "2017-11-07",
+    "closePoint": 811.87
+  },
+  {
+    "date": "2017-11-06",
+    "closePoint": 799.5
+  },
+  {
+    "date": "2017-11-03",
+    "closePoint": 802.73
+  },
+  {
+    "date": "2017-11-02",
+    "closePoint": 804.23
+  },
+  {
+    "date": "2017-11-01",
+    "closePoint": 799.77
+  },
+  {
+    "date": "2017-10-31",
+    "closePoint": 804.45
+  },
+  {
+    "date": "2017-10-30",
+    "closePoint": 810.39
+  },
+  {
+    "date": "2017-10-27",
+    "closePoint": 829.05
+  },
+  {
+    "date": "2017-10-26",
+    "closePoint": 837.04
+  },
+  {
+    "date": "2017-10-25",
+    "closePoint": 836.23
+  },
+  {
+    "date": "2017-10-24",
+    "closePoint": 835.4
+  },
+  {
+    "date": "2017-10-23",
+    "closePoint": 825.53
+  },
+  {
+    "date": "2017-10-20",
+    "closePoint": 830.72
+  },
+  {
+    "date": "2017-10-19",
+    "closePoint": 830.28
+  },
+  {
+    "date": "2017-10-18",
+    "closePoint": 847.08
+  },
+  {
+    "date": "2017-10-17",
+    "closePoint": 846.23
+  },
+  {
+    "date": "2017-10-16",
+    "closePoint": 852.67
+  },
+  {
+    "date": "2017-10-13",
+    "closePoint": 858.89
+  },
+  {
+    "date": "2017-10-12",
+    "closePoint": 857.6
+  },
+  {
+    "date": "2017-10-11",
+    "closePoint": 861.77
+  },
+  {
+    "date": "2017-10-10",
+    "closePoint": 865.98
+  },
+  {
+    "date": "2017-10-09",
+    "closePoint": 865.85
+  },
+  {
+    "date": "2017-09-29",
+    "closePoint": 865.77
+  },
+  {
+    "date": "2017-09-28",
+    "closePoint": 856.23
+  },
+  {
+    "date": "2017-09-27",
+    "closePoint": 858.48
+  },
+  {
+    "date": "2017-09-26",
+    "closePoint": 860.49
+  },
+  {
+    "date": "2017-09-25",
+    "closePoint": 861.13
+  },
+  {
+    "date": "2017-09-22",
+    "closePoint": 866.98
+  },
+  {
+    "date": "2017-09-21",
+    "closePoint": 868.32
+  },
+  {
+    "date": "2017-09-20",
+    "closePoint": 870.43
+  },
+  {
+    "date": "2017-09-19",
+    "closePoint": 869.2
+  },
+  {
+    "date": "2017-09-18",
+    "closePoint": 881.98
+  },
+  {
+    "date": "2017-09-15",
+    "closePoint": 871.5
+  },
+  {
+    "date": "2017-09-14",
+    "closePoint": 869.48
+  },
+  {
+    "date": "2017-09-13",
+    "closePoint": 872.26
+  },
+  {
+    "date": "2017-09-12",
+    "closePoint": 875.72
+  },
+  {
+    "date": "2017-09-11",
+    "closePoint": 866.69
+  },
+  {
+    "date": "2017-09-08",
+    "closePoint": 864.89
+  },
+  {
+    "date": "2017-09-07",
+    "closePoint": 868.54
+  },
+  {
+    "date": "2017-09-06",
+    "closePoint": 879.35
+  },
+  {
+    "date": "2017-09-05",
+    "closePoint": 882.31
+  },
+  {
+    "date": "2017-09-04",
+    "closePoint": 885.64
+  },
+  {
+    "date": "2017-09-01",
+    "closePoint": 888.94
+  },
+  {
+    "date": "2017-08-31",
+    "closePoint": 883.4
+  },
+  {
+    "date": "2017-08-30",
+    "closePoint": 874.12
+  },
+  {
+    "date": "2017-08-29",
+    "closePoint": 871.87
+  },
+  {
+    "date": "2017-08-28",
+    "closePoint": 881.13
+  },
+  {
+    "date": "2017-08-25",
+    "closePoint": 832.27
+  },
+  {
+    "date": "2017-08-24",
+    "closePoint": 810.48
+  },
+  {
+    "date": "2017-08-23",
+    "closePoint": 823.71
+  },
+  {
+    "date": "2017-08-22",
+    "closePoint": 815.88
+  },
+  {
+    "date": "2017-08-21",
+    "closePoint": 817.69
+  },
+  {
+    "date": "2017-08-18",
+    "closePoint": 812.25
+  },
+  {
+    "date": "2017-08-17",
+    "closePoint": 823.49
+  },
+  {
+    "date": "2017-08-16",
+    "closePoint": 816.08
+  },
+  {
+    "date": "2017-08-15",
+    "closePoint": 814.8
+  },
+  {
+    "date": "2017-08-14",
+    "closePoint": 818.83
+  },
+  {
+    "date": "2017-08-11",
+    "closePoint": 803.57
+  },
+  {
+    "date": "2017-08-10",
+    "closePoint": 827.11
+  },
+  {
+    "date": "2017-08-09",
+    "closePoint": 826.3
+  },
+  {
+    "date": "2017-08-08",
+    "closePoint": 837.42
+  },
+  {
+    "date": "2017-08-07",
+    "closePoint": 834.78
+  },
+  {
+    "date": "2017-08-04",
+    "closePoint": 844.3
+  },
+  {
+    "date": "2017-08-03",
+    "closePoint": 842.53
+  },
+  {
+    "date": "2017-08-02",
+    "closePoint": 847.98
+  },
+  {
+    "date": "2017-08-01",
+    "closePoint": 841.76
+  },
+  {
+    "date": "2017-07-31",
+    "closePoint": 832.9
+  },
+  {
+    "date": "2017-07-28",
+    "closePoint": 826.88
+  },
+  {
+    "date": "2017-07-27",
+    "closePoint": 834.03
+  },
+  {
+    "date": "2017-07-26",
+    "closePoint": 830.4
+  },
+  {
+    "date": "2017-07-25",
+    "closePoint": 824.53
+  },
+  {
+    "date": "2017-07-24",
+    "closePoint": 833.87
+  },
+  {
+    "date": "2017-07-21",
+    "closePoint": 833.59
+  },
+  {
+    "date": "2017-07-20",
+    "closePoint": 841.82
+  },
+  {
+    "date": "2017-07-19",
+    "closePoint": 845.2
+  },
+  {
+    "date": "2017-07-18",
+    "closePoint": 796.09
+  },
+  {
+    "date": "2017-07-17",
+    "closePoint": 801.44
+  },
+  {
+    "date": "2017-07-14",
+    "closePoint": 825.58
+  },
+  {
+    "date": "2017-07-13",
+    "closePoint": 826.66
+  },
+  {
+    "date": "2017-07-12",
+    "closePoint": 810.99
+  },
+  {
+    "date": "2017-07-11",
+    "closePoint": 814.32
+  },
+  {
+    "date": "2017-07-10",
+    "closePoint": 812.76
+  },
+  {
+    "date": "2017-07-07",
+    "closePoint": 806.16
+  },
+  {
+    "date": "2017-07-06",
+    "closePoint": 795.28
+  },
+  {
+    "date": "2017-07-05",
+    "closePoint": 798.08
+  },
+  {
+    "date": "2017-07-04",
+    "closePoint": 794.04
+  },
+  {
+    "date": "2017-07-03",
+    "closePoint": 800.25
+  },
+  {
+    "date": "2017-06-30",
+    "closePoint": 803.89
+  },
+  {
+    "date": "2017-06-29",
+    "closePoint": 804.55
+  },
+  {
+    "date": "2017-06-28",
+    "closePoint": 805.49
+  },
+  {
+    "date": "2017-06-27",
+    "closePoint": 808.3
+  },
+  {
+    "date": "2017-06-26",
+    "closePoint": 811.77
+  },
+  {
+    "date": "2017-06-23",
+    "closePoint": 799.81
+  },
+  {
+    "date": "2017-06-22",
+    "closePoint": 802.43
+  },
+  {
+    "date": "2017-06-21",
+    "closePoint": 801.82
+  },
+  {
+    "date": "2017-06-20",
+    "closePoint": 802.09
+  },
+  {
+    "date": "2017-06-19",
+    "closePoint": 802.92
+  },
+  {
+    "date": "2017-06-16",
+    "closePoint": 787.5
+  },
+  {
+    "date": "2017-06-15",
+    "closePoint": 790.84
+  },
+  {
+    "date": "2017-06-14",
+    "closePoint": 782.75
+  },
+  {
+    "date": "2017-06-13",
+    "closePoint": 782.27
+  },
+  {
+    "date": "2017-06-12",
+    "closePoint": 778.38
+  },
+  {
+    "date": "2017-06-09",
+    "closePoint": 787.49
+  },
+  {
+    "date": "2017-06-08",
+    "closePoint": 791
+  },
+  {
+    "date": "2017-06-07",
+    "closePoint": 791.82
+  },
+  {
+    "date": "2017-06-06",
+    "closePoint": 784.64
+  },
+  {
+    "date": "2017-06-05",
+    "closePoint": 782.98
+  },
+  {
+    "date": "2017-06-02",
+    "closePoint": 785.38
+  },
+  {
+    "date": "2017-06-01",
+    "closePoint": 787.55
+  },
+  {
+    "date": "2017-05-31",
+    "closePoint": 791.08
+  },
+  {
+    "date": "2017-05-26",
+    "closePoint": 784.88
+  },
+  {
+    "date": "2017-05-25",
+    "closePoint": 786.16
+  },
+  {
+    "date": "2017-05-24",
+    "closePoint": 758.01
+  },
+  {
+    "date": "2017-05-23",
+    "closePoint": 754.51
+  },
+  {
+    "date": "2017-05-22",
+    "closePoint": 753.01
+  },
+  {
+    "date": "2017-05-19",
+    "closePoint": 761.41
+  },
+  {
+    "date": "2017-05-18",
+    "closePoint": 763.3
+  },
+  {
+    "date": "2017-05-17",
+    "closePoint": 772.31
+  },
+  {
+    "date": "2017-05-16",
+    "closePoint": 773.2
+  },
+  {
+    "date": "2017-05-15",
+    "closePoint": 770.27
+  },
+  {
+    "date": "2017-05-12",
+    "closePoint": 765.31
+  },
+  {
+    "date": "2017-05-11",
+    "closePoint": 760.02
+  },
+  {
+    "date": "2017-05-10",
+    "closePoint": 757.68
+  },
+  {
+    "date": "2017-05-09",
+    "closePoint": 763.62
+  },
+  {
+    "date": "2017-05-08",
+    "closePoint": 766.38
+  },
+  {
+    "date": "2017-05-05",
+    "closePoint": 768.36
+  },
+  {
+    "date": "2017-05-04",
+    "closePoint": 780.58
+  },
+  {
+    "date": "2017-05-03",
+    "closePoint": 786.44
+  },
+  {
+    "date": "2017-05-02",
+    "closePoint": 791.33
+  },
+  {
+    "date": "2017-04-28",
+    "closePoint": 799.79
+  },
+  {
+    "date": "2017-04-27",
+    "closePoint": 798.82
+  },
+  {
+    "date": "2017-04-26",
+    "closePoint": 798.59
+  },
+  {
+    "date": "2017-04-25",
+    "closePoint": 796.07
+  },
+  {
+    "date": "2017-04-24",
+    "closePoint": 803.77
+  },
+  {
+    "date": "2017-04-21",
+    "closePoint": 803.52
+  },
+  {
+    "date": "2017-04-20",
+    "closePoint": 797.04
+  },
+  {
+    "date": "2017-04-19",
+    "closePoint": 799.64
+  },
+  {
+    "date": "2017-04-18",
+    "closePoint": 802.83
+  },
+  {
+    "date": "2017-04-17",
+    "closePoint": 814.18
+  },
+  {
+    "date": "2017-04-14",
+    "closePoint": 814.02
+  },
+  {
+    "date": "2017-04-13",
+    "closePoint": 822.2
+  },
+  {
+    "date": "2017-04-12",
+    "closePoint": 826.78
+  },
+  {
+    "date": "2017-04-11",
+    "closePoint": 822.23
+  },
+  {
+    "date": "2017-04-10",
+    "closePoint": 819.13
+  },
+  {
+    "date": "2017-04-07",
+    "closePoint": 826.33
+  },
+  {
+    "date": "2017-04-06",
+    "closePoint": 825.47
+  },
+  {
+    "date": "2017-04-05",
+    "closePoint": 827.41
+  },
+  {
+    "date": "2017-03-31",
+    "closePoint": 813.24
+  },
+  {
+    "date": "2017-03-30",
+    "closePoint": 814.13
+  },
+  {
+    "date": "2017-03-29",
+    "closePoint": 816.93
+  },
+  {
+    "date": "2017-03-28",
+    "closePoint": 825.81
+  },
+  {
+    "date": "2017-03-27",
+    "closePoint": 830.15
+  },
+  {
+    "date": "2017-03-24",
+    "closePoint": 832.83
+  },
+  {
+    "date": "2017-03-23",
+    "closePoint": 822.57
+  },
+  {
+    "date": "2017-03-22",
+    "closePoint": 819.96
+  },
+  {
+    "date": "2017-03-21",
+    "closePoint": 830.77
+  },
+  {
+    "date": "2017-03-20",
+    "closePoint": 836.31
+  },
+  {
+    "date": "2017-03-17",
+    "closePoint": 841.08
+  },
+  {
+    "date": "2017-03-16",
+    "closePoint": 857.66
+  },
+  {
+    "date": "2017-03-15",
+    "closePoint": 840.42
+  },
+  {
+    "date": "2017-03-14",
+    "closePoint": 840.52
+  },
+  {
+    "date": "2017-03-13",
+    "closePoint": 842.2
+  },
+  {
+    "date": "2017-03-10",
+    "closePoint": 838.02
+  },
+  {
+    "date": "2017-03-09",
+    "closePoint": 841.95
+  },
+  {
+    "date": "2017-03-08",
+    "closePoint": 846.31
+  },
+  {
+    "date": "2017-03-07",
+    "closePoint": 850.17
+  },
+  {
+    "date": "2017-03-06",
+    "closePoint": 850.57
+  },
+  {
+    "date": "2017-03-03",
+    "closePoint": 843.1
+  },
+  {
+    "date": "2017-03-02",
+    "closePoint": 849.58
+  },
+  {
+    "date": "2017-03-01",
+    "closePoint": 851.34
+  },
+  {
+    "date": "2017-02-28",
+    "closePoint": 852.49
+  },
+  {
+    "date": "2017-02-27",
+    "closePoint": 851.42
+  },
+  {
+    "date": "2017-02-24",
+    "closePoint": 860.61
+  },
+  {
+    "date": "2017-02-23",
+    "closePoint": 858.65
+  },
+  {
+    "date": "2017-02-22",
+    "closePoint": 867.75
+  },
+  {
+    "date": "2017-02-21",
+    "closePoint": 869.89
+  },
+  {
+    "date": "2017-02-20",
+    "closePoint": 866.33
+  },
+  {
+    "date": "2017-02-17",
+    "closePoint": 858.94
+  },
+  {
+    "date": "2017-02-16",
+    "closePoint": 858.23
+  },
+  {
+    "date": "2017-02-15",
+    "closePoint": 850.49
+  },
+  {
+    "date": "2017-02-14",
+    "closePoint": 856.25
+  },
+  {
+    "date": "2017-02-13",
+    "closePoint": 857.5
+  },
+  {
+    "date": "2017-02-10",
+    "closePoint": 852.76
+  },
+  {
+    "date": "2017-02-09",
+    "closePoint": 848.48
+  },
+  {
+    "date": "2017-02-08",
+    "closePoint": 848.81
+  },
+  {
+    "date": "2017-02-07",
+    "closePoint": 834.17
+  },
+  {
+    "date": "2017-02-06",
+    "closePoint": 839
+  },
+  {
+    "date": "2017-02-03",
+    "closePoint": 838.34
+  },
+  {
+    "date": "2017-01-26",
+    "closePoint": 845.01
+  },
+  {
+    "date": "2017-01-25",
+    "closePoint": 841.13
+  },
+  {
+    "date": "2017-01-24",
+    "closePoint": 840.15
+  },
+  {
+    "date": "2017-01-23",
+    "closePoint": 845.58
+  },
+  {
+    "date": "2017-01-20",
+    "closePoint": 845.11
+  },
+  {
+    "date": "2017-01-19",
+    "closePoint": 838.25
+  },
+  {
+    "date": "2017-01-18",
+    "closePoint": 838.1
+  },
+  {
+    "date": "2017-01-17",
+    "closePoint": 838.39
+  },
+  {
+    "date": "2017-01-16",
+    "closePoint": 842.96
+  },
+  {
+    "date": "2017-01-13",
+    "closePoint": 844.33
+  },
+  {
+    "date": "2017-01-12",
+    "closePoint": 842.17
+  },
+  {
+    "date": "2017-01-11",
+    "closePoint": 841.91
+  },
+  {
+    "date": "2017-01-10",
+    "closePoint": 845.04
+  },
+  {
+    "date": "2017-01-09",
+    "closePoint": 843.94
+  },
+  {
+    "date": "2017-01-06",
+    "closePoint": 841.12
+  },
+  {
+    "date": "2017-01-05",
+    "closePoint": 850.1
+  },
+  {
+    "date": "2017-01-04",
+    "closePoint": 854.63
+  },
+  {
+    "date": "2017-01-03",
+    "closePoint": 851.02
+  },
+  {
+    "date": "2016-12-30",
+    "closePoint": 843.3
+  },
+  {
+    "date": "2016-12-29",
+    "closePoint": 837.65
+  },
+  {
+    "date": "2016-12-28",
+    "closePoint": 840.22
+  },
+  {
+    "date": "2016-12-27",
+    "closePoint": 843.33
+  },
+  {
+    "date": "2016-12-26",
+    "closePoint": 846.99
+  },
+  {
+    "date": "2016-12-23",
+    "closePoint": 838.75
+  },
+  {
+    "date": "2016-12-22",
+    "closePoint": 848.6
+  },
+  {
+    "date": "2016-12-21",
+    "closePoint": 853.12
+  },
+  {
+    "date": "2016-12-20",
+    "closePoint": 847.47
+  },
+  {
+    "date": "2016-12-19",
+    "closePoint": 846.59
+  },
+  {
+    "date": "2016-12-16",
+    "closePoint": 853.71
+  },
+  {
+    "date": "2016-12-15",
+    "closePoint": 854.48
+  },
+  {
+    "date": "2016-12-14",
+    "closePoint": 857.5
+  },
+  {
+    "date": "2016-12-13",
+    "closePoint": 870.14
+  },
+  {
+    "date": "2016-12-12",
+    "closePoint": 869.53
+  },
+  {
+    "date": "2016-12-09",
+    "closePoint": 894.69
+  },
+  {
+    "date": "2016-12-08",
+    "closePoint": 891.58
+  },
+  {
+    "date": "2016-12-07",
+    "closePoint": 902.23
+  },
+  {
+    "date": "2016-12-06",
+    "closePoint": 896.22
+  },
+  {
+    "date": "2016-12-05",
+    "closePoint": 899.49
+  },
+  {
+    "date": "2016-12-02",
+    "closePoint": 932.8
+  },
+  {
+    "date": "2016-12-01",
+    "closePoint": 950.1
+  },
+  {
+    "date": "2016-11-30",
+    "closePoint": 941.83
+  },
+  {
+    "date": "2016-11-29",
+    "closePoint": 949.22
+  },
+  {
+    "date": "2016-11-28",
+    "closePoint": 946.74
+  },
+  {
+    "date": "2016-11-25",
+    "closePoint": 952.6
+  },
+  {
+    "date": "2016-11-24",
+    "closePoint": 947.37
+  },
+  {
+    "date": "2016-11-23",
+    "closePoint": 938.4
+  },
+  {
+    "date": "2016-11-22",
+    "closePoint": 946.74
+  },
+  {
+    "date": "2016-11-21",
+    "closePoint": 936.6
+  },
+  {
+    "date": "2016-11-18",
+    "closePoint": 933.47
+  },
+  {
+    "date": "2016-11-17",
+    "closePoint": 951.13
+  },
+  {
+    "date": "2016-11-16",
+    "closePoint": 950.48
+  },
+  {
+    "date": "2016-11-15",
+    "closePoint": 948.77
+  },
+  {
+    "date": "2016-11-14",
+    "closePoint": 955.33
+  },
+  {
+    "date": "2016-11-11",
+    "closePoint": 947.81
+  },
+  {
+    "date": "2016-11-10",
+    "closePoint": 916.85
+  },
+  {
+    "date": "2016-11-09",
+    "closePoint": 899.48
+  },
+  {
+    "date": "2016-11-08",
+    "closePoint": 912.68
+  },
+  {
+    "date": "2016-11-07",
+    "closePoint": 912.39
+  },
+  {
+    "date": "2016-11-04",
+    "closePoint": 909.91
+  },
+  {
+    "date": "2016-11-03",
+    "closePoint": 912.78
+  },
+  {
+    "date": "2016-11-02",
+    "closePoint": 892.3
+  },
+  {
+    "date": "2016-11-01",
+    "closePoint": 896.26
+  },
+  {
+    "date": "2016-10-31",
+    "closePoint": 888.18
+  },
+  {
+    "date": "2016-10-28",
+    "closePoint": 887.81
+  },
+  {
+    "date": "2016-10-27",
+    "closePoint": 881.97
+  },
+  {
+    "date": "2016-10-26",
+    "closePoint": 881.4
+  },
+  {
+    "date": "2016-10-25",
+    "closePoint": 884.04
+  },
+  {
+    "date": "2016-10-24",
+    "closePoint": 888.48
+  },
+  {
+    "date": "2016-10-21",
+    "closePoint": 869.31
+  },
+  {
+    "date": "2016-10-20",
+    "closePoint": 864.01
+  },
+  {
+    "date": "2016-10-19",
+    "closePoint": 865.34
+  },
+  {
+    "date": "2016-10-18",
+    "closePoint": 871.37
+  },
+  {
+    "date": "2016-10-17",
+    "closePoint": 850.24
+  },
+  {
+    "date": "2016-10-14",
+    "closePoint": 862.91
+  },
+  {
+    "date": "2016-10-13",
+    "closePoint": 864.42
+  },
+  {
+    "date": "2016-10-12",
+    "closePoint": 863.08
+  },
+  {
+    "date": "2016-10-11",
+    "closePoint": 866.56
+  },
+  {
+    "date": "2016-10-10",
+    "closePoint": 864.28
+  },
+  {
+    "date": "2016-09-30",
+    "closePoint": 851.42
+  },
+  {
+    "date": "2016-09-29",
+    "closePoint": 850.11
+  },
+  {
+    "date": "2016-09-28",
+    "closePoint": 841.49
+  },
+  {
+    "date": "2016-09-27",
+    "closePoint": 844.94
+  },
+  {
+    "date": "2016-09-26",
+    "closePoint": 836.34
+  },
+  {
+    "date": "2016-09-23",
+    "closePoint": 851.03
+  },
+  {
+    "date": "2016-09-22",
+    "closePoint": 856.49
+  },
+  {
+    "date": "2016-09-21",
+    "closePoint": 855.7
+  },
+  {
+    "date": "2016-09-20",
+    "closePoint": 849.75
+  },
+  {
+    "date": "2016-09-19",
+    "closePoint": 851.28
+  },
+  {
+    "date": "2016-09-14",
+    "closePoint": 848.05
+  },
+  {
+    "date": "2016-09-13",
+    "closePoint": 855.98
+  },
+  {
+    "date": "2016-09-12",
+    "closePoint": 858.95
+  },
+  {
+    "date": "2016-09-09",
+    "closePoint": 878.34
+  },
+  {
+    "date": "2016-09-08",
+    "closePoint": 884
+  },
+  {
+    "date": "2016-09-07",
+    "closePoint": 885.66
+  },
+  {
+    "date": "2016-09-06",
+    "closePoint": 887.69
+  },
+  {
+    "date": "2016-09-05",
+    "closePoint": 884.79
+  },
+  {
+    "date": "2016-09-02",
+    "closePoint": 882.85
+  },
+  {
+    "date": "2016-09-01",
+    "closePoint": 876.23
+  },
+  {
+    "date": "2016-08-31",
+    "closePoint": 890.21
+  },
+  {
+    "date": "2016-08-30",
+    "closePoint": 884.5
+  },
+  {
+    "date": "2016-08-29",
+    "closePoint": 879.77
+  },
+  {
+    "date": "2016-08-26",
+    "closePoint": 879.26
+  },
+  {
+    "date": "2016-08-25",
+    "closePoint": 883.58
+  },
+  {
+    "date": "2016-08-24",
+    "closePoint": 878.88
+  },
+  {
+    "date": "2016-08-23",
+    "closePoint": 887.2
+  },
+  {
+    "date": "2016-08-22",
+    "closePoint": 883.39
+  },
+  {
+    "date": "2016-08-19",
+    "closePoint": 898.42
+  },
+  {
+    "date": "2016-08-18",
+    "closePoint": 902.22
+  },
+  {
+    "date": "2016-08-17",
+    "closePoint": 910.29
+  },
+  {
+    "date": "2016-08-16",
+    "closePoint": 915.63
+  },
+  {
+    "date": "2016-08-15",
+    "closePoint": 926.13
+  },
+  {
+    "date": "2016-08-12",
+    "closePoint": 877.21
+  },
+  {
+    "date": "2016-08-11",
+    "closePoint": 856.19
+  },
+  {
+    "date": "2016-08-10",
+    "closePoint": 851.93
+  },
+  {
+    "date": "2016-08-09",
+    "closePoint": 856.09
+  },
+  {
+    "date": "2016-08-08",
+    "closePoint": 849.57
+  },
+  {
+    "date": "2016-08-05",
+    "closePoint": 842.85
+  },
+  {
+    "date": "2016-08-04",
+    "closePoint": 842.09
+  },
+  {
+    "date": "2016-08-03",
+    "closePoint": 839.4
+  },
+  {
+    "date": "2016-08-02",
+    "closePoint": 840.98
+  },
+  {
+    "date": "2016-08-01",
+    "closePoint": 837.56
+  },
+  {
+    "date": "2016-07-29",
+    "closePoint": 844.85
+  },
+  {
+    "date": "2016-07-28",
+    "closePoint": 850.51
+  },
+  {
+    "date": "2016-07-27",
+    "closePoint": 867.59
+  },
+  {
+    "date": "2016-07-26",
+    "closePoint": 889.1
+  },
+  {
+    "date": "2016-07-25",
+    "closePoint": 876.12
+  },
+  {
+    "date": "2016-07-22",
+    "closePoint": 877.74
+  },
+  {
+    "date": "2016-07-21",
+    "closePoint": 886.01
+  },
+  {
+    "date": "2016-07-20",
+    "closePoint": 878.42
+  },
+  {
+    "date": "2016-07-19",
+    "closePoint": 883.85
+  },
+  {
+    "date": "2016-07-18",
+    "closePoint": 875.75
+  },
+  {
+    "date": "2016-07-15",
+    "closePoint": 896.42
+  },
+  {
+    "date": "2016-07-14",
+    "closePoint": 909.28
+  },
+  {
+    "date": "2016-07-13",
+    "closePoint": 908.79
+  },
+  {
+    "date": "2016-07-12",
+    "closePoint": 905.7
+  },
+  {
+    "date": "2016-07-11",
+    "closePoint": 882.53
+  },
+  {
+    "date": "2016-07-08",
+    "closePoint": 885.7
+  },
+  {
+    "date": "2016-07-07",
+    "closePoint": 883.56
+  },
+  {
+    "date": "2016-07-06",
+    "closePoint": 882.29
+  },
+  {
+    "date": "2016-07-05",
+    "closePoint": 885.06
+  },
+  {
+    "date": "2016-07-04",
+    "closePoint": 886.15
+  },
+  {
+    "date": "2016-07-01",
+    "closePoint": 859.9
+  },
+  {
+    "date": "2016-06-30",
+    "closePoint": 863.88
+  },
+  {
+    "date": "2016-06-29",
+    "closePoint": 860.94
+  },
+  {
+    "date": "2016-06-28",
+    "closePoint": 863.77
+  },
+  {
+    "date": "2016-06-27",
+    "closePoint": 849.4
+  },
+  {
+    "date": "2016-06-24",
+    "closePoint": 831.35
+  },
+  {
+    "date": "2016-06-23",
+    "closePoint": 846.11
+  },
+  {
+    "date": "2016-06-22",
+    "closePoint": 850.08
+  },
+  {
+    "date": "2016-06-21",
+    "closePoint": 834.36
+  },
+  {
+    "date": "2016-06-20",
+    "closePoint": 825.89
+  },
+  {
+    "date": "2016-06-17",
+    "closePoint": 823.92
+  },
+  {
+    "date": "2016-06-16",
+    "closePoint": 818.92
+  },
+  {
+    "date": "2016-06-15",
+    "closePoint": 830.83
+  },
+  {
+    "date": "2016-06-14",
+    "closePoint": 818.2
+  },
+  {
+    "date": "2016-06-13",
+    "closePoint": 809.67
+  },
+  {
+    "date": "2016-06-08",
+    "closePoint": 850.46
+  },
+  {
+    "date": "2016-06-07",
+    "closePoint": 856.36
+  },
+  {
+    "date": "2016-06-06",
+    "closePoint": 852.06
+  },
+  {
+    "date": "2016-06-03",
+    "closePoint": 859.14
+  },
+  {
+    "date": "2016-06-02",
+    "closePoint": 858.44
+  },
+  {
+    "date": "2016-06-01",
+    "closePoint": 852.55
+  },
+  {
+    "date": "2016-05-31",
+    "closePoint": 863.96
+  },
+  {
+    "date": "2016-05-30",
+    "closePoint": 803.02
+  },
+  {
+    "date": "2016-05-27",
+    "closePoint": 799.02
+  },
+  {
+    "date": "2016-05-26",
+    "closePoint": 802.97
+  },
+  {
+    "date": "2016-05-25",
+    "closePoint": 799.08
+  },
+  {
+    "date": "2016-05-24",
+    "closePoint": 797.89
+  },
+  {
+    "date": "2016-05-23",
+    "closePoint": 807.38
+  },
+  {
+    "date": "2016-05-20",
+    "closePoint": 805.34
+  },
+  {
+    "date": "2016-05-19",
+    "closePoint": 795.56
+  },
+  {
+    "date": "2016-05-18",
+    "closePoint": 800
+  },
+  {
+    "date": "2016-05-17",
+    "closePoint": 798.31
+  },
+  {
+    "date": "2016-05-16",
+    "closePoint": 796.23
+  },
+  {
+    "date": "2016-05-13",
+    "closePoint": 790.89
+  },
+  {
+    "date": "2016-05-12",
+    "closePoint": 797.24
+  },
+  {
+    "date": "2016-05-11",
+    "closePoint": 791.94
+  },
+  {
+    "date": "2016-05-10",
+    "closePoint": 795.95
+  },
+  {
+    "date": "2016-05-09",
+    "closePoint": 798.24
+  },
+  {
+    "date": "2016-05-06",
+    "closePoint": 824.32
+  },
+  {
+    "date": "2016-05-05",
+    "closePoint": 857.82
+  },
+  {
+    "date": "2016-05-04",
+    "closePoint": 857.08
+  },
+  {
+    "date": "2016-05-03",
+    "closePoint": 861.53
+  },
+  {
+    "date": "2016-04-29",
+    "closePoint": 841.97
+  },
+  {
+    "date": "2016-04-28",
+    "closePoint": 846.71
+  },
+  {
+    "date": "2016-04-27",
+    "closePoint": 850.61
+  },
+  {
+    "date": "2016-04-26",
+    "closePoint": 861.89
+  },
+  {
+    "date": "2016-04-25",
+    "closePoint": 853.12
+  },
+  {
+    "date": "2016-04-22",
+    "closePoint": 865.8
+  },
+  {
+    "date": "2016-04-21",
+    "closePoint": 859.41
+  },
+  {
+    "date": "2016-04-20",
+    "closePoint": 872
+  },
+  {
+    "date": "2016-04-19",
+    "closePoint": 887.5
+  },
+  {
+    "date": "2016-04-18",
+    "closePoint": 880.8
+  },
+  {
+    "date": "2016-04-15",
+    "closePoint": 902.54
+  },
+  {
+    "date": "2016-04-14",
+    "closePoint": 907.18
+  },
+  {
+    "date": "2016-04-13",
+    "closePoint": 901.78
+  },
+  {
+    "date": "2016-04-12",
+    "closePoint": 878.2
+  },
+  {
+    "date": "2016-04-11",
+    "closePoint": 880.81
+  },
+  {
+    "date": "2016-04-08",
+    "closePoint": 856.04
+  },
+  {
+    "date": "2016-04-07",
+    "closePoint": 872.43
+  },
+  {
+    "date": "2016-04-06",
+    "closePoint": 893.82
+  },
+  {
+    "date": "2016-04-05",
+    "closePoint": 899.78
+  },
+  {
+    "date": "2016-04-01",
+    "closePoint": 883.09
+  },
+  {
+    "date": "2016-03-31",
+    "closePoint": 888.63
+  },
+  {
+    "date": "2016-03-30",
+    "closePoint": 885.94
+  },
+  {
+    "date": "2016-03-29",
+    "closePoint": 857.37
+  },
+  {
+    "date": "2016-03-28",
+    "closePoint": 861.08
+  },
+  {
+    "date": "2016-03-25",
+    "closePoint": 882.05
+  },
+  {
+    "date": "2016-03-24",
+    "closePoint": 872.8
+  },
+  {
+    "date": "2016-03-23",
+    "closePoint": 914.91
+  },
+  {
+    "date": "2016-03-22",
+    "closePoint": 899.42
+  },
+  {
+    "date": "2016-03-21",
+    "closePoint": 926.75
+  },
+  {
+    "date": "2016-03-18",
+    "closePoint": 842.84
+  },
+  {
+    "date": "2016-03-17",
+    "closePoint": 814.12
+  },
+  {
+    "date": "2016-03-16",
+    "closePoint": 791.84
+  },
+  {
+    "date": "2016-03-15",
+    "closePoint": 788.99
+  },
+  {
+    "date": "2016-03-14",
+    "closePoint": 794.08
+  },
+  {
+    "date": "2016-03-11",
+    "closePoint": 774.66
+  },
+  {
+    "date": "2016-03-10",
+    "closePoint": 763.46
+  },
+  {
+    "date": "2016-03-09",
+    "closePoint": 789
+  },
+  {
+    "date": "2016-03-08",
+    "closePoint": 799.66
+  },
+  {
+    "date": "2016-03-07",
+    "closePoint": 799.64
+  },
+  {
+    "date": "2016-03-04",
+    "closePoint": 794.73
+  },
+  {
+    "date": "2016-03-03",
+    "closePoint": 789.45
+  },
+  {
+    "date": "2016-03-02",
+    "closePoint": 794.01
+  },
+  {
+    "date": "2016-03-01",
+    "closePoint": 747.53
+  },
+  {
+    "date": "2016-02-29",
+    "closePoint": 716.98
+  },
+  {
+    "date": "2016-02-26",
+    "closePoint": 742.87
+  },
+  {
+    "date": "2016-02-25",
+    "closePoint": 735.64
+  },
+  {
+    "date": "2016-02-24",
+    "closePoint": 807.79
+  },
+  {
+    "date": "2016-02-23",
+    "closePoint": 801.86
+  },
+  {
+    "date": "2016-02-22",
+    "closePoint": 815.84
+  },
+  {
+    "date": "2016-02-19",
+    "closePoint": 787.47
+  },
+  {
+    "date": "2016-02-18",
+    "closePoint": 782.1
+  },
+  {
+    "date": "2016-02-17",
+    "closePoint": 783.42
+  },
+  {
+    "date": "2016-02-16",
+    "closePoint": 775.83
+  },
+  {
+    "date": "2016-02-15",
+    "closePoint": 739.96
+  },
+  {
+    "date": "2016-02-05",
+    "closePoint": 751.29
+  },
+  {
+    "date": "2016-02-04",
+    "closePoint": 777.05
+  },
+  {
+    "date": "2016-02-03",
+    "closePoint": 764.75
+  },
+  {
+    "date": "2016-02-02",
+    "closePoint": 769.12
+  },
+  {
+    "date": "2016-02-01",
+    "closePoint": 747.69
+  },
+  {
+    "date": "2016-01-29",
+    "closePoint": 761.39
+  },
+  {
+    "date": "2016-01-28",
+    "closePoint": 719.2
+  },
+  {
+    "date": "2016-01-27",
+    "closePoint": 736.55
+  },
+  {
+    "date": "2016-01-26",
+    "closePoint": 747.06
+  },
+  {
+    "date": "2016-01-25",
+    "closePoint": 821.17
+  },
+  {
+    "date": "2016-01-22",
+    "closePoint": 818.61
+  },
+  {
+    "date": "2016-01-21",
+    "closePoint": 807.26
+  },
+  {
+    "date": "2016-01-20",
+    "closePoint": 845.18
+  },
+  {
+    "date": "2016-01-19",
+    "closePoint": 854.49
+  },
+  {
+    "date": "2016-01-18",
+    "closePoint": 825.47
+  },
+  {
+    "date": "2016-01-15",
+    "closePoint": 822.01
+  },
+  {
+    "date": "2016-01-14",
+    "closePoint": 849.72
+  },
+  {
+    "date": "2016-01-13",
+    "closePoint": 824.9
+  },
+  {
+    "date": "2016-01-12",
+    "closePoint": 831.04
+  },
+  {
+    "date": "2016-01-11",
+    "closePoint": 817.41
+  },
+  {
+    "date": "2016-01-08",
+    "closePoint": 889.8
+  },
+  {
+    "date": "2016-01-07",
+    "closePoint": 866.51
+  },
+  {
+    "date": "2016-01-06",
+    "closePoint": 956.84
+  },
+  {
+    "date": "2016-01-05",
+    "closePoint": 941.72
+  },
+  {
+    "date": "2016-01-04",
+    "closePoint": 942.44
+  },
+  {
+    "date": "2015-12-31",
+    "closePoint": 1038.16
+  },
+  {
+    "date": "2015-12-30",
+    "closePoint": 1052.76
+  },
+  {
+    "date": "2015-12-29",
+    "closePoint": 1055.5
+  },
+  {
+    "date": "2015-12-28",
+    "closePoint": 1041.05
+  },
+  {
+    "date": "2015-12-25",
+    "closePoint": 1086.47
+  },
+  {
+    "date": "2015-12-24",
+    "closePoint": 1082.04
+  },
+  {
+    "date": "2015-12-23",
+    "closePoint": 1125.46
+  },
+  {
+    "date": "2015-12-22",
+    "closePoint": 1103.66
+  },
+  {
+    "date": "2015-12-21",
+    "closePoint": 1088.57
+  },
+  {
+    "date": "2015-12-18",
+    "closePoint": 1069.92
+  },
+  {
+    "date": "2015-12-17",
+    "closePoint": 1080.63
+  },
+  {
+    "date": "2015-12-16",
+    "closePoint": 1065.12
+  },
+  {
+    "date": "2015-12-15",
+    "closePoint": 1061.3
+  },
+  {
+    "date": "2015-12-14",
+    "closePoint": 1095.36
+  },
+  {
+    "date": "2015-12-11",
+    "closePoint": 1005.02
+  },
+  {
+    "date": "2015-12-10",
+    "closePoint": 999.5
+  },
+  {
+    "date": "2015-12-09",
+    "closePoint": 993.19
+  },
+  {
+    "date": "2015-12-08",
+    "closePoint": 990.61
+  },
+  {
+    "date": "2015-12-07",
+    "closePoint": 1007.5
+  },
+  {
+    "date": "2015-12-04",
+    "closePoint": 1019.85
+  },
+  {
+    "date": "2015-12-03",
+    "closePoint": 1048.06
+  },
+  {
+    "date": "2015-12-02",
+    "closePoint": 1047.31
+  },
+  {
+    "date": "2015-12-01",
+    "closePoint": 986.67
+  },
+  {
+    "date": "2015-11-30",
+    "closePoint": 989.36
+  },
+  {
+    "date": "2015-11-27",
+    "closePoint": 1002.45
+  },
+  {
+    "date": "2015-11-26",
+    "closePoint": 1095.83
+  },
+  {
+    "date": "2015-11-25",
+    "closePoint": 1109.3
+  },
+  {
+    "date": "2015-11-24",
+    "closePoint": 1104.1
+  },
+  {
+    "date": "2015-11-23",
+    "closePoint": 1079.6
+  },
+  {
+    "date": "2015-11-20",
+    "closePoint": 1094.15
+  },
+  {
+    "date": "2015-11-19",
+    "closePoint": 1115.22
+  },
+  {
+    "date": "2015-11-18",
+    "closePoint": 1088.38
+  },
+  {
+    "date": "2015-11-17",
+    "closePoint": 1135.1
+  },
+  {
+    "date": "2015-11-16",
+    "closePoint": 1124.47
+  },
+  {
+    "date": "2015-11-13",
+    "closePoint": 1138.47
+  },
+  {
+    "date": "2015-11-12",
+    "closePoint": 1127.45
+  },
+  {
+    "date": "2015-11-11",
+    "closePoint": 1152.89
+  },
+  {
+    "date": "2015-11-10",
+    "closePoint": 1126.87
+  },
+  {
+    "date": "2015-11-09",
+    "closePoint": 1104.95
+  },
+  {
+    "date": "2015-11-06",
+    "closePoint": 1117.86
+  },
+  {
+    "date": "2015-11-05",
+    "closePoint": 1024.27
+  },
+  {
+    "date": "2015-11-04",
+    "closePoint": 950.95
+  },
+  {
+    "date": "2015-11-03",
+    "closePoint": 864.59
+  },
+  {
+    "date": "2015-11-02",
+    "closePoint": 861.5
+  },
+  {
+    "date": "2015-10-30",
+    "closePoint": 888.57
+  },
+  {
+    "date": "2015-10-29",
+    "closePoint": 867.15
+  },
+  {
+    "date": "2015-10-28",
+    "closePoint": 867.61
+  },
+  {
+    "date": "2015-10-27",
+    "closePoint": 900.01
+  },
+  {
+    "date": "2015-10-26",
+    "closePoint": 906.48
+  },
+  {
+    "date": "2015-10-23",
+    "closePoint": 887.53
+  },
+  {
+    "date": "2015-10-22",
+    "closePoint": 872.871
+  },
+  {
+    "date": "2015-10-21",
+    "closePoint": 858.46
+  },
+  {
+    "date": "2015-10-20",
+    "closePoint": 908.387
+  },
+  {
+    "date": "2015-10-19",
+    "closePoint": 895.555
+  },
+  {
+    "date": "2015-10-16",
+    "closePoint": 873.874
+  },
+  {
+    "date": "2015-10-15",
+    "closePoint": 855.032
+  },
+  {
+    "date": "2015-10-14",
+    "closePoint": 827.902
+  },
+  {
+    "date": "2015-10-13",
+    "closePoint": 837.82
+  },
+  {
+    "date": "2015-10-12",
+    "closePoint": 843.516
+  },
+  {
+    "date": "2015-10-09",
+    "closePoint": 797.692
+  },
+  {
+    "date": "2015-10-08",
+    "closePoint": 775.255
+  },
+  {
+    "date": "2015-09-30",
+    "closePoint": 744.029
+  },
+  {
+    "date": "2015-09-29",
+    "closePoint": 741.467
+  },
+  {
+    "date": "2015-09-28",
+    "closePoint": 747.945
+  },
+  {
+    "date": "2015-09-25",
+    "closePoint": 738.417
+  },
+  {
+    "date": "2015-09-24",
+    "closePoint": 765.372
+  },
+  {
+    "date": "2015-09-23",
+    "closePoint": 758.697
+  },
+  {
+    "date": "2015-09-22",
+    "closePoint": 788.629
+  },
+  {
+    "date": "2015-09-21",
+    "closePoint": 760.183
+  },
+  {
+    "date": "2015-09-18",
+    "closePoint": 746.605
+  },
+  {
+    "date": "2015-09-17",
+    "closePoint": 742.184
+  },
+  {
+    "date": "2015-09-16",
+    "closePoint": 766.813
+  },
+  {
+    "date": "2015-09-15",
+    "closePoint": 713.336
+  },
+  {
+    "date": "2015-09-14",
+    "closePoint": 750.867
+  },
+  {
+    "date": "2015-09-11",
+    "closePoint": 790.66
+  },
+  {
+    "date": "2015-09-10",
+    "closePoint": 795.104
+  },
+  {
+    "date": "2015-09-09",
+    "closePoint": 818.289
+  },
+  {
+    "date": "2015-09-08",
+    "closePoint": 793.514
+  },
+  {
+    "date": "2015-09-07",
+    "closePoint": 765.874
+  },
+  {
+    "date": "2015-09-02",
+    "closePoint": 779.667
+  },
+  {
+    "date": "2015-09-01",
+    "closePoint": 787.654
+  },
+  {
+    "date": "2015-08-31",
+    "closePoint": 772.053
+  },
+  {
+    "date": "2015-08-28",
+    "closePoint": 792.574
+  },
+  {
+    "date": "2015-08-27",
+    "closePoint": 756.636
+  },
+  {
+    "date": "2015-08-26",
+    "closePoint": 704.657
+  },
+  {
+    "date": "2015-08-25",
+    "closePoint": 731.893
+  },
+  {
+    "date": "2015-08-24",
+    "closePoint": 811.94
+  },
+  {
+    "date": "2015-08-21",
+    "closePoint": 900.933
+  },
+  {
+    "date": "2015-08-20",
+    "closePoint": 973.958
+  },
+  {
+    "date": "2015-08-19",
+    "closePoint": 1021.68
+  },
+  {
+    "date": "2015-08-18",
+    "closePoint": 1007.75
+  },
+  {
+    "date": "2015-08-17",
+    "closePoint": 1082.43
+  },
+  {
+    "date": "2015-08-14",
+    "closePoint": 1098.71
+  },
+  {
+    "date": "2015-08-13",
+    "closePoint": 1087.84
+  },
+  {
+    "date": "2015-08-12",
+    "closePoint": 1075.14
+  },
+  {
+    "date": "2015-08-11",
+    "closePoint": 1079.21
+  },
+  {
+    "date": "2015-08-10",
+    "closePoint": 1095.74
+  },
+  {
+    "date": "2015-08-07",
+    "closePoint": 1021.99
+  },
+  {
+    "date": "2015-08-06",
+    "closePoint": 1008.09
+  },
+  {
+    "date": "2015-08-05",
+    "closePoint": 1037.21
+  },
+  {
+    "date": "2015-08-04",
+    "closePoint": 1069.96
+  },
+  {
+    "date": "2015-08-03",
+    "closePoint": 1044.09
+  },
+  {
+    "date": "2015-07-31",
+    "closePoint": 1038.32
+  },
+  {
+    "date": "2015-07-30",
+    "closePoint": 1033.81
+  },
+  {
+    "date": "2015-07-29",
+    "closePoint": 1090.36
+  },
+  {
+    "date": "2015-07-28",
+    "closePoint": 1088
+  },
+  {
+    "date": "2015-07-27",
+    "closePoint": 1032.62
+  },
+  {
+    "date": "2015-07-24",
+    "closePoint": 1146.14
+  },
+  {
+    "date": "2015-07-23",
+    "closePoint": 1183.38
+  },
+  {
+    "date": "2015-07-22",
+    "closePoint": 1152.06
+  },
+  {
+    "date": "2015-07-21",
+    "closePoint": 1172.47
+  },
+  {
+    "date": "2015-07-20",
+    "closePoint": 1163.93
+  },
+  {
+    "date": "2015-07-17",
+    "closePoint": 1190.3
+  },
+  {
+    "date": "2015-07-16",
+    "closePoint": 1134.46
+  },
+  {
+    "date": "2015-07-15",
+    "closePoint": 1130.44
+  },
+  {
+    "date": "2015-07-14",
+    "closePoint": 1209.87
+  },
+  {
+    "date": "2015-07-13",
+    "closePoint": 1290.61
+  },
+  {
+    "date": "2015-07-10",
+    "closePoint": 1278.44
+  },
+  {
+    "date": "2015-07-09",
+    "closePoint": 1176.8
+  },
+  {
+    "date": "2015-07-08",
+    "closePoint": 1074.15
+  },
+  {
+    "date": "2015-07-07",
+    "closePoint": 1188.12
+  },
+  {
+    "date": "2015-07-06",
+    "closePoint": 1254.7
+  },
+  {
+    "date": "2015-07-03",
+    "closePoint": 1185.35
+  },
+  {
+    "date": "2015-07-02",
+    "closePoint": 1234.91
+  },
+  {
+    "date": "2015-07-01",
+    "closePoint": 1240.97
+  },
+  {
+    "date": "2015-06-30",
+    "closePoint": 1324.61
+  },
+  {
+    "date": "2015-06-29",
+    "closePoint": 1214.23
+  },
+  {
+    "date": "2015-06-26",
+    "closePoint": 1307.03
+  },
+  {
+    "date": "2015-06-25",
+    "closePoint": 1446.64
+  },
+  {
+    "date": "2015-06-24",
+    "closePoint": 1489.75
+  },
+  {
+    "date": "2015-06-23",
+    "closePoint": 1489.43
+  },
+  {
+    "date": "2015-06-19",
+    "closePoint": 1434.45
+  },
+  {
+    "date": "2015-06-18",
+    "closePoint": 1508.4
+  },
+  {
+    "date": "2015-06-17",
+    "closePoint": 1589.9
+  },
+  {
+    "date": "2015-06-16",
+    "closePoint": 1583.84
+  },
+  {
+    "date": "2015-06-15",
+    "closePoint": 1604.23
+  },
+  {
+    "date": "2015-06-12",
+    "closePoint": 1639.83
+  },
+  {
+    "date": "2015-06-11",
+    "closePoint": 1639.59
+  },
+  {
+    "date": "2015-06-10",
+    "closePoint": 1662.42
+  },
+  {
+    "date": "2015-06-09",
+    "closePoint": 1681.95
+  },
+  {
+    "date": "2015-06-08",
+    "closePoint": 1717.1
+  },
+  {
+    "date": "2015-06-05",
+    "closePoint": 1637.92
+  },
+  {
+    "date": "2015-06-04",
+    "closePoint": 1645.17
+  },
+  {
+    "date": "2015-06-03",
+    "closePoint": 1613.43
+  },
+  {
+    "date": "2015-06-02",
+    "closePoint": 1622.8
+  },
+  {
+    "date": "2015-06-01",
+    "closePoint": 1628.47
+  },
+  {
+    "date": "2015-05-29",
+    "closePoint": 1544.43
+  },
+  {
+    "date": "2015-05-28",
+    "closePoint": 1561.57
+  },
+  {
+    "date": "2015-05-27",
+    "closePoint": 1716.63
+  },
+  {
+    "date": "2015-05-26",
+    "closePoint": 1720.23
+  },
+  {
+    "date": "2015-05-25",
+    "closePoint": 1700.7
+  },
+  {
+    "date": "2015-05-22",
+    "closePoint": 1653.2
+  },
+  {
+    "date": "2015-05-21",
+    "closePoint": 1601.81
+  },
+  {
+    "date": "2015-05-20",
+    "closePoint": 1604.66
+  },
+  {
+    "date": "2015-05-19",
+    "closePoint": 1632.28
+  },
+  {
+    "date": "2015-05-18",
+    "closePoint": 1523.51
+  },
+  {
+    "date": "2015-05-15",
+    "closePoint": 1565.86
+  },
+  {
+    "date": "2015-05-14",
+    "closePoint": 1617.83
+  },
+  {
+    "date": "2015-05-13",
+    "closePoint": 1623.93
+  },
+  {
+    "date": "2015-05-12",
+    "closePoint": 1664.01
+  },
+  {
+    "date": "2015-05-11",
+    "closePoint": 1634.89
+  },
+  {
+    "date": "2015-05-08",
+    "closePoint": 1600.29
+  },
+  {
+    "date": "2015-05-07",
+    "closePoint": 1607.36
+  },
+  {
+    "date": "2015-05-06",
+    "closePoint": 1591.46
+  },
+  {
+    "date": "2015-05-05",
+    "closePoint": 1584.2
+  },
+  {
+    "date": "2015-05-04",
+    "closePoint": 1626.41
+  },
+  {
+    "date": "2015-04-30",
+    "closePoint": 1642.64
+  },
+  {
+    "date": "2015-04-29",
+    "closePoint": 1684.84
+  },
+  {
+    "date": "2015-04-28",
+    "closePoint": 1686.9
+  },
+  {
+    "date": "2015-04-27",
+    "closePoint": 1697.16
+  },
+  {
+    "date": "2015-04-24",
+    "closePoint": 1684.64
+  },
+  {
+    "date": "2015-04-23",
+    "closePoint": 1741.58
+  },
+  {
+    "date": "2015-04-22",
+    "closePoint": 1764.91
+  },
+  {
+    "date": "2015-04-21",
+    "closePoint": 1655.66
+  },
+  {
+    "date": "2015-04-20",
+    "closePoint": 1579.16
+  },
+  {
+    "date": "2015-04-17",
+    "closePoint": 1658.86
+  },
+  {
+    "date": "2015-04-16",
+    "closePoint": 1648.81
+  },
+  {
+    "date": "2015-04-15",
+    "closePoint": 1625.91
+  },
+  {
+    "date": "2015-04-14",
+    "closePoint": 1687.36
+  },
+  {
+    "date": "2015-04-13",
+    "closePoint": 1668.34
+  },
+  {
+    "date": "2015-04-10",
+    "closePoint": 1682.3
+  },
+  {
+    "date": "2015-04-09",
+    "closePoint": 1676.92
+  },
+  {
+    "date": "2015-04-08",
+    "closePoint": 1682.38
+  },
+  {
+    "date": "2015-04-07",
+    "closePoint": 1610.59
+  },
+  {
+    "date": "2015-04-03",
+    "closePoint": 1588.37
+  },
+  {
+    "date": "2015-04-02",
+    "closePoint": 1530.6
+  },
+  {
+    "date": "2015-04-01",
+    "closePoint": 1550.34
+  },
+  {
+    "date": "2015-03-31",
+    "closePoint": 1500.84
+  },
+  {
+    "date": "2015-03-30",
+    "closePoint": 1497.19
+  },
+  {
+    "date": "2015-03-27",
+    "closePoint": 1457.54
+  },
+  {
+    "date": "2015-03-26",
+    "closePoint": 1446.54
+  },
+  {
+    "date": "2015-03-25",
+    "closePoint": 1454.38
+  },
+  {
+    "date": "2015-03-24",
+    "closePoint": 1469.92
+  },
+  {
+    "date": "2015-03-23",
+    "closePoint": 1500.24
+  },
+  {
+    "date": "2015-03-20",
+    "closePoint": 1471.3
+  },
+  {
+    "date": "2015-03-19",
+    "closePoint": 1382.29
+  },
+  {
+    "date": "2015-03-18",
+    "closePoint": 1390.96
+  },
+  {
+    "date": "2015-03-17",
+    "closePoint": 1364.25
+  },
+  {
+    "date": "2015-03-16",
+    "closePoint": 1323.87
+  },
+  {
+    "date": "2015-03-13",
+    "closePoint": 1294.34
+  },
+  {
+    "date": "2015-03-12",
+    "closePoint": 1291.34
+  },
+  {
+    "date": "2015-03-11",
+    "closePoint": 1260.89
+  },
+  {
+    "date": "2015-03-10",
+    "closePoint": 1258.92
+  },
+  {
+    "date": "2015-03-09",
+    "closePoint": 1258.8
+  },
+  {
+    "date": "2015-03-06",
+    "closePoint": 1288.82
+  },
+  {
+    "date": "2015-03-05",
+    "closePoint": 1297.24
+  },
+  {
+    "date": "2015-03-04",
+    "closePoint": 1293.34
+  },
+  {
+    "date": "2015-03-03",
+    "closePoint": 1296.96
+  },
+  {
+    "date": "2015-03-02",
+    "closePoint": 1353.37
+  },
+  {
+    "date": "2015-02-27",
+    "closePoint": 1334.94
+  },
+  {
+    "date": "2015-02-26",
+    "closePoint": 1345.52
+  },
+  {
+    "date": "2015-02-25",
+    "closePoint": 1279.42
+  },
+  {
+    "date": "2015-02-17",
+    "closePoint": 1308.36
+  },
+  {
+    "date": "2015-02-16",
+    "closePoint": 1296.29
+  },
+  {
+    "date": "2015-02-13",
+    "closePoint": 1301.12
+  },
+  {
+    "date": "2015-02-12",
+    "closePoint": 1304.9
+  },
+  {
+    "date": "2015-02-11",
+    "closePoint": 1312.71
+  },
+  {
+    "date": "2015-02-10",
+    "closePoint": 1308.65
+  },
+  {
+    "date": "2015-02-09",
+    "closePoint": 1292.48
+  },
+  {
+    "date": "2015-02-06",
+    "closePoint": 1232.5
+  },
+  {
+    "date": "2015-02-05",
+    "closePoint": 1227.19
+  },
+  {
+    "date": "2015-02-04",
+    "closePoint": 1221.19
+  },
+  {
+    "date": "2015-02-03",
+    "closePoint": 1238.59
+  },
+  {
+    "date": "2015-02-02",
+    "closePoint": 1183.22
+  },
+  {
+    "date": "2015-01-30",
+    "closePoint": 1222.09
+  },
+  {
+    "date": "2015-01-29",
+    "closePoint": 1244.23
+  },
+  {
+    "date": "2015-01-28",
+    "closePoint": 1275.65
+  },
+  {
+    "date": "2015-01-27",
+    "closePoint": 1280.39
+  },
+  {
+    "date": "2015-01-26",
+    "closePoint": 1302.15
+  },
+  {
+    "date": "2015-01-23",
+    "closePoint": 1288.84
+  },
+  {
+    "date": "2015-01-22",
+    "closePoint": 1265.44
+  },
+  {
+    "date": "2015-01-21",
+    "closePoint": 1255.06
+  },
+  {
+    "date": "2015-01-20",
+    "closePoint": 1168.81
+  },
+  {
+    "date": "2015-01-19",
+    "closePoint": 1252.73
+  },
+  {
+    "date": "2015-01-16",
+    "closePoint": 1384.27
+  },
+  {
+    "date": "2015-01-15",
+    "closePoint": 1397.31
+  },
+  {
+    "date": "2015-01-14",
+    "closePoint": 1352.23
+  },
+  {
+    "date": "2015-01-13",
+    "closePoint": 1332.9
+  },
+  {
+    "date": "2015-01-12",
+    "closePoint": 1373.26
+  },
+  {
+    "date": "2015-01-09",
+    "closePoint": 1399.98
+  },
+  {
+    "date": "2015-01-08",
+    "closePoint": 1407.54
+  },
+  {
+    "date": "2015-01-07",
+    "closePoint": 1460.97
+  },
+  {
+    "date": "2015-01-06",
+    "closePoint": 1420.14
+  },
+  {
+    "date": "2015-01-05",
+    "closePoint": 1434.8
+  },
+  {
+    "date": "2014-12-31",
+    "closePoint": 1436.18
+  },
+  {
+    "date": "2014-12-30",
+    "closePoint": 1415.67
+  },
+  {
+    "date": "2014-12-29",
+    "closePoint": 1383.87
+  },
+  {
+    "date": "2014-12-26",
+    "closePoint": 1419.56
+  },
+  {
+    "date": "2014-12-25",
+    "closePoint": 1297.97
+  },
+  {
+    "date": "2014-12-24",
+    "closePoint": 1247.51
+  },
+  {
+    "date": "2014-12-23",
+    "closePoint": 1346.39
+  },
+  {
+    "date": "2014-12-22",
+    "closePoint": 1341.91
+  },
+  {
+    "date": "2014-12-19",
+    "closePoint": 1376.72
+  },
+  {
+    "date": "2014-12-18",
+    "closePoint": 1388.17
+  },
+  {
+    "date": "2014-12-17",
+    "closePoint": 1487.54
+  },
+  {
+    "date": "2014-12-16",
+    "closePoint": 1415.09
+  },
+  {
+    "date": "2014-12-15",
+    "closePoint": 1292.64
+  },
+  {
+    "date": "2014-12-12",
+    "closePoint": 1249.68
+  },
+  {
+    "date": "2014-12-11",
+    "closePoint": 1218.22
+  },
+  {
+    "date": "2014-12-10",
+    "closePoint": 1311.64
+  },
+  {
+    "date": "2014-12-09",
+    "closePoint": 1303.77
+  },
+  {
+    "date": "2014-12-08",
+    "closePoint": 1341.25
+  },
+  {
+    "date": "2014-12-05",
+    "closePoint": 1228.53
+  },
+  {
+    "date": "2014-12-04",
+    "closePoint": 1116.86
+  },
+  {
+    "date": "2014-12-03",
+    "closePoint": 1029.03
+  },
+  {
+    "date": "2014-12-02",
+    "closePoint": 1006.72
+  },
+  {
+    "date": "2014-12-01",
+    "closePoint": 925.357
+  },
+  {
+    "date": "2014-11-28",
+    "closePoint": 910.973
+  },
+  {
+    "date": "2014-11-27",
+    "closePoint": 915.317
+  },
+  {
+    "date": "2014-11-26",
+    "closePoint": 862.351
+  },
+  {
+    "date": "2014-11-25",
+    "closePoint": 820.825
+  },
+  {
+    "date": "2014-11-24",
+    "closePoint": 817.708
+  },
+  {
+    "date": "2014-11-21",
+    "closePoint": 766.392
+  },
+  {
+    "date": "2014-11-20",
+    "closePoint": 722.576
+  },
+  {
+    "date": "2014-11-19",
+    "closePoint": 710.912
+  },
+  {
+    "date": "2014-11-18",
+    "closePoint": 714.388
+  },
+  {
+    "date": "2014-11-17",
+    "closePoint": 722.011
+  },
+  {
+    "date": "2014-11-14",
+    "closePoint": 730.894
+  },
+  {
+    "date": "2014-11-13",
+    "closePoint": 737.485
+  },
+  {
+    "date": "2014-11-12",
+    "closePoint": 749.704
+  },
+  {
+    "date": "2014-11-11",
+    "closePoint": 716.61
+  },
+  {
+    "date": "2014-11-10",
+    "closePoint": 711.774
+  },
+  {
+    "date": "2014-11-07",
+    "closePoint": 682.86
+  },
+  {
+    "date": "2014-11-06",
+    "closePoint": 661.102
+  },
+  {
+    "date": "2014-11-05",
+    "closePoint": 660.628
+  },
+  {
+    "date": "2014-11-04",
+    "closePoint": 645.628
+  },
+  {
+    "date": "2014-11-03",
+    "closePoint": 644.603
+  },
+  {
+    "date": "2014-10-31",
+    "closePoint": 644.342
+  },
+  {
+    "date": "2014-10-30",
+    "closePoint": 626.111
+  },
+  {
+    "date": "2014-10-29",
+    "closePoint": 622.479
+  },
+  {
+    "date": "2014-10-28",
+    "closePoint": 605.014
+  },
+  {
+    "date": "2014-10-27",
+    "closePoint": 582.078
+  },
+  {
+    "date": "2014-10-24",
+    "closePoint": 603.123
+  },
+  {
+    "date": "2014-10-23",
+    "closePoint": 606.851
+  },
+  {
+    "date": "2014-10-22",
+    "closePoint": 612.078
+  },
+  {
+    "date": "2014-10-21",
+    "closePoint": 621.139
+  },
+  {
+    "date": "2014-10-20",
+    "closePoint": 624.269
+  },
+  {
+    "date": "2014-10-17",
+    "closePoint": 622.128
+  },
+  {
+    "date": "2014-10-16",
+    "closePoint": 612.486
+  },
+  {
+    "date": "2014-10-15",
+    "closePoint": 621.849
+  },
+  {
+    "date": "2014-10-14",
+    "closePoint": 599.68
+  },
+  {
+    "date": "2014-10-13",
+    "closePoint": 600.76
+  },
+  {
+    "date": "2014-10-10",
+    "closePoint": 605.576
+  },
+  {
+    "date": "2014-10-09",
+    "closePoint": 606.818
+  },
+  {
+    "date": "2014-10-08",
+    "closePoint": 610.595
+  },
+  {
+    "date": "2014-09-30",
+    "closePoint": 607.757
+  },
+  {
+    "date": "2014-09-29",
+    "closePoint": 608.679
+  },
+  {
+    "date": "2014-09-26",
+    "closePoint": 601.355
+  },
+  {
+    "date": "2014-09-25",
+    "closePoint": 600.16
+  },
+  {
+    "date": "2014-09-24",
+    "closePoint": 604.709
+  },
+  {
+    "date": "2014-09-23",
+    "closePoint": 577.85
+  },
+  {
+    "date": "2014-09-22",
+    "closePoint": 568.213
+  },
+  {
+    "date": "2014-09-19",
+    "closePoint": 577.155
+  },
+  {
+    "date": "2014-09-18",
+    "closePoint": 573.709
+  },
+  {
+    "date": "2014-09-17",
+    "closePoint": 569.45
+  },
+  {
+    "date": "2014-09-16",
+    "closePoint": 567.323
+  },
+  {
+    "date": "2014-09-15",
+    "closePoint": 586.538
+  },
+  {
+    "date": "2014-09-12",
+    "closePoint": 585.364
+  },
+  {
+    "date": "2014-09-11",
+    "closePoint": 583.757
+  },
+  {
+    "date": "2014-09-10",
+    "closePoint": 581.523
+  },
+  {
+    "date": "2014-09-09",
+    "closePoint": 586.243
+  },
+  {
+    "date": "2014-09-05",
+    "closePoint": 592.419
+  },
+  {
+    "date": "2014-09-04",
+    "closePoint": 587.384
+  },
+  {
+    "date": "2014-09-03",
+    "closePoint": 577.094
+  },
+  {
+    "date": "2014-09-02",
+    "closePoint": 577.481
+  },
+  {
+    "date": "2014-09-01",
+    "closePoint": 563.333
+  },
+  {
+    "date": "2014-08-29",
+    "closePoint": 560.645
+  },
+  {
+    "date": "2014-08-28",
+    "closePoint": 553.06
+  },
+  {
+    "date": "2014-08-27",
+    "closePoint": 553.336
+  },
+  {
+    "date": "2014-08-26",
+    "closePoint": 552.592
+  },
+  {
+    "date": "2014-08-25",
+    "closePoint": 560.352
+  },
+  {
+    "date": "2014-08-22",
+    "closePoint": 570.011
+  },
+  {
+    "date": "2014-08-21",
+    "closePoint": 566.06
+  },
+  {
+    "date": "2014-08-20",
+    "closePoint": 574.608
+  },
+  {
+    "date": "2014-08-19",
+    "closePoint": 574.768
+  },
+  {
+    "date": "2014-08-18",
+    "closePoint": 580.759
+  },
+  {
+    "date": "2014-08-15",
+    "closePoint": 577.868
+  },
+  {
+    "date": "2014-08-14",
+    "closePoint": 564.18
+  },
+  {
+    "date": "2014-08-13",
+    "closePoint": 573.109
+  },
+  {
+    "date": "2014-08-12",
+    "closePoint": 570.533
+  },
+  {
+    "date": "2014-08-11",
+    "closePoint": 572.612
+  },
+  {
+    "date": "2014-08-08",
+    "closePoint": 562.424
+  },
+  {
+    "date": "2014-08-07",
+    "closePoint": 562.244
+  },
+  {
+    "date": "2014-08-06",
+    "closePoint": 577.042
+  },
+  {
+    "date": "2014-08-05",
+    "closePoint": 574.874
+  },
+  {
+    "date": "2014-08-04",
+    "closePoint": 576.219
+  },
+  {
+    "date": "2014-08-01",
+    "closePoint": 554.005
+  },
+  {
+    "date": "2014-07-31",
+    "closePoint": 566.904
+  },
+  {
+    "date": "2014-07-30",
+    "closePoint": 558.699
+  },
+  {
+    "date": "2014-07-29",
+    "closePoint": 556.107
+  },
+  {
+    "date": "2014-07-28",
+    "closePoint": 554.388
+  },
+  {
+    "date": "2014-07-25",
+    "closePoint": 527.941
+  },
+  {
+    "date": "2014-07-24",
+    "closePoint": 520.523
+  },
+  {
+    "date": "2014-07-23",
+    "closePoint": 503.356
+  },
+  {
+    "date": "2014-07-22",
+    "closePoint": 499.682
+  },
+  {
+    "date": "2014-07-21",
+    "closePoint": 492.032
+  },
+  {
+    "date": "2014-07-18",
+    "closePoint": 495.817
+  },
+  {
+    "date": "2014-07-17",
+    "closePoint": 492.039
+  },
+  {
+    "date": "2014-07-16",
+    "closePoint": 494.435
+  },
+  {
+    "date": "2014-07-15",
+    "closePoint": 495.289
+  },
+  {
+    "date": "2014-07-14",
+    "closePoint": 496.718
+  },
+  {
+    "date": "2014-07-11",
+    "closePoint": 489.81
+  },
+  {
+    "date": "2014-07-10",
+    "closePoint": 486.425
+  },
+  {
+    "date": "2014-07-09",
+    "closePoint": 486.27
+  },
+  {
+    "date": "2014-07-08",
+    "closePoint": 494.539
+  },
+  {
+    "date": "2014-07-07",
+    "closePoint": 495.135
+  },
+  {
+    "date": "2014-07-04",
+    "closePoint": 495.887
+  },
+  {
+    "date": "2014-07-03",
+    "closePoint": 497.864
+  },
+  {
+    "date": "2014-07-02",
+    "closePoint": 497.496
+  },
+  {
+    "date": "2014-07-01",
+    "closePoint": 492.544
+  },
+  {
+    "date": "2014-06-30",
+    "closePoint": 493.381
+  },
+  {
+    "date": "2014-06-27",
+    "closePoint": 489.671
+  },
+  {
+    "date": "2014-06-26",
+    "closePoint": 488.577
+  },
+  {
+    "date": "2014-06-25",
+    "closePoint": 483.327
+  },
+  {
+    "date": "2014-06-24",
+    "closePoint": 486.657
+  },
+  {
+    "date": "2014-06-23",
+    "closePoint": 483.514
+  },
+  {
+    "date": "2014-06-20",
+    "closePoint": 483.876
+  },
+  {
+    "date": "2014-06-19",
+    "closePoint": 482.374
+  },
+  {
+    "date": "2014-06-18",
+    "closePoint": 494.144
+  },
+  {
+    "date": "2014-06-17",
+    "closePoint": 497.193
+  },
+  {
+    "date": "2014-06-16",
+    "closePoint": 504.255
+  },
+  {
+    "date": "2014-06-13",
+    "closePoint": 501.004
+  },
+  {
+    "date": "2014-06-12",
+    "closePoint": 494.914
+  },
+  {
+    "date": "2014-06-11",
+    "closePoint": 496.921
+  },
+  {
+    "date": "2014-06-10",
+    "closePoint": 500.379
+  },
+  {
+    "date": "2014-06-09",
+    "closePoint": 490.056
+  },
+  {
+    "date": "2014-06-06",
+    "closePoint": 492.583
+  },
+  {
+    "date": "2014-06-05",
+    "closePoint": 497.225
+  },
+  {
+    "date": "2014-06-04",
+    "closePoint": 491.791
+  },
+  {
+    "date": "2014-06-03",
+    "closePoint": 496.679
+  },
+  {
+    "date": "2014-05-30",
+    "closePoint": 499.75
+  },
+  {
+    "date": "2014-05-29",
+    "closePoint": 497.479
+  },
+  {
+    "date": "2014-05-28",
+    "closePoint": 507.899
+  },
+  {
+    "date": "2014-05-27",
+    "closePoint": 497.555
+  },
+  {
+    "date": "2014-05-26",
+    "closePoint": 502.82
+  },
+  {
+    "date": "2014-05-23",
+    "closePoint": 503.71
+  },
+  {
+    "date": "2014-05-22",
+    "closePoint": 498.871
+  },
+  {
+    "date": "2014-05-21",
+    "closePoint": 501.359
+  },
+  {
+    "date": "2014-05-20",
+    "closePoint": 496.29
+  },
+  {
+    "date": "2014-05-19",
+    "closePoint": 494.492
+  },
+  {
+    "date": "2014-05-16",
+    "closePoint": 505.931
+  },
+  {
+    "date": "2014-05-15",
+    "closePoint": 512.435
+  },
+  {
+    "date": "2014-05-14",
+    "closePoint": 526.208
+  },
+  {
+    "date": "2014-05-13",
+    "closePoint": 525.183
+  },
+  {
+    "date": "2014-05-12",
+    "closePoint": 528.821
+  },
+  {
+    "date": "2014-05-09",
+    "closePoint": 514.057
+  },
+  {
+    "date": "2014-05-08",
+    "closePoint": 509.719
+  },
+  {
+    "date": "2014-05-07",
+    "closePoint": 506.108
+  },
+  {
+    "date": "2014-05-06",
+    "closePoint": 506.187
+  },
+  {
+    "date": "2014-05-05",
+    "closePoint": 508.272
+  },
+  {
+    "date": "2014-04-30",
+    "closePoint": 503.726
+  },
+  {
+    "date": "2014-04-29",
+    "closePoint": 505.436
+  },
+  {
+    "date": "2014-04-28",
+    "closePoint": 494.765
+  },
+  {
+    "date": "2014-04-25",
+    "closePoint": 502.821
+  },
+  {
+    "date": "2014-04-24",
+    "closePoint": 507.589
+  },
+  {
+    "date": "2014-04-23",
+    "closePoint": 507.846
+  },
+  {
+    "date": "2014-04-22",
+    "closePoint": 513.428
+  },
+  {
+    "date": "2014-04-21",
+    "closePoint": 509.178
+  },
+  {
+    "date": "2014-04-18",
+    "closePoint": 521.928
+  },
+  {
+    "date": "2014-04-17",
+    "closePoint": 519.703
+  },
+  {
+    "date": "2014-04-16",
+    "closePoint": 519.267
+  },
+  {
+    "date": "2014-04-15",
+    "closePoint": 515.242
+  },
+  {
+    "date": "2014-04-14",
+    "closePoint": 527.945
+  },
+  {
+    "date": "2014-04-11",
+    "closePoint": 529.627
+  },
+  {
+    "date": "2014-04-10",
+    "closePoint": 533.475
+  },
+  {
+    "date": "2014-04-09",
+    "closePoint": 511.255
+  },
+  {
+    "date": "2014-04-08",
+    "closePoint": 514.258
+  },
+  {
+    "date": "2014-04-04",
+    "closePoint": 500.917
+  },
+  {
+    "date": "2014-04-03",
+    "closePoint": 493.302
+  },
+  {
+    "date": "2014-04-02",
+    "closePoint": 491.547
+  },
+  {
+    "date": "2014-04-01",
+    "closePoint": 488.894
+  },
+  {
+    "date": "2014-03-31",
+    "closePoint": 483.37
+  },
+  {
+    "date": "2014-03-28",
+    "closePoint": 487.355
+  },
+  {
+    "date": "2014-03-27",
+    "closePoint": 490.349
+  },
+  {
+    "date": "2014-03-26",
+    "closePoint": 496.486
+  },
+  {
+    "date": "2014-03-25",
+    "closePoint": 500.727
+  },
+  {
+    "date": "2014-03-24",
+    "closePoint": 501.389
+  },
+  {
+    "date": "2014-03-21",
+    "closePoint": 490.366
+  },
+  {
+    "date": "2014-03-20",
+    "closePoint": 468.253
+  },
+  {
+    "date": "2014-03-19",
+    "closePoint": 476.643
+  },
+  {
+    "date": "2014-03-18",
+    "closePoint": 480.057
+  },
+  {
+    "date": "2014-03-17",
+    "closePoint": 483.101
+  },
+  {
+    "date": "2014-03-14",
+    "closePoint": 481.759
+  },
+  {
+    "date": "2014-03-13",
+    "closePoint": 483.878
+  },
+  {
+    "date": "2014-03-12",
+    "closePoint": 477.346
+  },
+  {
+    "date": "2014-03-11",
+    "closePoint": 482.884
+  },
+  {
+    "date": "2014-03-10",
+    "closePoint": 480.672
+  },
+  {
+    "date": "2014-03-07",
+    "closePoint": 496.137
+  },
+  {
+    "date": "2014-03-06",
+    "closePoint": 500.754
+  },
+  {
+    "date": "2014-03-05",
+    "closePoint": 496.2
+  },
+  {
+    "date": "2014-03-04",
+    "closePoint": 502.553
+  },
+  {
+    "date": "2014-03-03",
+    "closePoint": 502.014
+  },
+  {
+    "date": "2014-02-28",
+    "closePoint": 508.191
+  },
+  {
+    "date": "2014-02-27",
+    "closePoint": 485.148
+  },
+  {
+    "date": "2014-02-26",
+    "closePoint": 487.768
+  },
+  {
+    "date": "2014-02-25",
+    "closePoint": 491.206
+  },
+  {
+    "date": "2014-02-24",
+    "closePoint": 506.704
+  },
+  {
+    "date": "2014-02-21",
+    "closePoint": 514.491
+  },
+  {
+    "date": "2014-02-20",
+    "closePoint": 525.834
+  },
+  {
+    "date": "2014-02-19",
+    "closePoint": 539.379
+  },
+  {
+    "date": "2014-02-18",
+    "closePoint": 537.897
+  },
+  {
+    "date": "2014-02-17",
+    "closePoint": 555.935
+  },
+  {
+    "date": "2014-02-14",
+    "closePoint": 551.131
+  },
+  {
+    "date": "2014-02-13",
+    "closePoint": 548.449
+  },
+  {
+    "date": "2014-02-12",
+    "closePoint": 556.1
+  },
+  {
+    "date": "2014-02-11",
+    "closePoint": 555.308
+  },
+  {
+    "date": "2014-02-10",
+    "closePoint": 553.346
+  },
+  {
+    "date": "2014-02-07",
+    "closePoint": 540.456
+  },
+  {
+    "date": "2014-01-30",
+    "closePoint": 536.372
+  },
+  {
+    "date": "2014-01-29",
+    "closePoint": 544.212
+  },
+  {
+    "date": "2014-01-28",
+    "closePoint": 539.386
+  },
+  {
+    "date": "2014-01-27",
+    "closePoint": 535.356
+  },
+  {
+    "date": "2014-01-24",
+    "closePoint": 550.579
+  },
+  {
+    "date": "2014-01-23",
+    "closePoint": 543.816
+  },
+  {
+    "date": "2014-01-22",
+    "closePoint": 548.68
+  },
+  {
+    "date": "2014-01-21",
+    "closePoint": 533.891
+  },
+  {
+    "date": "2014-01-20",
+    "closePoint": 522.977
+  },
+  {
+    "date": "2014-01-17",
+    "closePoint": 525.283
+  },
+  {
+    "date": "2014-01-16",
+    "closePoint": 527.172
+  },
+  {
+    "date": "2014-01-15",
+    "closePoint": 525.386
+  },
+  {
+    "date": "2014-01-14",
+    "closePoint": 526.431
+  },
+  {
+    "date": "2014-01-13",
+    "closePoint": 521.772
+  },
+  {
+    "date": "2014-01-10",
+    "closePoint": 525.482
+  },
+  {
+    "date": "2014-01-09",
+    "closePoint": 536.55
+  },
+  {
+    "date": "2014-01-08",
+    "closePoint": 546.184
+  },
+  {
+    "date": "2014-01-07",
+    "closePoint": 541.529
+  },
+  {
+    "date": "2014-01-06",
+    "closePoint": 545.609
+  },
+  {
+    "date": "2014-01-03",
+    "closePoint": 546.379
+  },
+  {
+    "date": "2014-01-02",
+    "closePoint": 560.862
+  },
+  {
+    "date": "2013-12-31",
+    "closePoint": 565.346
+  },
+  {
+    "date": "2013-12-30",
+    "closePoint": 555.264
+  },
+  {
+    "date": "2013-12-27",
+    "closePoint": 555.372
+  },
+  {
+    "date": "2013-12-26",
+    "closePoint": 543.76
+  },
+  {
+    "date": "2013-12-25",
+    "closePoint": 552.886
+  },
+  {
+    "date": "2013-12-24",
+    "closePoint": 542.658
+  },
+  {
+    "date": "2013-12-23",
+    "closePoint": 544.634
+  },
+  {
+    "date": "2013-12-20",
+    "closePoint": 545.688
+  },
+  {
+    "date": "2013-12-19",
+    "closePoint": 559.44
+  },
+  {
+    "date": "2013-12-18",
+    "closePoint": 560.434
+  },
+  {
+    "date": "2013-12-17",
+    "closePoint": 555.342
+  },
+  {
+    "date": "2013-12-16",
+    "closePoint": 555.304
+  },
+  {
+    "date": "2013-12-13",
+    "closePoint": 567.684
+  },
+  {
+    "date": "2013-12-12",
+    "closePoint": 563.24
+  },
+  {
+    "date": "2013-12-11",
+    "closePoint": 564.336
+  },
+  {
+    "date": "2013-12-10",
+    "closePoint": 582.599
+  },
+  {
+    "date": "2013-12-09",
+    "closePoint": 580.937
+  },
+  {
+    "date": "2013-12-06",
+    "closePoint": 582.028
+  },
+  {
+    "date": "2013-12-05",
+    "closePoint": 594.059
+  },
+  {
+    "date": "2013-12-04",
+    "closePoint": 589.481
+  },
+  {
+    "date": "2013-12-03",
+    "closePoint": 589.625
+  },
+  {
+    "date": "2013-12-02",
+    "closePoint": 591.256
+  },
+  {
+    "date": "2013-11-29",
+    "closePoint": 563.177
+  },
+  {
+    "date": "2013-11-28",
+    "closePoint": 562.823
+  },
+  {
+    "date": "2013-11-27",
+    "closePoint": 564.16
+  },
+  {
+    "date": "2013-11-26",
+    "closePoint": 546.702
+  },
+  {
+    "date": "2013-11-25",
+    "closePoint": 543.333
+  },
+  {
+    "date": "2013-11-22",
+    "closePoint": 547.628
+  },
+  {
+    "date": "2013-11-21",
+    "closePoint": 547.474
+  },
+  {
+    "date": "2013-11-20",
+    "closePoint": 550.969
+  },
+  {
+    "date": "2013-11-19",
+    "closePoint": 547.773
+  },
+  {
+    "date": "2013-11-18",
+    "closePoint": 554.442
+  },
+  {
+    "date": "2013-11-15",
+    "closePoint": 521.007
+  },
+  {
+    "date": "2013-11-14",
+    "closePoint": 494.68
+  },
+  {
+    "date": "2013-11-13",
+    "closePoint": 491.649
+  },
+  {
+    "date": "2013-11-12",
+    "closePoint": 507.534
+  },
+  {
+    "date": "2013-11-11",
+    "closePoint": 501.438
+  },
+  {
+    "date": "2013-11-08",
+    "closePoint": 501.846
+  },
+  {
+    "date": "2013-11-07",
+    "closePoint": 519.78
+  },
+  {
+    "date": "2013-11-06",
+    "closePoint": 524.732
+  },
+  {
+    "date": "2013-11-05",
+    "closePoint": 534.03
+  },
+  {
+    "date": "2013-11-04",
+    "closePoint": 536.015
+  },
+  {
+    "date": "2013-11-01",
+    "closePoint": 540.963
+  },
+  {
+    "date": "2013-10-31",
+    "closePoint": 534.981
+  },
+  {
+    "date": "2013-10-30",
+    "closePoint": 540.995
+  },
+  {
+    "date": "2013-10-29",
+    "closePoint": 537.012
+  },
+  {
+    "date": "2013-10-28",
+    "closePoint": 528.433
+  },
+  {
+    "date": "2013-10-25",
+    "closePoint": 529.21
+  },
+  {
+    "date": "2013-10-24",
+    "closePoint": 533.589
+  },
+  {
+    "date": "2013-10-23",
+    "closePoint": 542.3
+  },
+  {
+    "date": "2013-10-22",
+    "closePoint": 543.967
+  },
+  {
+    "date": "2013-10-21",
+    "closePoint": 552.099
+  },
+  {
+    "date": "2013-10-18",
+    "closePoint": 545.217
+  },
+  {
+    "date": "2013-10-17",
+    "closePoint": 536.937
+  },
+  {
+    "date": "2013-10-16",
+    "closePoint": 535.53
+  },
+  {
+    "date": "2013-10-15",
+    "closePoint": 549.867
+  },
+  {
+    "date": "2013-10-14",
+    "closePoint": 548.561
+  },
+  {
+    "date": "2013-10-11",
+    "closePoint": 553.516
+  },
+  {
+    "date": "2013-10-10",
+    "closePoint": 543.317
+  },
+  {
+    "date": "2013-10-09",
+    "closePoint": 562.368
+  },
+  {
+    "date": "2013-10-08",
+    "closePoint": 559.644
+  },
+  {
+    "date": "2013-09-30",
+    "closePoint": 553.007
+  },
+  {
+    "date": "2013-09-27",
+    "closePoint": 559.504
+  },
+  {
+    "date": "2013-09-26",
+    "closePoint": 547.07
+  },
+  {
+    "date": "2013-09-25",
+    "closePoint": 558.299
+  },
+  {
+    "date": "2013-09-24",
+    "closePoint": 563.283
+  },
+  {
+    "date": "2013-09-23",
+    "closePoint": 578.286
+  },
+  {
+    "date": "2013-09-18",
+    "closePoint": 572.739
+  },
+  {
+    "date": "2013-09-17",
+    "closePoint": 567.711
+  },
+  {
+    "date": "2013-09-16",
+    "closePoint": 578.991
+  },
+  {
+    "date": "2013-09-13",
+    "closePoint": 589.135
+  },
+  {
+    "date": "2013-09-12",
+    "closePoint": 598.8
+  },
+  {
+    "date": "2013-09-11",
+    "closePoint": 583.976
+  },
+  {
+    "date": "2013-09-10",
+    "closePoint": 587.152
+  },
+  {
+    "date": "2013-09-09",
+    "closePoint": 564.404
+  },
+  {
+    "date": "2013-09-06",
+    "closePoint": 534.658
+  },
+  {
+    "date": "2013-09-05",
+    "closePoint": 530.51
+  },
+  {
+    "date": "2013-09-04",
+    "closePoint": 535.981
+  },
+  {
+    "date": "2013-09-03",
+    "closePoint": 540.945
+  },
+  {
+    "date": "2013-09-02",
+    "closePoint": 539.711
+  },
+  {
+    "date": "2013-08-30",
+    "closePoint": 538.354
+  },
+  {
+    "date": "2013-08-29",
+    "closePoint": 532.581
+  },
+  {
+    "date": "2013-08-28",
+    "closePoint": 529.253
+  },
+  {
+    "date": "2013-08-27",
+    "closePoint": 536.457
+  },
+  {
+    "date": "2013-08-26",
+    "closePoint": 535.91
+  },
+  {
+    "date": "2013-08-23",
+    "closePoint": 509.477
+  },
+  {
+    "date": "2013-08-22",
+    "closePoint": 516.508
+  },
+  {
+    "date": "2013-08-21",
+    "closePoint": 520.217
+  },
+  {
+    "date": "2013-08-20",
+    "closePoint": 517.813
+  },
+  {
+    "date": "2013-08-19",
+    "closePoint": 528.717
+  },
+  {
+    "date": "2013-08-16",
+    "closePoint": 540.638
+  },
+  {
+    "date": "2013-08-15",
+    "closePoint": 539.842
+  },
+  {
+    "date": "2013-08-14",
+    "closePoint": 548.758
+  },
+  {
+    "date": "2013-08-13",
+    "closePoint": 555.026
+  },
+  {
+    "date": "2013-08-12",
+    "closePoint": 556.128
+  },
+  {
+    "date": "2013-08-09",
+    "closePoint": 535.271
+  },
+  {
+    "date": "2013-08-08",
+    "closePoint": 529.095
+  },
+  {
+    "date": "2013-08-07",
+    "closePoint": 536.845
+  },
+  {
+    "date": "2013-08-06",
+    "closePoint": 542.352
+  },
+  {
+    "date": "2013-08-05",
+    "closePoint": 539.54
+  },
+  {
+    "date": "2013-08-02",
+    "closePoint": 531.878
+  },
+  {
+    "date": "2013-08-01",
+    "closePoint": 536.025
+  },
+  {
+    "date": "2013-07-31",
+    "closePoint": 517.061
+  },
+  {
+    "date": "2013-07-30",
+    "closePoint": 513.981
+  },
+  {
+    "date": "2013-07-29",
+    "closePoint": 501.995
+  },
+  {
+    "date": "2013-07-26",
+    "closePoint": 519.985
+  },
+  {
+    "date": "2013-07-25",
+    "closePoint": 526.271
+  },
+  {
+    "date": "2013-07-24",
+    "closePoint": 526.26
+  },
+  {
+    "date": "2013-07-23",
+    "closePoint": 531.422
+  },
+  {
+    "date": "2013-07-22",
+    "closePoint": 508.034
+  },
+  {
+    "date": "2013-07-19",
+    "closePoint": 499.601
+  },
+  {
+    "date": "2013-07-18",
+    "closePoint": 516.96
+  },
+  {
+    "date": "2013-07-17",
+    "closePoint": 528.296
+  },
+  {
+    "date": "2013-07-16",
+    "closePoint": 543.943
+  }
+]

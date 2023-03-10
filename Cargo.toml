@@ -1,0 +1,6 @@
+[workspace]
+members = ["midas-core", "midas-http"]
+
+[profile.release]
+lto = true
+strip = true
