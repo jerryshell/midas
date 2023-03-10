@@ -39,6 +39,9 @@ const App: Component = () => {
 
   createEffect(() => {
     setChartData({
+      theme: {
+        mode: 'dark',
+      },
       series: [
         {
           name: 'Close Point',

@@ -3,7 +3,7 @@ pub mod model;
 pub fn get_index_code_list() -> Result<Vec<crate::model::IndexCode>, Box<dyn std::error::Error>> {
     let file = std::fs::File::open("./index-data/codes.json")?;
     let reader = std::io::BufReader::new(file);
-    let index_code_list = serde_json::from_reader(reader)?;
+    let index_code_list = serde_json::from_reader::<_, Vec<crate::model::IndexCode>>(reader)?;
     Ok(index_code_list)
 }
 
@@ -12,8 +12,9 @@ pub fn get_index_data_list_by_code(
 ) -> Result<Vec<crate::model::IndexData>, Box<dyn std::error::Error>> {
     let file = std::fs::File::open(format!("./index-data/{}.json", code))?;
     let reader = std::io::BufReader::new(file);
-    let index_data = serde_json::from_reader(reader)?;
-    Ok(index_data)
+    let mut index_data_list = serde_json::from_reader::<_, Vec<crate::model::IndexData>>(reader)?;
+    index_data_list.sort_by(|a, b| a.date.cmp(&b.date));
+    Ok(index_data_list)
 }
 
 #[cfg(test)]
