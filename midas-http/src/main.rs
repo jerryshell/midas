@@ -15,6 +15,10 @@ async fn main() {
             "/indexCode/list",
             axum::routing::get(midas_http::controller::index_code::list),
         )
+        .route(
+            "/indexData/list/:code",
+            axum::routing::get(midas_http::controller::index_data::list_by_code),
+        )
         .layer(cors);
 
     // init port
