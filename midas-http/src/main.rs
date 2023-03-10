@@ -25,7 +25,7 @@ async fn main() {
     let port = std::env::var("PORT")
         .ok()
         .and_then(|s| s.parse().ok())
-        .unwrap_or(3000);
+        .unwrap_or(8000);
     tracing::info!(port);
 
     // run app
