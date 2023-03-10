@@ -1,20 +1,14 @@
 import { Component, createEffect, createSignal, For } from 'solid-js';
 import api from './api/api';
-
-interface IndexCode {
-  code: string,
-  name: string,
-}
-
-interface IndexData {
-  date: string,
-  closePoint: string,
-}
+import Chart from './Chart';
+import IIndexCode from './interfaces/IIndexCode';
+import IIndexData from './interfaces/IIndexData';
+import { setChartData } from './ChartData';
 
 const App: Component = () => {
-  const [indexCodeList, setIndexCodeList] = createSignal([] as IndexCode[])
-  const [indexDataList, setIndexDataList] = createSignal([] as IndexData[])
-  const [currentIndexCode, setCurrentIndexCode] = createSignal({} as IndexCode)
+  const [indexCodeList, setIndexCodeList] = createSignal([] as IIndexCode[])
+  const [indexDataList, setIndexDataList] = createSignal([] as IIndexData[])
+  const [currentIndexCode, setCurrentIndexCode] = createSignal({} as IIndexCode)
 
   const fetchIndexCodeList = async () => {
     return api.get('/indexCode/list').then(response => {
@@ -43,6 +37,20 @@ const App: Component = () => {
     }
   })
 
+  createEffect(() => {
+    setChartData({
+      series: [
+        {
+          name: 'Close Point',
+          data: indexDataList().map(item => item.closePoint)
+        }
+      ],
+      xaxis: {
+        categories: indexDataList().map(item => item.date)
+      }
+    });
+  })
+
   const handleSelectChange = (code: string) => {
     const indexCode = indexCodeList().find(item => item.code === code)
     if (indexCode) {
@@ -60,6 +68,7 @@ const App: Component = () => {
           )}
         </For>
       </select>
+      <Chart />
     </div>
   );
 };
