@@ -3,7 +3,7 @@ import { chartData } from './ChartData';
 
 const Chart = () => {
   return (
-    <SolidApexCharts options={chartData()} series={[]} type="line" />
+    <SolidApexCharts type="line" options={chartData()} series={[]} />
   )
 };
 

@@ -41,10 +41,11 @@ const App: Component = () => {
     setChartData({
       theme: {
         mode: 'dark',
+        palette: 'palette1',
       },
       series: [
         {
-          name: 'Close Point',
+          name: '收盘价',
           data: indexDataList().map(item => item.closePoint)
         }
       ],
