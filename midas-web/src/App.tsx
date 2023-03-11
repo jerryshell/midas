@@ -3,12 +3,14 @@ import api from './api/api';
 import Chart from './Chart';
 import IIndexCode from './interfaces/IIndexCode';
 import IIndexData from './interfaces/IIndexData';
+import IProfitData from './interfaces/IProfitData';
 import { setChartData } from './ChartData';
 
 const App: Component = () => {
   const [indexCodeList, setIndexCodeList] = createSignal([] as IIndexCode[])
   const [indexDataList, setIndexDataList] = createSignal([] as IIndexData[])
   const [currentIndexCode, setCurrentIndexCode] = createSignal({} as IIndexCode)
+  const [profitDataList, setProfitDataList] = createSignal([] as IProfitData[])
 
   const fetchIndexCodeList = async () => {
     return api.get('/indexCode/list').then(response => {
@@ -24,6 +26,13 @@ const App: Component = () => {
     })
   }
 
+  const fetchProfitDataList = async (code: string) => {
+    return api.post(`/simulate`, { code }).then(response => {
+      console.log('fetchProfitDataList() response', response)
+      setProfitDataList(response.data)
+    })
+  }
+
   createEffect(() => {
     fetchIndexCodeList().then(() => {
       setCurrentIndexCode(indexCodeList()[0])
@@ -34,6 +43,7 @@ const App: Component = () => {
     const code = currentIndexCode().code
     if (code) {
       fetchIndexDataList(code)
+      fetchProfitDataList(code)
     }
   })
 
@@ -46,11 +56,15 @@ const App: Component = () => {
       series: [
         {
           name: '收盘价',
-          data: indexDataList().map(item => item.closePoint)
-        }
+          data: indexDataList().map(item => item.closePoint),
+        },
+        {
+          name: '回测收益',
+          data: profitDataList().map(item => item.value),
+        },
       ],
       xaxis: {
-        categories: indexDataList().map(item => item.date)
+        categories: indexDataList().map(item => item.date),
       }
     });
   })

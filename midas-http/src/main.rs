@@ -20,8 +20,8 @@ async fn main() {
             axum::routing::get(midas_http::controller::index_data::list_by_code),
         )
         .route(
-            "/simulate/:code",
-            axum::routing::get(midas_http::controller::simulate::simulate),
+            "/simulate",
+            axum::routing::post(midas_http::controller::simulate::simulate),
         )
         .layer(cors);
 
