@@ -41,8 +41,8 @@ pub fn simulate(
                         println!("decrese_rate: {decrese_rate:#}");
 
                         if increse_rate >= buy_rate {
-                            if 0f64 == share {
-                                // but
+                            if 0.0 == share {
+                                // buy
                                 println!("buy");
                                 share = cash / close_point;
                                 cash = 0.0;

@@ -29,6 +29,10 @@ const App: Component = () => {
   const fetchProfitDataList = async (code: string) => {
     return api.post(`/simulate`, {
       code,
+      maDays: 30,
+      sellRate: 0.95,
+      buyRate: 1.05,
+      serviceCharge: 0.0,
       // dateBegin: '2015-01-01',
       // dateEnd: '2019-01-01',
     }).then(response => {

@@ -2,6 +2,10 @@
 #[serde(rename_all = "camelCase")]
 pub struct SimulateForm {
     code: String,
+    ma_days: usize,
+    sell_rate: f64,
+    buy_rate: f64,
+    service_charge: f64,
     date_begin: Option<String>,
     date_end: Option<String>,
 }
@@ -22,8 +26,13 @@ pub async fn simulate(
             match filter_result {
                 Err(e) => Err(crate::error::AppError::FailedWithMessage(e.to_string())),
                 Ok(index_data_list) => {
-                    let profit_list =
-                        midas_core::simulate::simulate(30, 0.95, 1.05, 0.0, &index_data_list);
+                    let profit_list = midas_core::simulate::simulate(
+                        form.ma_days,
+                        form.sell_rate,
+                        form.buy_rate,
+                        form.service_charge,
+                        &index_data_list,
+                    );
                     Ok(axum::Json(profit_list))
                 }
             }
