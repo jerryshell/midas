@@ -1,16 +1,23 @@
+import { SolidApexCharts } from 'solid-apexcharts';
 import { Component, createEffect, createSignal, For } from 'solid-js';
 import api from './api/api';
-import Chart from './Chart';
+import { indexDataChartOptions, setIndexDataChartOptions } from './IndexDataChartOptions';
 import IIndexCode from './interfaces/IIndexCode';
 import IIndexData from './interfaces/IIndexData';
 import IProfitData from './interfaces/IProfitData';
-import { setChartData } from './ChartData';
+import { profitDataChartOptions, setProfitDataChartOptions } from './ProfitDataChartOptions';
 
 const App: Component = () => {
   const [indexCodeList, setIndexCodeList] = createSignal([] as IIndexCode[])
   const [indexDataList, setIndexDataList] = createSignal([] as IIndexData[])
   const [currentIndexCode, setCurrentIndexCode] = createSignal({} as IIndexCode)
   const [profitDataList, setProfitDataList] = createSignal([] as IProfitData[])
+  const [maDays, setMadays] = createSignal(30)
+  const [sellRate, setSellRate] = createSignal(0.95)
+  const [buyRate, setBuyRate] = createSignal(1.05)
+  const [serviceCharge, setServiceCharge] = createSignal(0.01)
+  const [dateBegin, setDateBegin] = createSignal<string | undefined>(undefined)
+  const [dateEnd, setDateEnd] = createSignal<string | undefined>(undefined)
 
   const fetchIndexCodeList = async () => {
     return api.get('/indexCode/list').then(response => {
@@ -27,15 +34,17 @@ const App: Component = () => {
   }
 
   const fetchProfitDataList = async (code: string) => {
-    return api.post(`/simulate`, {
+    const postData = {
       code,
-      maDays: 30,
-      sellRate: 0.95,
-      buyRate: 1.05,
-      serviceCharge: 0.0,
-      // dateBegin: '2015-01-01',
-      // dateEnd: '2019-01-01',
-    }).then(response => {
+      maDays: maDays(),
+      sellRate: sellRate(),
+      buyRate: buyRate(),
+      serviceCharge: serviceCharge(),
+      dateBegin: dateBegin() || undefined,
+      dateEnd: dateEnd() || undefined,
+    }
+
+    return api.post(`/simulate`, postData).then(response => {
       console.log('fetchProfitDataList() response', response)
       setProfitDataList(response.data)
     })
@@ -51,12 +60,36 @@ const App: Component = () => {
     const code = currentIndexCode().code
     if (code) {
       fetchIndexDataList(code)
-      fetchProfitDataList(code)
     }
   })
 
   createEffect(() => {
-    setChartData({
+    setIndexDataChartOptions({
+      theme: {
+        mode: 'dark',
+        palette: 'palette1',
+      },
+      series: [
+        {
+          name: '收盘价',
+          data: indexDataList().map(item => item.closePoint),
+        },
+      ],
+      xaxis: {
+        categories: indexDataList().map(item => item.date),
+      }
+    });
+  })
+
+  const handleBackTestBtnClick = () => {
+    const code = currentIndexCode().code
+    if (code) {
+      fetchProfitDataList(code)
+    }
+  }
+
+  createEffect(() => {
+    setProfitDataChartOptions({
       theme: {
         mode: 'dark',
         palette: 'palette1',
@@ -88,14 +121,74 @@ const App: Component = () => {
     <div>
       <h1>Midas</h1>
       <p>⚠️ 本项目仅供交流编程技术使用，不对任何人构成投资建议，投资有风险，入市需谨慎！</p>
-      <select onChange={e => handleSelectChange(e.currentTarget.value)}>
-        <For each={indexCodeList()} fallback={<div>Loading...</div>}>
-          {(item) => (
-            <option value={item.code} selected={item.code === currentIndexCode().code}>{`${item.code}-${item.name}`}</option>
-          )}
-        </For>
-      </select>
-      <Chart />
+
+      <fieldset>
+        <legend>选择指数</legend>
+        <select onChange={e => handleSelectChange(e.currentTarget.value)}>
+          <For each={indexCodeList()} fallback={<div>Loading...</div>}>
+            {(item) => (
+              <option value={item.code} selected={item.code === currentIndexCode().code}>{`${item.code}-${item.name}`}</option>
+            )}
+          </For>
+        </select>
+
+        <SolidApexCharts type="line" options={indexDataChartOptions()} series={[]} />
+      </fieldset>
+
+      <fieldset>
+        <legend>回测模拟</legend>
+        <div style={{ display: 'flex' }}>
+          <div>
+            <label for='maInput'>
+              MA
+            </label>
+            <input id='maInput' type='number' value={maDays()} onChange={e => setMadays(e.currentTarget.valueAsNumber)} />
+          </div>
+
+          <div>
+            <label for='serviceChargeInput'>
+              服务费率
+            </label>
+            <input id='serviceChargeInput' step='0.01' type='number' value={serviceCharge()} onChange={e => setServiceCharge(e.currentTarget.valueAsNumber)} />
+          </div>
+        </div>
+
+        <div style={{ display: 'flex' }}>
+          <div>
+            <label for='sellRateInput'>
+              卖出阈值
+            </label>
+            <input id='sellRateInput' step='0.01' type='number' value={sellRate()} onChange={e => setSellRate(e.currentTarget.valueAsNumber)} />
+          </div>
+
+          <div>
+            <label for='buyRateInput'>
+              买入阈值
+            </label>
+            <input id='buyRateInput' step='0.01' type='number' value={buyRate()} onChange={e => setBuyRate(e.currentTarget.valueAsNumber)} />
+          </div>
+        </div>
+
+        <div style={{ display: 'flex' }}>
+          <div>
+            <label for='dateBeginInput'>
+              开始日期
+            </label>
+            <input id='dateBeginInput' type='date' value={dateBegin()} onChange={e => setDateBegin(e.currentTarget.value)} />
+          </div>
+
+          <div>
+            <label for='dateEndInput'>
+              结束日期
+            </label>
+            <input id='dateEndInput' type='date' value={dateEnd()} onChange={e => setDateEnd(e.currentTarget.value)} />
+          </div>
+        </div>
+
+        <button onClick={handleBackTestBtnClick}>回测模拟</button>
+
+        <SolidApexCharts type="line" options={profitDataChartOptions()} series={[]} />
+      </fieldset>
     </div>
   );
 };

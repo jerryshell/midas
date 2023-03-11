@@ -18,10 +18,7 @@ pub fn simulate(
         .iter()
         .enumerate()
         .map(|(current_index, index_data)| {
-            tracing::info!("cash: {cash}");
-
             let close_point = index_data.close_point;
-            tracing::info!("close_point: {close_point}");
 
             match get_ma(current_index, ma_days, index_data_list) {
                 None => {
@@ -32,25 +29,18 @@ pub fn simulate(
                         // if max is None, do nothing
                     }
                     Some(max) => {
-                        tracing::info!("ma: {ma}");
-                        tracing::info!("max: {max}");
-
                         let increse_rate = close_point / ma;
                         let decrese_rate = close_point / max;
-                        tracing::info!("increse_rate: {increse_rate}");
-                        tracing::info!("decrese_rate: {decrese_rate}");
 
                         if increse_rate >= buy_rate {
                             if 0.0 == share {
                                 // buy
-                                tracing::info!("buy");
                                 share = cash / close_point;
                                 cash = 0.0;
                             }
                         } else if decrese_rate <= sell_rate {
                             if 0.0 != share {
                                 // sell
-                                tracing::info!("sell");
                                 cash = close_point * share * (1.0 - service_charge);
                                 share = 0.0;
                             }
@@ -72,7 +62,6 @@ pub fn simulate(
                 close_point,
                 value,
             };
-            tracing::info!("profit: {profit:?}");
 
             profit
         })
