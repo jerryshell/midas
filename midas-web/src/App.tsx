@@ -27,7 +27,11 @@ const App: Component = () => {
   }
 
   const fetchProfitDataList = async (code: string) => {
-    return api.post(`/simulate`, { code }).then(response => {
+    return api.post(`/simulate`, {
+      code,
+      // dateBegin: '2015-01-01',
+      // dateEnd: '2019-01-01',
+    }).then(response => {
       console.log('fetchProfitDataList() response', response)
       setProfitDataList(response.data)
     })
@@ -56,15 +60,15 @@ const App: Component = () => {
       series: [
         {
           name: '收盘价',
-          data: indexDataList().map(item => item.closePoint),
+          data: profitDataList().map(item => item.closePoint),
         },
         {
-          name: '回测收益',
+          name: '回测模拟',
           data: profitDataList().map(item => item.value),
         },
       ],
       xaxis: {
-        categories: indexDataList().map(item => item.date),
+        categories: profitDataList().map(item => item.date),
       }
     });
   })

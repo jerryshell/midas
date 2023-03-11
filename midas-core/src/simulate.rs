@@ -69,6 +69,7 @@ pub fn simulate(
 
             let profit = crate::model::Profit {
                 date: index_data.date.clone(),
+                close_point,
                 value,
             };
             println!("profit: {profit:#?}");
