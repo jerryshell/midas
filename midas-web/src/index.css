@@ -1,1 +1,5 @@
-@import './dark.min.css'
+@import './dark.min.css';
+
+:root {
+  --background-body: black;
+}

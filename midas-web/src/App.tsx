@@ -1,11 +1,10 @@
-import { SolidApexCharts } from 'solid-apexcharts';
-import { Component, createEffect, createSignal, For } from 'solid-js';
+import { Component, createEffect, createSignal, For, Show } from 'solid-js';
 import api from './api/api';
-import { indexDataChartOptions, setIndexDataChartOptions } from './IndexDataChartOptions';
 import IIndexCode from './interfaces/IIndexCode';
 import IIndexData from './interfaces/IIndexData';
 import IProfitData from './interfaces/IProfitData';
-import { profitDataChartOptions, setProfitDataChartOptions } from './ProfitDataChartOptions';
+import IndexDataChart from './IndexDataChart';
+import ProfitDataChart from './ProfitDataChart';
 
 const App: Component = () => {
   const [indexCodeList, setIndexCodeList] = createSignal([] as IIndexCode[])
@@ -63,52 +62,12 @@ const App: Component = () => {
     }
   })
 
-  createEffect(() => {
-    setIndexDataChartOptions({
-      theme: {
-        mode: 'dark',
-        palette: 'palette1',
-      },
-      series: [
-        {
-          name: '收盘价',
-          data: indexDataList().map(item => item.closePoint),
-        },
-      ],
-      xaxis: {
-        categories: indexDataList().map(item => item.date),
-      }
-    });
-  })
-
   const handleBackTestBtnClick = () => {
     const code = currentIndexCode().code
     if (code) {
       fetchProfitDataList(code)
     }
   }
-
-  createEffect(() => {
-    setProfitDataChartOptions({
-      theme: {
-        mode: 'dark',
-        palette: 'palette1',
-      },
-      series: [
-        {
-          name: '收盘价',
-          data: profitDataList().map(item => item.closePoint),
-        },
-        {
-          name: '回测模拟',
-          data: profitDataList().map(item => item.value),
-        },
-      ],
-      xaxis: {
-        categories: profitDataList().map(item => item.date),
-      }
-    });
-  })
 
   const handleSelectChange = (code: string) => {
     const indexCode = indexCodeList().find(item => item.code === code)
@@ -131,20 +90,21 @@ const App: Component = () => {
             )}
           </For>
         </select>
-
-        <SolidApexCharts type="line" options={indexDataChartOptions()} series={[]} />
+        <Show when={indexDataList().length > 0}>
+          <IndexDataChart indexDataList={indexDataList()} />
+        </Show>
       </fieldset>
 
       <fieldset>
         <legend>回测模拟</legend>
+
         <div style={{ display: 'flex' }}>
           <div>
             <label for='maInput'>
-              MA
+              移动均线
             </label>
             <input id='maInput' type='number' value={maDays()} onChange={e => setMadays(e.currentTarget.valueAsNumber)} />
           </div>
-
           <div>
             <label for='serviceChargeInput'>
               服务费率
@@ -155,17 +115,16 @@ const App: Component = () => {
 
         <div style={{ display: 'flex' }}>
           <div>
-            <label for='sellRateInput'>
-              卖出阈值
-            </label>
-            <input id='sellRateInput' step='0.01' type='number' value={sellRate()} onChange={e => setSellRate(e.currentTarget.valueAsNumber)} />
-          </div>
-
-          <div>
             <label for='buyRateInput'>
               买入阈值
             </label>
             <input id='buyRateInput' step='0.01' type='number' value={buyRate()} onChange={e => setBuyRate(e.currentTarget.valueAsNumber)} />
+          </div>
+          <div>
+            <label for='sellRateInput'>
+              卖出阈值
+            </label>
+            <input id='sellRateInput' step='0.01' type='number' value={sellRate()} onChange={e => setSellRate(e.currentTarget.valueAsNumber)} />
           </div>
         </div>
 
@@ -176,7 +135,6 @@ const App: Component = () => {
             </label>
             <input id='dateBeginInput' type='date' value={dateBegin()} onChange={e => setDateBegin(e.currentTarget.value)} />
           </div>
-
           <div>
             <label for='dateEndInput'>
               结束日期
@@ -186,10 +144,11 @@ const App: Component = () => {
         </div>
 
         <button onClick={handleBackTestBtnClick}>回测模拟</button>
-
-        <SolidApexCharts type="line" options={profitDataChartOptions()} series={[]} />
-      </fieldset>
-    </div>
+        <Show when={profitDataList().length > 0}>
+          <ProfitDataChart profitDataList={profitDataList()} />
+        </Show>
+      </fieldset >
+    </div >
   );
 };
 
