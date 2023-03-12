@@ -5,5 +5,5 @@ pub struct Trade {
     pub sell_date: String,
     pub buy_close_point: f64,
     pub sell_close_point: f64,
-    pub profit_rate: f64,
+    pub profit_loss_ratio: f64,
 }

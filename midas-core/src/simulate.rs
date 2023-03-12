@@ -44,7 +44,7 @@ pub fn simulate(
                                     sell_date: r"N\A".to_owned(),
                                     buy_close_point: index_data.close_point,
                                     sell_close_point: 0.0,
-                                    profit_rate: 0.0,
+                                    profit_loss_ratio: 0.0,
                                 };
                                 simulate_result.trade_list.push(trade);
                             }
@@ -56,7 +56,9 @@ pub fn simulate(
                                 let trade = simulate_result.trade_list.last_mut().unwrap();
                                 trade.sell_date = index_data.date.clone();
                                 trade.sell_close_point = index_data.close_point;
-                                trade.profit_rate = cash / init_cash;
+                                trade.profit_loss_ratio = (trade.sell_close_point
+                                    - trade.buy_close_point)
+                                    / trade.buy_close_point;
                             }
                         } else {
                             // hold the share, do nothing

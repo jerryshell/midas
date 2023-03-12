@@ -12,7 +12,7 @@ const TradeTable = (props: { tradeList: ITrade[] }) => {
             <th>买入收盘价</th>
             <th>卖出日期</th>
             <th>卖出收盘价</th>
-            <th>收益率</th>
+            <th>盈亏率</th>
           </tr>
         </thead>
         <tbody>
@@ -24,10 +24,10 @@ const TradeTable = (props: { tradeList: ITrade[] }) => {
                 <td>{item.sellDate}</td>
                 <td>{item.sellClosePoint.toFixed(2)}</td>
                 <td classList={{
-                  green: item.profitRate >= 1,
-                  red: item.profitRate < 1
+                  green: item.profitLossRatio >= 0,
+                  red: item.profitLossRatio < 0
                 }}>
-                  {(item.profitRate * 100).toFixed(2)}%
+                  {(item.profitLossRatio * 100).toFixed(2)}%
                 </td>
               </tr>
             )}
