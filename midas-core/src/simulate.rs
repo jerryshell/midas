@@ -57,13 +57,11 @@ pub fn simulate(
                 value = cash;
             }
 
-            let profit = crate::model::Profit {
+            crate::model::Profit {
                 date: index_data.date.clone(),
                 close_point,
                 value,
-            };
-
-            profit
+            }
         })
         .collect()
 }
