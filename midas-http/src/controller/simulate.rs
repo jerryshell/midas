@@ -2,6 +2,7 @@
 #[serde(rename_all = "camelCase")]
 pub struct SimulateForm {
     code: String,
+    init_cash: f64,
     ma_days: usize,
     sell_rate: f64,
     buy_rate: f64,
@@ -27,6 +28,7 @@ pub async fn simulate(
                 Err(e) => Err(crate::error::AppError::FailedWithMessage(e.to_string())),
                 Ok(index_data_list) => {
                     let simulate_result = midas_core::simulate::simulate(
+                        form.init_cash,
                         form.ma_days,
                         form.sell_rate,
                         form.buy_rate,

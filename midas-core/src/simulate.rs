@@ -1,4 +1,5 @@
 pub fn simulate(
+    init_cash: f64,
     ma_days: usize,
     sell_rate: f64,
     buy_rate: f64,
@@ -11,7 +12,6 @@ pub fn simulate(
         return simulate_result;
     }
 
-    let init_cash = 1000.0;
     let mut cash = init_cash;
     let mut share = 0.0;
     let mut value = 0.0;
@@ -159,10 +159,11 @@ mod tests {
         #[test]
         fn test() {
             let index_data_list = crate::simulate::tests::get_test_index_data_list();
-            let simulate_result = crate::simulate::simulate(30, 0.95, 1.05, 0.0, &index_data_list);
+            let simulate_result =
+                crate::simulate::simulate(1000.0, 30, 0.95, 1.05, 0.0, &index_data_list);
             assert_eq!(index_data_list.len(), simulate_result.profit_list.len());
             assert_eq!(
-                9995.847799430787,
+                7612.837856710538,
                 simulate_result.profit_list.last().unwrap().value
             );
         }
@@ -173,7 +174,7 @@ mod tests {
         fn test() {
             let index_data_list = crate::simulate::tests::get_test_index_data_list();
             let max = crate::simulate::get_max(100, 30, &index_data_list);
-            assert_eq!(Some(954.5), max);
+            assert_eq!(Some(948.86), max);
         }
     }
 
@@ -182,7 +183,7 @@ mod tests {
         fn test() {
             let index_data_list = crate::simulate::tests::get_test_index_data_list();
             let ma = crate::simulate::get_ma(100, 30, &index_data_list);
-            assert_eq!(Some(920.8453333333331), ma);
+            assert_eq!(Some(885.0443333333334), ma);
         }
     }
 }

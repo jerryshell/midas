@@ -13,12 +13,12 @@ mod tests {
     mod list_by_code {
         #[test]
         fn test() {
-            let code = "000015";
+            let code = "000300";
             let index_data_list =
                 crate::index_data::list_by_code(code).expect("get_index_data_by_code() error");
-            assert_eq!(index_data_list.len(), 3484);
-            assert_eq!(index_data_list[0].date, "2005-01-05");
-            assert_eq!(index_data_list[0].close_point, 985.46);
+            assert_eq!(index_data_list.len(), 4418);
+            assert_eq!(index_data_list[0].date, "2005-01-04");
+            assert_eq!(index_data_list[0].close_point, 994.77);
         }
     }
 }

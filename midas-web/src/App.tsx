@@ -18,7 +18,8 @@ const App: Component = () => {
   const [simulateResult, setSimulateResult] = createSignal(
     {} as ISimulateResult
   );
-  const [maDays, setMadays] = createSignal(30);
+  const [initCash, setInitCash] = createSignal(1000.0);
+  const [maDays, setMadays] = createSignal(60);
   const [sellRate, setSellRate] = createSignal(0.95);
   const [buyRate, setBuyRate] = createSignal(1.05);
   const [serviceCharge, setServiceCharge] = createSignal(0.01);
@@ -42,6 +43,7 @@ const App: Component = () => {
   const fetchSimulateResult = async (code: string) => {
     const postData = {
       code,
+      initCash: initCash(),
       maDays: maDays(),
       sellRate: sellRate(),
       buyRate: buyRate(),
@@ -112,6 +114,15 @@ const App: Component = () => {
         <legend>回测模拟</legend>
 
         <div style={{ display: "flex" }}>
+          <div>
+            <label for="initCashInput">初始现金</label>
+            <input
+              id="initCashInput"
+              type="number"
+              value={initCash()}
+              onChange={(e) => setInitCash(e.currentTarget.valueAsNumber)}
+            />
+          </div>
           <div>
             <label for="maInput">移动均线</label>
             <input
