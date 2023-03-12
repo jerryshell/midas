@@ -41,7 +41,7 @@ pub fn simulate(
                                 cash = 0.0;
                                 let trade = crate::model::Trade {
                                     buy_date: index_data.date.clone(),
-                                    sell_date: r"N\A".to_owned(),
+                                    sell_date: r"N/A".to_owned(),
                                     buy_close_point: index_data.close_point,
                                     sell_close_point: 0.0,
                                     profit_loss_ratio: 0.0,
