@@ -3,7 +3,8 @@ import api from "./api/api";
 import IndexDataChart from "./components/IndexDataChart";
 import ProfitChart from "./components/Profitchart";
 import ProfitOverview from "./components/ProfitOverview";
-import TradeTable from "./components/TradeTable";
+import TradeDetailTable from "./components/TradeDetailTable";
+import TradeOverview from "./components/TradeOverview";
 import IIndexCode from "./interfaces/IIndexCode";
 import IIndexData from "./interfaces/IIndexData";
 import ISimulateResult from "./interfaces/ISimulateResult";
@@ -184,7 +185,10 @@ const App: Component = () => {
           <ProfitOverview simulateResult={simulateResult()} />
         </Show>
         <Show when={simulateResult().tradeList}>
-          <TradeTable tradeList={simulateResult().tradeList} />
+          <TradeOverview tradeList={simulateResult().tradeList} />
+        </Show>
+        <Show when={simulateResult().tradeList}>
+          <TradeDetailTable tradeList={simulateResult().tradeList} />
         </Show>
       </fieldset>
 

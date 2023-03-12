@@ -2,8 +2,8 @@ import ISimulateResult from "../interfaces/ISimulateResult";
 
 const ProfitOverview = (props: { simulateResult: ISimulateResult }) => {
   return (
-    <details open>
-      <summary>收益总览</summary>
+    <fieldset>
+      <legend>交易总览</legend>
       <table>
         <thead>
           <tr>
@@ -35,7 +35,7 @@ const ProfitOverview = (props: { simulateResult: ISimulateResult }) => {
           </tr>
         </tbody>
       </table>
-    </details>
+    </fieldset>
   );
 };
 

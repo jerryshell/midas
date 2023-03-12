@@ -1,7 +1,7 @@
 import { For } from "solid-js";
 import ITrade from "../interfaces/ITrade";
 
-const TradeTable = (props: { tradeList: ITrade[] }) => {
+const TradeDetailTable = (props: { tradeList: ITrade[] }) => {
   return (
     <details open>
       <summary>交易明细</summary>
@@ -40,4 +40,4 @@ const TradeTable = (props: { tradeList: ITrade[] }) => {
   );
 };
 
-export default TradeTable;
+export default TradeDetailTable;
