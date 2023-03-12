@@ -1,5 +1,5 @@
-import { For } from "solid-js"
-import ITrade from "./interfaces/ITrade"
+import { For } from "solid-js";
+import ITrade from "../interfaces/ITrade";
 
 const TradeTable = (props: { tradeList: ITrade[] }) => {
   return (
@@ -17,16 +17,18 @@ const TradeTable = (props: { tradeList: ITrade[] }) => {
         </thead>
         <tbody>
           <For each={props.tradeList}>
-            {item => (
+            {(item) => (
               <tr>
                 <td>{item.buyDate}</td>
                 <td>{item.buyClosePoint.toFixed(2)}</td>
                 <td>{item.sellDate}</td>
                 <td>{item.sellClosePoint.toFixed(2)}</td>
-                <td classList={{
-                  green: item.profitLossRatio >= 0,
-                  red: item.profitLossRatio < 0
-                }}>
+                <td
+                  classList={{
+                    green: item.profitLossRatio >= 0,
+                    red: item.profitLossRatio < 0,
+                  }}
+                >
                   {(item.profitLossRatio * 100).toFixed(2)}%
                 </td>
               </tr>
@@ -35,7 +37,7 @@ const TradeTable = (props: { tradeList: ITrade[] }) => {
         </tbody>
       </table>
     </details>
-  )
-}
+  );
+};
 
-export default TradeTable
+export default TradeTable;

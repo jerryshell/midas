@@ -1,5 +1,5 @@
 export default interface IProfit {
-  date: string,
-  closePoint: number,
-  value: number,
+  date: string;
+  closePoint: number;
+  value: number;
 }

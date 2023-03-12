@@ -1,6 +1,6 @@
-@import './dark.min.css';
+@import "./dark.min.css";
 
-* {
+body {
   font-family: Monaco;
 }
 

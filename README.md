@@ -1,6 +1,6 @@
-# Midas
+# 💰 Midas
 
-*Midas* is a free and open source *Moving Average Trading* simulator.
+_Midas_ is a free and open source _Moving Average Trading_ simulator.
 
 ## ⚠️ Warning
 
@@ -10,7 +10,7 @@
 
 **Investment risks should be cautious when entering the market.**
 
-## How to run
+## 🚀 How to run
 
 ### 1. Run `midas-http`
 
@@ -27,6 +27,6 @@ yarn
 yarn dev
 ```
 
-## License
+## 📄 License
 
 [GNU Affero General Public License v3.0](https://choosealicense.com/licenses/agpl-3.0)
