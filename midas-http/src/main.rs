@@ -38,5 +38,5 @@ async fn main() {
     axum::Server::bind(&addr)
         .serve(app.into_make_service_with_connect_info::<std::net::SocketAddr>())
         .await
-        .expect("axum::Server::bind().serve() err");
+        .expect("axum serve err");
 }

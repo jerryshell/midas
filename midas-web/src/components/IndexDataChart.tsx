@@ -27,9 +27,6 @@ const IndexDataChart = (props: { indexDataList: IIndexData[] }) => {
           dataZoom: {
             yAxisIndex: false,
           },
-          brush: {
-            type: ["lineX", "clear"],
-          },
         },
       },
       dataZoom: [
@@ -41,12 +38,9 @@ const IndexDataChart = (props: { indexDataList: IIndexData[] }) => {
         },
       ],
       xAxis: {
-        type: "category",
         data: props.indexDataList.map((item) => item.date),
       },
-      yAxis: {
-        type: "value",
-      },
+      yAxis: {},
       series: [
         {
           name: "收盘价",
@@ -57,7 +51,7 @@ const IndexDataChart = (props: { indexDataList: IIndexData[] }) => {
     });
   });
 
-  return <div style="width: 100%; height:400px;" ref={chartRef!}></div>;
+  return <div style={{ height: "500px" }} ref={chartRef!}></div>;
 };
 
 export default IndexDataChart;

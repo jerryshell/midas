@@ -14,9 +14,6 @@ const ProfitChart = (props: { profitList: IProfit[] }) => {
   createEffect(() => {
     profitChart()?.setOption({
       backgroundColor: "black",
-      // title: {
-      //   text: '回测模拟'
-      // },
       legend: {
         data: ["收盘价", "回测模拟"],
       },
@@ -31,9 +28,6 @@ const ProfitChart = (props: { profitList: IProfit[] }) => {
           dataZoom: {
             yAxisIndex: false,
           },
-          brush: {
-            type: ["lineX", "clear"],
-          },
         },
       },
       dataZoom: [
@@ -45,12 +39,9 @@ const ProfitChart = (props: { profitList: IProfit[] }) => {
         },
       ],
       xAxis: {
-        type: "category",
         data: props.profitList.map((item) => item.date),
       },
-      yAxis: {
-        type: "value",
-      },
+      yAxis: {},
       series: [
         {
           name: "收盘价",
@@ -66,7 +57,7 @@ const ProfitChart = (props: { profitList: IProfit[] }) => {
     });
   });
 
-  return <div style="width: 100%; height:400px;" ref={chartRef!}></div>;
+  return <div style={{ height: "500px" }} ref={chartRef!}></div>;
 };
 
 export default ProfitChart;

@@ -498,7 +498,6 @@ dependencies = [
  "chrono",
  "midas-core",
  "serde",
- "serde_json",
  "tokio",
  "tower-http 0.4.0",
  "tracing",
@@ -512,9 +511,9 @@ dependencies = [
  "midas-core",
  "reqwest",
  "serde",
- "serde_derive",
  "serde_json",
  "tokio",
+ "tracing",
 ]
 
 [[package]]

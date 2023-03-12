@@ -1,4 +1,4 @@
-#[derive(Default, Debug, Clone, PartialEq, serde::Serialize, serde::Deserialize)]
+#[derive(Default, serde::Serialize)]
 #[serde(rename_all = "camelCase")]
 pub struct SimulateResult {
     pub profit_list: Vec<crate::model::Profit>,

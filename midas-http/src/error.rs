@@ -22,10 +22,7 @@ impl axum::response::IntoResponse for AppError {
                 (axum::http::StatusCode::BAD_REQUEST, code, message)
             }
         };
-        (
-            status,
-            axum::Json(serde_json::json!({ "code": code, "message": message })),
-        )
-            .into_response()
+        let response_map = std::collections::HashMap::from([("code", code), ("message", message)]);
+        (status, axum::Json(response_map)).into_response()
     }
 }

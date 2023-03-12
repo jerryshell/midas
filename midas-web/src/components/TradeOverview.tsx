@@ -33,7 +33,7 @@ const TradeOverview = (props: { tradeList: ITrade[] }) => {
               {(
                 (profitTradeList()
                   .map((item) => item.profitLossRatio)
-                  .reduce((a, b) => a + b) /
+                  .reduce((a, b) => a + b, 0) /
                   profitTradeList().length) *
                 100
               ).toFixed(2)}
@@ -46,7 +46,7 @@ const TradeOverview = (props: { tradeList: ITrade[] }) => {
               {(
                 (lossTradeList()
                   .map((item) => item.profitLossRatio)
-                  .reduce((a, b) => a + b) /
+                  .reduce((a, b) => a + b, 0) /
                   lossTradeList().length) *
                 100
               ).toFixed(2)}

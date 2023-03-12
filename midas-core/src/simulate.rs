@@ -16,6 +16,7 @@ pub fn simulate(
     let mut share = 0.0;
     let mut value = 0.0;
 
+    // profit_list
     let profit_list = index_data_list
         .iter()
         .enumerate()

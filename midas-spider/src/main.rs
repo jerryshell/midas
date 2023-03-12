@@ -1,5 +1,4 @@
-#[derive(Default, Debug, Clone, PartialEq, serde_derive::Serialize, serde_derive::Deserialize)]
-#[serde(rename_all = "camelCase")]
+#[derive(serde::Deserialize)]
 pub struct EastmoneyResponse {
     pub rc: i64,
     pub rt: i64,
@@ -10,7 +9,7 @@ pub struct EastmoneyResponse {
     pub data: EastmoneyResponseData,
 }
 
-#[derive(Default, Debug, Clone, PartialEq, serde_derive::Serialize, serde_derive::Deserialize)]
+#[derive(serde::Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct EastmoneyResponseData {
     pub code: String,
