@@ -1,21 +1,22 @@
 import * as echarts from 'echarts'
 import { createEffect, createSignal } from 'solid-js'
-import IProfitData from './interfaces/IProfitData'
+import IProfit from './interfaces/IProfit'
 
-const ProfitDataChart = (props: { profitDataList: IProfitData[] }) => {
+const ProfitChart = (props: { profitList: IProfit[] }) => {
   let chartRef: HTMLDivElement
 
-  const [profitDataChart, setProfitDataChart] = createSignal<echarts.ECharts | null>(null)
+  const [profitChart, setProfitChart] = createSignal<echarts.ECharts | null>(null)
   createEffect(() => {
-    setProfitDataChart(echarts.init(chartRef, 'dark'))
+    setProfitChart(echarts.init(chartRef, 'dark'))
   })
   createEffect(() => {
-    profitDataChart()?.setOption({
-      title: {
-        text: '回测模拟'
-      },
+    profitChart()?.setOption({
+      backgroundColor: 'black',
+      // title: {
+      //   text: '回测模拟'
+      // },
       legend: {
-        data: ['回测模拟', '收盘价'],
+        data: ['收盘价', '回测模拟'],
       },
       tooltip: {
         trigger: 'axis',
@@ -43,7 +44,7 @@ const ProfitDataChart = (props: { profitDataList: IProfitData[] }) => {
       ],
       xAxis: {
         type: 'category',
-        data: props.profitDataList.map(item => item.date)
+        data: props.profitList.map(item => item.date)
       },
       yAxis: {
         type: 'value',
@@ -52,12 +53,12 @@ const ProfitDataChart = (props: { profitDataList: IProfitData[] }) => {
         {
           name: '收盘价',
           type: 'line',
-          data: props.profitDataList.map(item => item.closePoint)
+          data: props.profitList.map(item => item.closePoint)
         },
         {
           name: '回测模拟',
           type: 'line',
-          data: props.profitDataList.map(item => item.value)
+          data: props.profitList.map(item => item.value)
         }
       ]
     })
@@ -68,4 +69,4 @@ const ProfitDataChart = (props: { profitDataList: IProfitData[] }) => {
   )
 }
 
-export default ProfitDataChart
+export default ProfitChart

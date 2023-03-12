@@ -11,6 +11,7 @@ const IndexDataChart = (props: { indexDataList: IIndexData[] }) => {
   })
   createEffect(() => {
     indexDataChart()?.setOption({
+      backgroundColor: 'black',
       title: {
         text: '指数收盘价'
       },

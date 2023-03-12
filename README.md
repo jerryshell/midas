@@ -4,7 +4,11 @@
 
 ## ⚠️ Warning
 
-**This project is only for the use of communication programming technology, and no investment advice is provided to anyone. Investment risks should be cautious when entering the market.**
+**This project is only for the use of communication programming technology.**
+
+**No investment advice is provided to anyone.**
+
+**Investment risks should be cautious when entering the market.**
 
 ## How to run
 

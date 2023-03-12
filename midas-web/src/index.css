@@ -1,5 +1,19 @@
 @import './dark.min.css';
 
+* {
+  font-family: Monaco;
+}
+
 :root {
+  --background: black;
   --background-body: black;
+  --background-alt: black;
+}
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
 }

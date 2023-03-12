@@ -1,4 +1,4 @@
-export default interface IProfitData {
+export default interface IProfit {
   date: string,
   closePoint: number,
   value: number,

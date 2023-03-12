@@ -4,9 +4,11 @@ pub fn simulate(
     buy_rate: f64,
     service_charge: f64,
     index_data_list: &[crate::model::IndexData],
-) -> Vec<crate::model::Profit> {
+) -> crate::model::SimulateResult {
+    let mut simulate_result = crate::model::SimulateResult::default();
+
     if index_data_list.is_empty() {
-        return vec![];
+        return simulate_result;
     }
 
     let init_cash = 1000.0;
@@ -14,7 +16,7 @@ pub fn simulate(
     let mut share = 0.0;
     let mut value = 0.0;
 
-    index_data_list
+    let profit_list = index_data_list
         .iter()
         .enumerate()
         .map(|(current_index, index_data)| {
@@ -37,12 +39,24 @@ pub fn simulate(
                                 // buy
                                 share = cash / close_point;
                                 cash = 0.0;
+                                let trade = crate::model::Trade {
+                                    buy_date: index_data.date.clone(),
+                                    sell_date: r"N\A".to_owned(),
+                                    buy_close_point: index_data.close_point,
+                                    sell_close_point: 0.0,
+                                    profit_rate: 0.0,
+                                };
+                                simulate_result.trade_list.push(trade);
                             }
                         } else if decrese_rate <= sell_rate {
                             if 0.0 != share {
                                 // sell
                                 cash = close_point * share * (1.0 - service_charge);
                                 share = 0.0;
+                                let trade = simulate_result.trade_list.last_mut().unwrap();
+                                trade.sell_date = index_data.date.clone();
+                                trade.sell_close_point = index_data.close_point;
+                                trade.profit_rate = cash / init_cash;
                             }
                         } else {
                             // hold the share, do nothing
@@ -63,7 +77,10 @@ pub fn simulate(
                 value,
             }
         })
-        .collect()
+        .collect();
+
+    simulate_result.profit_list = profit_list;
+    simulate_result
 }
 
 fn get_max(
@@ -114,9 +131,12 @@ mod tests {
         #[test]
         fn test() {
             let index_data_list = crate::simulate::tests::get_test_index_data_list();
-            let profit_list = crate::simulate::simulate(30, 0.95, 1.05, 0.0, &index_data_list);
-            assert_eq!(index_data_list.len(), profit_list.len());
-            assert_eq!(9995.847799430787, profit_list.last().unwrap().value);
+            let simulate_result = crate::simulate::simulate(30, 0.95, 1.05, 0.0, &index_data_list);
+            assert_eq!(index_data_list.len(), simulate_result.profit_list.len());
+            assert_eq!(
+                9995.847799430787,
+                simulate_result.profit_list.last().unwrap().value
+            );
         }
     }
 

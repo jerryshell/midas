@@ -2,15 +2,16 @@ import { Component, createEffect, createSignal, For, Show } from 'solid-js';
 import api from './api/api';
 import IIndexCode from './interfaces/IIndexCode';
 import IIndexData from './interfaces/IIndexData';
-import IProfitData from './interfaces/IProfitData';
 import IndexDataChart from './IndexDataChart';
-import ProfitDataChart from './ProfitDataChart';
+import ProfitChart from './Profitchart';
+import ISimulateResult from './interfaces/ISimulateResult';
+import TradeTable from './TradeTable';
 
 const App: Component = () => {
   const [indexCodeList, setIndexCodeList] = createSignal([] as IIndexCode[])
   const [indexDataList, setIndexDataList] = createSignal([] as IIndexData[])
   const [currentIndexCode, setCurrentIndexCode] = createSignal({} as IIndexCode)
-  const [profitDataList, setProfitDataList] = createSignal([] as IProfitData[])
+  const [simulateResult, setSimulateResult] = createSignal({} as ISimulateResult)
   const [maDays, setMadays] = createSignal(30)
   const [sellRate, setSellRate] = createSignal(0.95)
   const [buyRate, setBuyRate] = createSignal(1.05)
@@ -32,7 +33,7 @@ const App: Component = () => {
     })
   }
 
-  const fetchProfitDataList = async (code: string) => {
+  const fetchSimulateResult = async (code: string) => {
     const postData = {
       code,
       maDays: maDays(),
@@ -44,8 +45,8 @@ const App: Component = () => {
     }
 
     return api.post(`/simulate`, postData).then(response => {
-      console.log('fetchProfitDataList() response', response)
-      setProfitDataList(response.data)
+      console.log('fetchSimulateResult() response', response)
+      setSimulateResult(response.data)
     })
   }
 
@@ -62,10 +63,10 @@ const App: Component = () => {
     }
   })
 
-  const handleBackTestBtnClick = () => {
+  const handleSimulateBtnClick = () => {
     const code = currentIndexCode().code
     if (code) {
-      fetchProfitDataList(code)
+      fetchSimulateResult(code)
     }
   }
 
@@ -143,11 +144,19 @@ const App: Component = () => {
           </div>
         </div>
 
-        <button onClick={handleBackTestBtnClick}>回测模拟</button>
-        <Show when={profitDataList().length > 0}>
-          <ProfitDataChart profitDataList={profitDataList()} />
+        <button onClick={handleSimulateBtnClick}>回测模拟</button>
+        <Show when={simulateResult().profitList}>
+          <ProfitChart profitList={simulateResult().profitList} />
+        </Show>
+        <Show when={simulateResult().tradeList}>
+          <TradeTable tradeList={simulateResult().tradeList} />
         </Show>
       </fieldset >
+
+      <div>
+        <span>Author: </span>
+        <a href='https://github.com/jerryshell' target='_blank'>@jerryshell</a>
+      </div>
     </div >
   );
 };
