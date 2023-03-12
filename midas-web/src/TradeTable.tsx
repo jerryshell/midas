@@ -4,7 +4,7 @@ import ITrade from "./interfaces/ITrade"
 const TradeTable = (props: { tradeList: ITrade[] }) => {
   return (
     <details open>
-      <summary>交易详情</summary>
+      <summary>交易明细</summary>
       <table>
         <thead>
           <tr>

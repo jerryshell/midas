@@ -79,7 +79,33 @@ pub fn simulate(
                 value,
             }
         })
-        .collect();
+        .collect::<Vec<crate::model::Profit>>();
+
+    // index_final_profit_loss_ratio
+    let first_close_point = index_data_list.first().unwrap().close_point;
+    let last_close_point = index_data_list.last().unwrap().close_point;
+    let index_final_profit_loss_ratio = (last_close_point - first_close_point) / first_close_point;
+    simulate_result.index_final_profit_loss_ratio = index_final_profit_loss_ratio;
+
+    // ma_final_profit_loss_ratio
+    let last_value = profit_list.last().unwrap().value;
+    let ma_final_profit_loss_ratio = (last_value - init_cash) / init_cash;
+    simulate_result.ma_final_profit_loss_ratio = ma_final_profit_loss_ratio;
+
+    // years
+    let date_begin = &index_data_list.first().unwrap().date;
+    let date_end = &index_data_list.last().unwrap().date;
+    let date_begin = chrono::NaiveDate::parse_from_str(date_begin, "%Y-%m-%d").unwrap();
+    let date_end = chrono::NaiveDate::parse_from_str(date_end, "%Y-%m-%d").unwrap();
+    let duration = date_end.signed_duration_since(date_begin);
+    let years = duration.num_days() as f64 / 365.0;
+    simulate_result.years = years;
+
+    // index_apr
+    simulate_result.index_apr = (1.0 + index_final_profit_loss_ratio).powf(1.0 / years) - 1.0;
+
+    // ma_apr
+    simulate_result.ma_apr = (1.0 + ma_final_profit_loss_ratio).powf(1.0 / years) - 1.0;
 
     simulate_result.profit_list = profit_list;
     simulate_result

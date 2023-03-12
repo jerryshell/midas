@@ -6,6 +6,7 @@ import IndexDataChart from './IndexDataChart';
 import ProfitChart from './Profitchart';
 import ISimulateResult from './interfaces/ISimulateResult';
 import TradeTable from './TradeTable';
+import ProfitOverview from './ProfitOverview';
 
 const App: Component = () => {
   const [indexCodeList, setIndexCodeList] = createSignal([] as IIndexCode[])
@@ -147,6 +148,9 @@ const App: Component = () => {
         <button onClick={handleSimulateBtnClick}>回测模拟</button>
         <Show when={simulateResult().profitList}>
           <ProfitChart profitList={simulateResult().profitList} />
+        </Show>
+        <Show when={simulateResult().years}>
+          <ProfitOverview simulateResult={simulateResult()} />
         </Show>
         <Show when={simulateResult().tradeList}>
           <TradeTable tradeList={simulateResult().tradeList} />

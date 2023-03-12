@@ -1,6 +1,6 @@
 # Midas
 
-*Midas* is a free and open source trend investment tool.
+*Midas* is a free and open source *Moving Average Trading* simulator.
 
 ## ⚠️ Warning
 
