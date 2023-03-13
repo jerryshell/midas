@@ -6,7 +6,7 @@
 <i>Midas</i> is a free and open source <i>Moving Average Trading</i> backtest simulator
 </p>
 
-Bilibili Video: *TODO*
+Bilibili Video: _TODO_
 
 ## ⚠️ Warning
 
@@ -44,6 +44,6 @@ cargo run --bin midas-spider
 
 [GNU Affero General Public License v3.0](https://choosealicense.com/licenses/agpl-3.0)
 
-## Scrrenshot
+## Screenshot
 
-![scrrenshot](images/screenshot.jpg)
+![screenshot](images/screenshot.jpg)
