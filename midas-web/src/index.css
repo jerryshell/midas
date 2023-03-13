@@ -9,10 +9,10 @@ body {
   --background-alt: black;
 }
 
-.green {
+.profit {
   color: green;
 }
 
-.red {
+.loss {
   color: red;
 }

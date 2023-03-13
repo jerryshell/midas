@@ -16,9 +16,14 @@ import {
 const App = () => {
   createEffect(() => {
     const fetchIndexCodeList = async () => {
-      return indexCodeApi.list().then((response) => {
-        setIndexCodeList(response.data);
-      });
+      return indexCodeApi
+        .list()
+        .then((response) => {
+          setIndexCodeList(response.data);
+        })
+        .catch((e) => {
+          alert(e.response.data);
+        });
     };
     fetchIndexCodeList().then(() => {
       setCurrentIndexCode(indexCodeList()[0]);
@@ -27,11 +32,14 @@ const App = () => {
 
   createEffect(() => {
     const fetchIndexDataList = async (code: string) => {
-      return indexDataApi.list_by_code(code).then((response) => {
-        setIndexDataList(response.data);
-      });
+      return indexDataApi
+        .list_by_code(code)
+        .then((response) => {
+          setIndexDataList(response.data);
+        })
+        .catch((e) => alert(e.response.data));
     };
-    const code = currentIndexCode().code;
+    const code = currentIndexCode()?.code;
     if (code) {
       fetchIndexDataList(code);
     }

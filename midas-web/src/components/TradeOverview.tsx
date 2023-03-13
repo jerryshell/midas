@@ -21,15 +21,15 @@ const TradeOverview = (props: { tradeList: ITrade[] }) => {
           </tr>
           <tr>
             <td>盈利交易次数</td>
-            <td class="green">{profitTradeList().length}</td>
+            <td class="profit">{profitTradeList().length}</td>
           </tr>
           <tr>
             <td>亏损交易次数</td>
-            <td class="red">{lossTradeList().length}</td>
+            <td class="loss">{lossTradeList().length}</td>
           </tr>
           <tr>
             <td>平均盈利比率</td>
-            <td class="green">
+            <td class="profit">
               {(
                 (profitTradeList()
                   .map((item) => item.profitLossRatio)
@@ -42,7 +42,7 @@ const TradeOverview = (props: { tradeList: ITrade[] }) => {
           </tr>
           <tr>
             <td>平均亏损比率</td>
-            <td class="red">
+            <td class="loss">
               {(
                 (lossTradeList()
                   .map((item) => item.profitLossRatio)

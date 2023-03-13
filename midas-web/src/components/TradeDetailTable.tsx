@@ -25,8 +25,8 @@ const TradeDetailTable = (props: { tradeList: ITrade[] }) => {
                 <td>{item.sellClosePoint.toFixed(2)}</td>
                 <td
                   classList={{
-                    green: item.profitLossRatio >= 0,
-                    red: item.profitLossRatio < 0,
+                    profit: item.profitLossRatio >= 0,
+                    loss: item.profitLossRatio < 0,
                   }}
                 >
                   {(item.profitLossRatio * 100).toFixed(2)}%

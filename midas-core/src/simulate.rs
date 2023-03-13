@@ -1,8 +1,8 @@
 pub fn simulate(
     init_cash: f64,
     ma_days: usize,
-    sell_rate: f64,
-    buy_rate: f64,
+    sell_ratio: f64,
+    buy_ratio: f64,
     service_charge: f64,
     index_data_list: &[crate::model::IndexData],
 ) -> crate::model::SimulateResult {
@@ -12,86 +12,22 @@ pub fn simulate(
         return simulate_result;
     }
 
-    let mut cash = init_cash;
-    let mut share = 0.0;
-    let mut value = 0.0;
-
-    // profit_list
-    let profit_list = index_data_list
-        .iter()
-        .enumerate()
-        .map(|(current_index, index_data)| {
-            let close_point = index_data.close_point;
-
-            match get_ma(current_index, ma_days, index_data_list) {
-                None => {
-                    // if ma is None, do nothing
-                }
-                Some(ma) => match get_max(current_index, ma_days, index_data_list) {
-                    None => {
-                        // if max is None, do nothing
-                    }
-                    Some(max) => {
-                        let increse_rate = close_point / ma;
-                        let decrese_rate = close_point / max;
-
-                        if increse_rate >= buy_rate {
-                            if 0.0 == share {
-                                // buy
-                                share = cash / close_point;
-                                cash = 0.0;
-                                let trade = crate::model::Trade {
-                                    buy_date: index_data.date.clone(),
-                                    sell_date: r"N/A".to_owned(),
-                                    buy_close_point: index_data.close_point,
-                                    sell_close_point: 0.0,
-                                    profit_loss_ratio: 0.0,
-                                };
-                                simulate_result.trade_list.push(trade);
-                            }
-                        } else if decrese_rate <= sell_rate {
-                            if 0.0 != share {
-                                // sell
-                                cash = close_point * share * (1.0 - service_charge);
-                                share = 0.0;
-                                let trade = simulate_result.trade_list.last_mut().unwrap();
-                                trade.sell_date = index_data.date.clone();
-                                trade.sell_close_point = index_data.close_point;
-                                trade.profit_loss_ratio = (trade.sell_close_point
-                                    - trade.buy_close_point)
-                                    / trade.buy_close_point;
-                            }
-                        } else {
-                            // hold the share, do nothing
-                        }
-                    }
-                },
-            };
-
-            if share != 0.0 {
-                value = close_point * share;
-            } else {
-                value = cash;
-            }
-
-            crate::model::Profit {
-                date: index_data.date.clone(),
-                close_point,
-                value,
-            }
-        })
-        .collect::<Vec<crate::model::Profit>>();
+    // profit_list & trade_list
+    fill_profit_list_and_trade_list(
+        init_cash,
+        ma_days,
+        sell_ratio,
+        buy_ratio,
+        service_charge,
+        index_data_list,
+        &mut simulate_result,
+    );
 
     // index_final_profit_loss_ratio
-    let first_close_point = index_data_list.first().unwrap().close_point;
-    let last_close_point = index_data_list.last().unwrap().close_point;
-    let index_final_profit_loss_ratio = (last_close_point - first_close_point) / first_close_point;
-    simulate_result.index_final_profit_loss_ratio = index_final_profit_loss_ratio;
+    fill_index_final_profit_loss_ratio(index_data_list, &mut simulate_result);
 
     // ma_final_profit_loss_ratio
-    let last_value = profit_list.last().unwrap().value;
-    let ma_final_profit_loss_ratio = (last_value - init_cash) / init_cash;
-    simulate_result.ma_final_profit_loss_ratio = ma_final_profit_loss_ratio;
+    fill_ma_final_profit_loss_ratio(init_cash, &mut simulate_result);
 
     // years
     let date_begin = &index_data_list.first().unwrap().date;
@@ -103,13 +39,117 @@ pub fn simulate(
     simulate_result.years = years;
 
     // index_apr
-    simulate_result.index_apr = (1.0 + index_final_profit_loss_ratio).powf(1.0 / years) - 1.0;
+    simulate_result.index_apr =
+        (1.0 + simulate_result.index_final_profit_loss_ratio).powf(1.0 / years) - 1.0;
 
     // ma_apr
-    simulate_result.ma_apr = (1.0 + ma_final_profit_loss_ratio).powf(1.0 / years) - 1.0;
+    simulate_result.ma_apr =
+        (1.0 + simulate_result.ma_final_profit_loss_ratio).powf(1.0 / years) - 1.0;
+
+    simulate_result
+}
+
+fn fill_ma_final_profit_loss_ratio(
+    init_cash: f64,
+    simulate_result: &mut crate::model::SimulateResult,
+) {
+    let last_value = simulate_result.profit_list.last().unwrap().value;
+    let ma_final_profit_loss_ratio = (last_value - init_cash) / init_cash;
+    simulate_result.ma_final_profit_loss_ratio = ma_final_profit_loss_ratio;
+}
+
+fn fill_index_final_profit_loss_ratio(
+    index_data_list: &[crate::model::IndexData],
+    simulate_result: &mut crate::model::SimulateResult,
+) {
+    let first_close_point = index_data_list.first().unwrap().close_point;
+    let last_close_point = index_data_list.last().unwrap().close_point;
+    let index_final_profit_loss_ratio = (last_close_point - first_close_point) / first_close_point;
+    simulate_result.index_final_profit_loss_ratio = index_final_profit_loss_ratio;
+}
+
+fn fill_profit_list_and_trade_list(
+    init_cash: f64,
+    ma_days: usize,
+    sell_ratio: f64,
+    buy_ratio: f64,
+    service_charge: f64,
+    index_data_list: &[crate::model::IndexData],
+    simulate_result: &mut crate::model::SimulateResult,
+) {
+    let mut cash = init_cash;
+    let mut shares = 0.0;
+
+    // profit_list
+    let profit_list = index_data_list
+        .iter()
+        .enumerate()
+        .map(|(current_index, index_data)| {
+            let close_point = index_data.close_point;
+
+            let ma = get_ma(current_index, ma_days, index_data_list);
+            let max = get_max(current_index, ma_days, index_data_list);
+            match ma.is_some() && max.is_some() {
+                false => {
+                    // do nothing
+                }
+                true => {
+                    let increse_ratio = close_point / ma.unwrap();
+                    let decrese_ratio = close_point / max.unwrap();
+
+                    if increse_ratio >= buy_ratio {
+                        // time to buy
+                        if 0.0 == shares {
+                            // buy
+                            shares = cash / close_point;
+                            cash = 0.0;
+                            let trade = crate::model::Trade {
+                                buy_date: index_data.date.clone(),
+                                sell_date: r"N/A".to_owned(),
+                                buy_close_point: index_data.close_point,
+                                sell_close_point: 0.0,
+                                profit_loss_ratio: 0.0,
+                            };
+                            simulate_result.trade_list.push(trade);
+                        } else {
+                            // hold shares, do nothing
+                        }
+                    } else if decrese_ratio <= sell_ratio {
+                        // time to sell
+                        if 0.0 == shares {
+                            // no shares, do nothing
+                        } else {
+                            // sell
+                            cash = close_point * shares * (1.0 - service_charge);
+                            shares = 0.0;
+                            let trade = simulate_result.trade_list.last_mut().unwrap();
+                            trade.sell_date = index_data.date.clone();
+                            trade.sell_close_point = index_data.close_point;
+                            trade.profit_loss_ratio = (trade.sell_close_point
+                                - trade.buy_close_point)
+                                / trade.buy_close_point;
+                        }
+                    } else {
+                        // do nothing
+                    }
+                }
+            }
+
+            let value = if shares == 0.0 {
+                cash
+            } else {
+                close_point * shares
+            };
+
+            crate::model::Profit {
+                date: index_data.date.clone(),
+                close_point,
+                value,
+            }
+        })
+        .collect();
 
     simulate_result.profit_list = profit_list;
-    simulate_result
 }
 
 fn get_max(

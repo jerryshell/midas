@@ -1,6 +1,10 @@
-# 💰 Midas
+<p style="aligen: center; text-align: center;">
+<img src="images/midas.jpg" alt="midas image" />
+</p>
 
-_Midas_ is a free and open source _Moving Average Trading_ simulator.
+<p style="aligen: center; text-align: center;">
+<i>Midas</i> is a free and open source <i>Moving Average Trading</i> simulator
+</p>
 
 ## ⚠️ Warning
 
@@ -15,8 +19,7 @@ _Midas_ is a free and open source _Moving Average Trading_ simulator.
 ### 1. Run `midas-http`
 
 ```bash
-cd midas-http
-cargo run
+cargo run --bin midas-http
 ```
 
 ### 2. Run `midas-web`
@@ -25,6 +28,14 @@ cargo run
 cd midas-web
 yarn
 yarn dev
+```
+
+### ?. Optional
+
+You can update Index Data using `midas-spider`
+
+```bash
+cargo run --bin midas-spider
 ```
 
 ## 📄 License

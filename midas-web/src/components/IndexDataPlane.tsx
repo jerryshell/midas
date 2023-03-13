@@ -23,7 +23,7 @@ const IndexDataPlane = () => {
           {(item) => (
             <option
               value={item.code}
-              selected={item.code === currentIndexCode().code}
+              selected={item.code === currentIndexCode()?.code}
             >{`${item.code}-${item.name}`}</option>
           )}
         </For>

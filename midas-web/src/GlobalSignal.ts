@@ -3,13 +3,16 @@ import IIndexCode from "./interfaces/IIndexCode";
 import IIndexData from "./interfaces/IIndexData";
 import ISimulateResult from "./interfaces/ISimulateResult";
 
-const [indexCodeList, setIndexCodeList] = createSignal([] as IIndexCode[]);
+const [indexCodeList, setIndexCodeList] = createSignal<IIndexCode[]>([]);
 
-const [indexDataList, setIndexDataList] = createSignal([] as IIndexData[]);
+const [indexDataList, setIndexDataList] = createSignal<IIndexData[]>([]);
 
-const [currentIndexCode, setCurrentIndexCode] = createSignal({} as IIndexCode);
+const [currentIndexCode, setCurrentIndexCode] = createSignal<IIndexCode | null>(
+  null
+);
 
-const [simulateResult, setSimulateResult] = createSignal({} as ISimulateResult);
+const [simulateResult, setSimulateResult] =
+  createSignal<ISimulateResult | null>(null);
 
 export {
   indexCodeList,

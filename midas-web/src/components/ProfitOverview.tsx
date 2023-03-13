@@ -3,7 +3,7 @@ import ISimulateResult from "../interfaces/ISimulateResult";
 const ProfitOverview = (props: { simulateResult: ISimulateResult }) => {
   return (
     <fieldset>
-      <legend>交易总览</legend>
+      <legend>收益总览</legend>
       <table>
         <thead>
           <tr>

@@ -4,8 +4,8 @@ pub struct SimulateForm {
     code: String,
     init_cash: f64,
     ma_days: usize,
-    sell_rate: f64,
-    buy_rate: f64,
+    sell_ratio: f64,
+    buy_ratio: f64,
     service_charge: f64,
     date_begin: Option<String>,
     date_end: Option<String>,
@@ -29,8 +29,8 @@ pub async fn simulate(
             let simulate_result = midas_core::simulate::simulate(
                 form.init_cash,
                 form.ma_days,
-                form.sell_rate,
-                form.buy_rate,
+                form.sell_ratio,
+                form.buy_ratio,
                 form.service_charge,
                 &index_data_list,
             );
