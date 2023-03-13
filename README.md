@@ -1,18 +1,18 @@
-<p style="aligen: center; text-align: center;">
+<p align="center">
 <img src="images/midas.jpg" alt="midas image" />
 </p>
 
-<p style="aligen: center; text-align: center;">
+<p align="center">
 <i>Midas</i> is a free and open source <i>Moving Average Trading</i> simulator
 </p>
 
 ## ⚠️ Warning
 
-**This project is only for the use of communication programming technology.**
-
-**No investment advice is provided to anyone.**
-
 **Investment risks should be cautious when entering the market.**
+
+**This project is ONLY used for communication programming technology.**
+
+**This project does NOT provide investment advice to anyone.**
 
 ## 🚀 How to run
 
