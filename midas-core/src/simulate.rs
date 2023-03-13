@@ -41,6 +41,9 @@ pub fn simulate(
     simulate_result.ma_apr =
         (1.0 + simulate_result.ma_final_profit_loss_ratio).powf(1.0 / simulate_result.years) - 1.0;
 
+    // annual_profit_list
+    simulate_result.annual_profit_list = crate::annual_profit::list(&simulate_result.profit_list);
+
     simulate_result
 }
 
