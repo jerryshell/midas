@@ -5,6 +5,7 @@ import {
   setSimulateResult,
   simulateResult,
 } from "../GlobalSignal";
+import AnnualProfitChart from "./AnnualProfitChart";
 import ProfitChart from "./Profitchart";
 import ProfitOverview from "./ProfitOverview";
 import TradeDetailTable from "./TradeDetailTable";
@@ -141,6 +142,11 @@ const Simulate = () => {
       </Show>
       <Show when={simulateResult()}>
         <ProfitOverview simulateResult={simulateResult()!} />
+      </Show>
+      <Show when={simulateResult()}>
+        <AnnualProfitChart
+          annualProfitList={simulateResult()!.annualProfitList}
+        />
       </Show>
       <Show when={simulateResult()}>
         <TradeOverview tradeList={simulateResult()!.tradeList} />

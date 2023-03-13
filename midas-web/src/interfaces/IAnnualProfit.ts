@@ -1,5 +1,5 @@
-export default interface IProfit {
-  date: string;
-  closePoint: number;
-  value: number;
+export default interface IAnuualProfit {
+  year: string;
+  indexProfit: number;
+  maProfit: number;
 }
