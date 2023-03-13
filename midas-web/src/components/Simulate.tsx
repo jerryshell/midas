@@ -65,7 +65,7 @@ const Simulate = () => {
         </div>
         <div>
           <label>
-            移动均线
+            MA
             <input
               type="number"
               value={maDays()}

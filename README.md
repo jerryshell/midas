@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-<i>Midas</i> is a free and open source <i>Moving Average Trading</i> simulator
+<i>Midas</i> is a free and open source <i>Moving Average Trading</i> backtest simulator
 </p>
 
 ## ⚠️ Warning

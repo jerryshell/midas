@@ -1,7 +1,7 @@
 pub fn list_by_code(
     code: &str,
 ) -> Result<Vec<crate::model::IndexData>, Box<dyn std::error::Error>> {
-    let file = std::fs::File::open(format!("./index-data/{}.json", code))?;
+    let file = std::fs::File::open(format!("index-data/{}.json", code))?;
     let reader = std::io::BufReader::new(file);
     let mut index_data_list = serde_json::from_reader::<_, Vec<crate::model::IndexData>>(reader)?;
     index_data_list.sort_by(|a, b| a.date.cmp(&b.date));

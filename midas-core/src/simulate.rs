@@ -30,6 +30,24 @@ pub fn simulate(
     fill_ma_final_profit_loss_ratio(init_cash, &mut simulate_result);
 
     // years
+    fill_years(index_data_list, &mut simulate_result);
+
+    // index_apr
+    simulate_result.index_apr = (1.0 + simulate_result.index_final_profit_loss_ratio)
+        .powf(1.0 / simulate_result.years)
+        - 1.0;
+
+    // ma_apr
+    simulate_result.ma_apr =
+        (1.0 + simulate_result.ma_final_profit_loss_ratio).powf(1.0 / simulate_result.years) - 1.0;
+
+    simulate_result
+}
+
+fn fill_years(
+    index_data_list: &[crate::model::IndexData],
+    simulate_result: &mut crate::model::SimulateResult,
+) {
     let date_begin = &index_data_list.first().unwrap().date;
     let date_end = &index_data_list.last().unwrap().date;
     let date_begin = chrono::NaiveDate::parse_from_str(date_begin, "%Y-%m-%d").unwrap();
@@ -37,16 +55,6 @@ pub fn simulate(
     let duration = date_end.signed_duration_since(date_begin);
     let years = duration.num_days() as f64 / 365.0;
     simulate_result.years = years;
-
-    // index_apr
-    simulate_result.index_apr =
-        (1.0 + simulate_result.index_final_profit_loss_ratio).powf(1.0 / years) - 1.0;
-
-    // ma_apr
-    simulate_result.ma_apr =
-        (1.0 + simulate_result.ma_final_profit_loss_ratio).powf(1.0 / years) - 1.0;
-
-    simulate_result
 }
 
 fn fill_ma_final_profit_loss_ratio(
