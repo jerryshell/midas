@@ -6,7 +6,7 @@
 <i>Midas</i> is a free and open source <i>Moving Average Trading</i> backtest simulator
 </p>
 
-Bilibili Video: _TODO_
+Bilibili Video: [https://www.bilibili.com/video/BV11o4y1B7fL](https://www.bilibili.com/video/BV11o4y1B7fL)
 
 ## ⚠️ Warning
 
