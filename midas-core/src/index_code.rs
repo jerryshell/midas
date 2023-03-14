@@ -10,7 +10,7 @@ mod tests {
     mod list {
         #[test]
         fn test() {
-            let index_code_list = crate::index_code::list().expect("get_index_code_list() error");
+            let index_code_list = crate::index_code::list().unwrap();
             assert_eq!(index_code_list.len(), 8);
         }
     }

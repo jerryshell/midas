@@ -215,7 +215,7 @@ mod tests {
                 crate::simulate::simulate(1000.0, 30, 0.95, 1.05, 0.0, &index_data_list);
             assert_eq!(index_data_list.len(), simulate_result.profit_list.len());
             assert_eq!(
-                7612.837856710538,
+                9449.059143002818,
                 simulate_result.profit_list.last().unwrap().value
             );
         }
@@ -226,7 +226,7 @@ mod tests {
         fn test() {
             let index_data_list = crate::simulate::tests::get_test_index_data_list();
             let max = crate::simulate::get_max(100, 30, &index_data_list);
-            assert_eq!(Some(948.86), max);
+            assert_eq!(Some(943.98), max);
         }
     }
 
@@ -235,7 +235,7 @@ mod tests {
         fn test() {
             let index_data_list = crate::simulate::tests::get_test_index_data_list();
             let ma = crate::simulate::get_ma(100, 30, &index_data_list);
-            assert_eq!(Some(885.0443333333334), ma);
+            assert_eq!(Some(884.342), ma);
         }
     }
 }

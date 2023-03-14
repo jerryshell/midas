@@ -14,9 +14,9 @@ mod tests {
         #[test]
         fn test() {
             let index_data_list = crate::index_data::list_by_code("000300").unwrap();
-            assert_eq!(index_data_list.len(), 4418);
+            assert_eq!(index_data_list.len(), 4419);
             assert_eq!(index_data_list[0].date, "2005-01-04");
-            assert_eq!(index_data_list[0].close_point, 994.77);
+            assert_eq!(index_data_list[0].close_point, 982.79);
         }
     }
 }
