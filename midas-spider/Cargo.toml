@@ -14,3 +14,4 @@ reqwest = { version = "0", default-features = false, features = [
 tokio = { version = "1", features = ["full"] }
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
+rayon = "1"

@@ -1,3 +1,5 @@
+use rayon::prelude::*;
+
 pub fn simulate(
     init_cash: f64,
     ma_days: usize,
@@ -176,7 +178,7 @@ fn get_max(
     let end_index = target_index - 1;
 
     index_data_list[begin_index..=end_index]
-        .iter()
+        .par_iter()
         .map(|item| item.close_point)
         .max_by(|a, b| a.partial_cmp(b).unwrap())
 }
@@ -194,7 +196,7 @@ fn get_ma(
     let end_index = target_index - 1;
 
     let sum = index_data_list[begin_index..=end_index]
-        .iter()
+        .par_iter()
         .map(|item| item.close_point)
         .sum::<f64>();
 
@@ -235,7 +237,7 @@ mod tests {
         fn test() {
             let index_data_list = crate::simulate::tests::get_test_index_data_list();
             let ma = crate::simulate::get_ma(100, 30, &index_data_list);
-            assert_eq!(Some(884.342), ma);
+            assert_eq!(Some(884.3420000000001), ma);
         }
     }
 }

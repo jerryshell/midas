@@ -1,3 +1,5 @@
+use rayon::prelude::*;
+
 #[derive(serde::Deserialize)]
 struct EastmoneyResponse {
     // pub rc: i64,
@@ -33,7 +35,7 @@ pub async fn fetch_data(index_code: &midas_core::model::IndexCode, client: &reqw
     let index_data_list = eastmoney_response
         .data
         .klines
-        .iter()
+        .par_iter()
         .map(|item| {
             let item_split_vec = item.split(',').collect::<Vec<&str>>();
             let date = item_split_vec[0];
