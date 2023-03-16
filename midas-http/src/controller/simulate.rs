@@ -11,9 +11,7 @@ pub struct SimulateForm {
     date_end: Option<String>,
 }
 
-pub async fn simulate(
-    form: axum::Json<SimulateForm>,
-) -> Result<axum::Json<midas_core::model::SimulateResult>, crate::error::AppError> {
+pub async fn simulate(form: axum::Json<SimulateForm>) -> impl axum::response::IntoResponse {
     match midas_core::index_data::list_by_code(form.code.trim()) {
         Err(e) => Err(crate::error::AppError::FailedWithMessage(e.to_string())),
         Ok(mut index_data_list) => {
