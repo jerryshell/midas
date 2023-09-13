@@ -3354,5 +3354,249 @@
   {
     "date": "2023-06-16",
     "closePoint": 1052.88
+  },
+  {
+    "date": "2023-06-19",
+    "closePoint": 1055.45
+  },
+  {
+    "date": "2023-06-20",
+    "closePoint": 1055.41
+  },
+  {
+    "date": "2023-06-21",
+    "closePoint": 1020.22
+  },
+  {
+    "date": "2023-06-26",
+    "closePoint": 1010.31
+  },
+  {
+    "date": "2023-06-27",
+    "closePoint": 1011.35
+  },
+  {
+    "date": "2023-06-28",
+    "closePoint": 1008.22
+  },
+  {
+    "date": "2023-06-29",
+    "closePoint": 1001.46
+  },
+  {
+    "date": "2023-06-30",
+    "closePoint": 1005.15
+  },
+  {
+    "date": "2023-07-03",
+    "closePoint": 1008.4
+  },
+  {
+    "date": "2023-07-04",
+    "closePoint": 1015.4
+  },
+  {
+    "date": "2023-07-05",
+    "closePoint": 1005.73
+  },
+  {
+    "date": "2023-07-06",
+    "closePoint": 1002.11
+  },
+  {
+    "date": "2023-07-07",
+    "closePoint": 991.85
+  },
+  {
+    "date": "2023-07-10",
+    "closePoint": 993.73
+  },
+  {
+    "date": "2023-07-11",
+    "closePoint": 1001.41
+  },
+  {
+    "date": "2023-07-12",
+    "closePoint": 984.98
+  },
+  {
+    "date": "2023-07-13",
+    "closePoint": 995.97
+  },
+  {
+    "date": "2023-07-14",
+    "closePoint": 991.56
+  },
+  {
+    "date": "2023-07-17",
+    "closePoint": 984.82
+  },
+  {
+    "date": "2023-07-18",
+    "closePoint": 980.02
+  },
+  {
+    "date": "2023-07-19",
+    "closePoint": 975.11
+  },
+  {
+    "date": "2023-07-20",
+    "closePoint": 961.13
+  },
+  {
+    "date": "2023-07-21",
+    "closePoint": 955.55
+  },
+  {
+    "date": "2023-07-24",
+    "closePoint": 950.55
+  },
+  {
+    "date": "2023-07-25",
+    "closePoint": 964.4
+  },
+  {
+    "date": "2023-07-26",
+    "closePoint": 961.6
+  },
+  {
+    "date": "2023-07-27",
+    "closePoint": 952.3
+  },
+  {
+    "date": "2023-07-28",
+    "closePoint": 962.64
+  },
+  {
+    "date": "2023-07-31",
+    "closePoint": 968.99
+  },
+  {
+    "date": "2023-08-01",
+    "closePoint": 969.68
+  },
+  {
+    "date": "2023-08-02",
+    "closePoint": 968.44
+  },
+  {
+    "date": "2023-08-03",
+    "closePoint": 970.37
+  },
+  {
+    "date": "2023-08-04",
+    "closePoint": 975.78
+  },
+  {
+    "date": "2023-08-07",
+    "closePoint": 968.9
+  },
+  {
+    "date": "2023-08-08",
+    "closePoint": 965.53
+  },
+  {
+    "date": "2023-08-09",
+    "closePoint": 957.37
+  },
+  {
+    "date": "2023-08-10",
+    "closePoint": 959.17
+  },
+  {
+    "date": "2023-08-11",
+    "closePoint": 938.77
+  },
+  {
+    "date": "2023-08-14",
+    "closePoint": 930.5
+  },
+  {
+    "date": "2023-08-15",
+    "closePoint": 917.45
+  },
+  {
+    "date": "2023-08-16",
+    "closePoint": 901.79
+  },
+  {
+    "date": "2023-08-17",
+    "closePoint": 910.38
+  },
+  {
+    "date": "2023-08-18",
+    "closePoint": 904.25
+  },
+  {
+    "date": "2023-08-21",
+    "closePoint": 892.09
+  },
+  {
+    "date": "2023-08-22",
+    "closePoint": 901.13
+  },
+  {
+    "date": "2023-08-23",
+    "closePoint": 879.46
+  },
+  {
+    "date": "2023-08-24",
+    "closePoint": 885.48
+  },
+  {
+    "date": "2023-08-25",
+    "closePoint": 870.4
+  },
+  {
+    "date": "2023-08-28",
+    "closePoint": 880.19
+  },
+  {
+    "date": "2023-08-29",
+    "closePoint": 916.46
+  },
+  {
+    "date": "2023-08-30",
+    "closePoint": 939.65
+  },
+  {
+    "date": "2023-08-31",
+    "closePoint": 942.61
+  },
+  {
+    "date": "2023-09-01",
+    "closePoint": 934.79
+  },
+  {
+    "date": "2023-09-04",
+    "closePoint": 942.43
+  },
+  {
+    "date": "2023-09-05",
+    "closePoint": 930.63
+  },
+  {
+    "date": "2023-09-06",
+    "closePoint": 934.6
+  },
+  {
+    "date": "2023-09-07",
+    "closePoint": 899.83
+  },
+  {
+    "date": "2023-09-08",
+    "closePoint": 901.51
+  },
+  {
+    "date": "2023-09-11",
+    "closePoint": 907.51
+  },
+  {
+    "date": "2023-09-12",
+    "closePoint": 901.62
+  },
+  {
+    "date": "2023-09-13",
+    "closePoint": 889.13
   }
 ]

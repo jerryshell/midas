@@ -5,10 +5,10 @@ edition = "2021"
 
 [dependencies]
 midas-core = { path = "../midas-core" }
-tracing = "0"
-tracing-subscriber = "0"
-axum = "0"
-tokio = { version = "1", features = ["full"] }
-tower-http = { version = "0", features = ["cors"] }
-serde = { version = "1", features = ["derive"] }
-chrono = "0"
+tracing = "*"
+tracing-subscriber = "*"
+axum = "*"
+tokio = { version = "*", features = ["full"] }
+tower-http = { version = "*", features = ["cors"] }
+serde = { version = "*", features = ["derive"] }
+chrono = "*"

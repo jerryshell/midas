@@ -1,6 +1,10 @@
 [workspace]
+resolver = "2"
 members = ["midas-core", "midas-http", "midas-spider"]
 
 [profile.release]
 lto = true
 strip = true
+opt-level = "z"
+panic = "abort"
+codegen-units = 1
