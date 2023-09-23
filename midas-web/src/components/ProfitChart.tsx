@@ -46,12 +46,12 @@ const ProfitChart = (props: { profitList: IProfit[] }) => {
         {
           name: "收盘价",
           type: "line",
-          data: props.profitList.map((item) => item.closePoint),
+          data: props.profitList.map((item) => item.closePoint.toFixed(2)),
         },
         {
           name: "回测模拟",
           type: "line",
-          data: props.profitList.map((item) => item.value),
+          data: props.profitList.map((item) => item.value.toFixed(2)),
         },
       ],
     });
