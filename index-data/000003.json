@@ -30842,5 +30842,229 @@
   {
     "date": "2023-10-13",
     "closePoint": 233.47
+  },
+  {
+    "date": "2023-10-16",
+    "closePoint": 228.83
+  },
+  {
+    "date": "2023-10-17",
+    "closePoint": 229.71
+  },
+  {
+    "date": "2023-10-18",
+    "closePoint": 224.99
+  },
+  {
+    "date": "2023-10-19",
+    "closePoint": 223.5
+  },
+  {
+    "date": "2023-10-20",
+    "closePoint": 223.06
+  },
+  {
+    "date": "2023-10-23",
+    "closePoint": 219.01
+  },
+  {
+    "date": "2023-10-24",
+    "closePoint": 221.83
+  },
+  {
+    "date": "2023-10-25",
+    "closePoint": 224.38
+  },
+  {
+    "date": "2023-10-26",
+    "closePoint": 224.12
+  },
+  {
+    "date": "2023-10-27",
+    "closePoint": 228.21
+  },
+  {
+    "date": "2023-10-30",
+    "closePoint": 230.36
+  },
+  {
+    "date": "2023-10-31",
+    "closePoint": 230.02
+  },
+  {
+    "date": "2023-11-01",
+    "closePoint": 229.77
+  },
+  {
+    "date": "2023-11-02",
+    "closePoint": 227.74
+  },
+  {
+    "date": "2023-11-03",
+    "closePoint": 229.66
+  },
+  {
+    "date": "2023-11-06",
+    "closePoint": 232.75
+  },
+  {
+    "date": "2023-11-07",
+    "closePoint": 234.04
+  },
+  {
+    "date": "2023-11-08",
+    "closePoint": 233.55
+  },
+  {
+    "date": "2023-11-09",
+    "closePoint": 229.97
+  },
+  {
+    "date": "2023-11-10",
+    "closePoint": 227.09
+  },
+  {
+    "date": "2023-11-13",
+    "closePoint": 228.15
+  },
+  {
+    "date": "2023-11-14",
+    "closePoint": 228.75
+  },
+  {
+    "date": "2023-11-15",
+    "closePoint": 231.14
+  },
+  {
+    "date": "2023-11-16",
+    "closePoint": 231.98
+  },
+  {
+    "date": "2023-11-17",
+    "closePoint": 232.15
+  },
+  {
+    "date": "2023-11-20",
+    "closePoint": 232.97
+  },
+  {
+    "date": "2023-11-21",
+    "closePoint": 233.61
+  },
+  {
+    "date": "2023-11-22",
+    "closePoint": 231.39
+  },
+  {
+    "date": "2023-11-23",
+    "closePoint": 232.48
+  },
+  {
+    "date": "2023-11-24",
+    "closePoint": 231.95
+  },
+  {
+    "date": "2023-11-27",
+    "closePoint": 230.11
+  },
+  {
+    "date": "2023-11-28",
+    "closePoint": 231.33
+  },
+  {
+    "date": "2023-11-29",
+    "closePoint": 230.51
+  },
+  {
+    "date": "2023-11-30",
+    "closePoint": 226.26
+  },
+  {
+    "date": "2023-12-01",
+    "closePoint": 227.69
+  },
+  {
+    "date": "2023-12-04",
+    "closePoint": 227.41
+  },
+  {
+    "date": "2023-12-05",
+    "closePoint": 225.42
+  },
+  {
+    "date": "2023-12-06",
+    "closePoint": 227.34
+  },
+  {
+    "date": "2023-12-07",
+    "closePoint": 227.25
+  },
+  {
+    "date": "2023-12-08",
+    "closePoint": 228.84
+  },
+  {
+    "date": "2023-12-11",
+    "closePoint": 229.82
+  },
+  {
+    "date": "2023-12-12",
+    "closePoint": 229.37
+  },
+  {
+    "date": "2023-12-13",
+    "closePoint": 224.99
+  },
+  {
+    "date": "2023-12-14",
+    "closePoint": 225.65
+  },
+  {
+    "date": "2023-12-15",
+    "closePoint": 226.12
+  },
+  {
+    "date": "2023-12-18",
+    "closePoint": 224.94
+  },
+  {
+    "date": "2023-12-19",
+    "closePoint": 225.23
+  },
+  {
+    "date": "2023-12-20",
+    "closePoint": 224.02
+  },
+  {
+    "date": "2023-12-21",
+    "closePoint": 225.2
+  },
+  {
+    "date": "2023-12-22",
+    "closePoint": 225.22
+  },
+  {
+    "date": "2023-12-25",
+    "closePoint": 222.95
+  },
+  {
+    "date": "2023-12-26",
+    "closePoint": 222.64
+  },
+  {
+    "date": "2023-12-27",
+    "closePoint": 224.73
+  },
+  {
+    "date": "2023-12-28",
+    "closePoint": 228.27
+  },
+  {
+    "date": "2023-12-29",
+    "closePoint": 231.6
+  },
+  {
+    "date": "2024-01-02",
+    "closePoint": 232.42
   }
 ]

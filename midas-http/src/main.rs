@@ -25,18 +25,27 @@ async fn main() {
         )
         .layer(cors);
 
+    // init ip addr
+    let ip_addr = std::env::var("IP_ADDR")
+        .ok()
+        .and_then(|s| s.parse().ok())
+        .unwrap_or(std::net::IpAddr::V4(std::net::Ipv4Addr::new(0, 0, 0, 0)));
+
     // init port
     let port = std::env::var("PORT")
         .ok()
         .and_then(|s| s.parse().ok())
         .unwrap_or(8000);
-    tracing::info!(port);
+    tracing::info!("port {}", port);
+
+    // init socket addr
+    let socket_addr = std::net::SocketAddr::new(ip_addr, port);
+    tracing::info!("socket_addr {}", socket_addr);
 
     // run app
-    let addr = std::net::SocketAddr::from(([0, 0, 0, 0], port));
-    tracing::info!("addr={}", addr);
-    axum::Server::bind(&addr)
-        .serve(app.into_make_service_with_connect_info::<std::net::SocketAddr>())
+    let app = app.into_make_service_with_connect_info::<std::net::SocketAddr>();
+    let listener = tokio::net::TcpListener::bind(socket_addr)
         .await
-        .expect("axum serve err");
+        .expect("bind failed");
+    axum::serve(listener, app).await.expect("serve failed");
 }
