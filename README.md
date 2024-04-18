@@ -8,13 +8,11 @@
 
 Bilibili Video: [https://www.bilibili.com/video/BV11o4y1B7fL](https://www.bilibili.com/video/BV11o4y1B7fL)
 
-## ⚠️ Warning
-
-**Investment risks should be cautious when entering the market.**
-
-**This project is ONLY used for communication programming technology.**
-
-**This project does NOT provide investment advice to anyone.**
+> [!CAUTION]
+>
+> Investment risks should be considered carefully when entering the market.
+>
+> This project does NOT provide investment advice to anyone.
 
 ## 🚀 How to run
 
