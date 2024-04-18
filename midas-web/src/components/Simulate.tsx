@@ -6,7 +6,7 @@ import {
   simulateResult,
 } from "../GlobalSignal";
 import AnnualProfitChart from "./AnnualProfitChart";
-import ProfitChart from "./Profitchart";
+import ProfitChart from "./ProfitChart";
 import ProfitOverview from "./ProfitOverview";
 import TradeDetailTable from "./TradeDetailTable";
 import TradeOverview from "./TradeOverview";
