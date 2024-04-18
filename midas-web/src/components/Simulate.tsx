@@ -56,7 +56,7 @@ const Simulate = () => {
       <div style={{ display: "flex" }}>
         <div>
           <label>
-            初始现金
+            <span>初始现金</span>
             <input
               type="number"
               value={initCash()}
@@ -66,7 +66,7 @@ const Simulate = () => {
         </div>
         <div>
           <label>
-            MA
+            <span>MA</span>
             <input
               type="number"
               value={maDays()}
@@ -76,7 +76,7 @@ const Simulate = () => {
         </div>
         <div>
           <label>
-            服务费率
+            <span>服务费率</span>
             <input
               step="0.01"
               type="number"
@@ -90,7 +90,7 @@ const Simulate = () => {
       <div style={{ display: "flex" }}>
         <div>
           <label>
-            买入阈值
+            <span>买入阈值</span>
             <input
               step="0.01"
               type="number"
@@ -101,7 +101,7 @@ const Simulate = () => {
         </div>
         <div>
           <label>
-            卖出阈值
+            <span>卖出阈值</span>
             <input
               step="0.01"
               type="number"
@@ -115,7 +115,7 @@ const Simulate = () => {
       <div style={{ display: "flex" }}>
         <div>
           <label>
-            开始日期
+            <span>开始日期</span>
             <input
               type="date"
               value={dateBegin()}
@@ -125,7 +125,7 @@ const Simulate = () => {
         </div>
         <div>
           <label>
-            结束日期
+            <span>结束日期</span>
             <input
               type="date"
               value={dateEnd()}
