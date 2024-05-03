@@ -9,12 +9,12 @@
   },
   "devDependencies": {
     "typescript": "^5.4.5",
-    "vite": "^5.2.9",
+    "vite": "^5.2.11",
     "vite-plugin-solid": "^2.10.2"
   },
   "dependencies": {
     "axios": "^1.6.8",
     "echarts": "^5.5.0",
-    "solid-js": "^1.8.16"
+    "solid-js": "^1.8.17"
   }
 }
