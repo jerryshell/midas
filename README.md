@@ -26,8 +26,8 @@ cargo run --bin midas-http
 
 ```bash
 cd midas-web
-yarn
-yarn dev
+npm install
+npm run dev
 ```
 
 ### ?. Optional
