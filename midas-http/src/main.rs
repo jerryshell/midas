@@ -1,5 +1,7 @@
+const DEFAULT_BIND_ADDR: &str = "0.0.0.0:8000";
+
 #[tokio::main]
-async fn main() {
+async fn main() -> anyhow::Result<()> {
     // init tracing
     tracing_subscriber::fmt::init();
 
@@ -25,27 +27,14 @@ async fn main() {
         )
         .layer(cors);
 
-    // init ip addr
-    let ip_addr = std::env::var("IP_ADDR")
-        .ok()
-        .and_then(|s| s.parse().ok())
-        .unwrap_or(std::net::IpAddr::V4(std::net::Ipv4Addr::new(0, 0, 0, 0)));
+    let bind_addr = std::env::var("BIND_ADDR").unwrap_or(DEFAULT_BIND_ADDR.to_string());
+    tracing::info!("bind_addr: {:?}", bind_addr);
 
-    // init port
-    let port = std::env::var("PORT")
-        .ok()
-        .and_then(|s| s.parse().ok())
-        .unwrap_or(8000);
-    tracing::info!("port {}", port);
-
-    // init socket addr
-    let socket_addr = std::net::SocketAddr::new(ip_addr, port);
-    tracing::info!("socket_addr {}", socket_addr);
+    let tcp_listener = tokio::net::TcpListener::bind(&bind_addr).await?;
 
     // run app
     let app = app.into_make_service_with_connect_info::<std::net::SocketAddr>();
-    let listener = tokio::net::TcpListener::bind(socket_addr)
-        .await
-        .expect("bind failed");
-    axum::serve(listener, app).await.expect("serve failed");
+    axum::serve(tcp_listener, app).await?;
+
+    Ok(())
 }

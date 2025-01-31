@@ -12,3 +12,4 @@ tokio = { version = "*", features = ["full"] }
 tower-http = { version = "*", features = ["cors"] }
 serde = { version = "*", features = ["derive"] }
 chrono = "*"
+anyhow = "*"
