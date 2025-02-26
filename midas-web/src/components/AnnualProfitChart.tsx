@@ -3,13 +3,15 @@ import { createEffect, createSignal } from "solid-js";
 import IAnuualProfit from "../interfaces/IAnnualProfit";
 
 const AnnualProfitChart = (props: { annualProfitList: IAnuualProfit[] }) => {
-  let chartRef: HTMLDivElement;
+  let chartRef: HTMLDivElement | undefined;
 
   const [annualProfitChart, setAnnualProfitChart] =
     createSignal<echarts.ECharts | null>(null);
+
   createEffect(() => {
     setAnnualProfitChart(echarts.init(chartRef, "dark"));
   });
+
   createEffect(() => {
     annualProfitChart()?.setOption({
       backgroundColor: "black",
@@ -72,7 +74,7 @@ const AnnualProfitChart = (props: { annualProfitList: IAnuualProfit[] }) => {
 
   return (
     <div>
-      <div style={{ height: "1200px" }} ref={chartRef!}></div>
+      <div style={{ height: "1200px" }} ref={chartRef}></div>
     </div>
   );
 };

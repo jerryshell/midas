@@ -1,18 +1,18 @@
 [package]
+edition = "2024"
 name = "midas-spider"
 version = "0.1.0"
-edition = "2021"
 
 [dependencies]
-midas-core = { path = "../midas-core" }
-tracing = "*"
-tracing-subscriber = "*"
-tokio = { version = "*", features = ["full"] }
-reqwest = { version = "*", default-features = false, features = [
+futures = "*"
+midas-core = {path = "../midas-core"}
+rayon = "*"
+reqwest = {version = "*", default-features = false, features = [
   "json",
   "rustls-tls",
-] }
-serde = { version = "*", features = ["derive"] }
+]}
+serde = {version = "*", features = ["derive"]}
 serde_json = "*"
-rayon = "*"
-futures = "*"
+tokio = {version = "*", features = ["full"]}
+tracing = "*"
+tracing-subscriber = "*"

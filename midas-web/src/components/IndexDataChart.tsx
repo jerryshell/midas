@@ -3,13 +3,15 @@ import { createEffect, createSignal } from "solid-js";
 import IIndexData from "../interfaces/IIndexData";
 
 const IndexDataChart = (props: { indexDataList: IIndexData[] }) => {
-  let chartRef: HTMLDivElement;
+  let chartRef: HTMLDivElement | undefined;
 
   const [indexDataChart, setIndexDataChart] =
     createSignal<echarts.ECharts | null>(null);
+
   createEffect(() => {
     setIndexDataChart(echarts.init(chartRef, "dark"));
   });
+
   createEffect(() => {
     indexDataChart()?.setOption({
       backgroundColor: "black",
@@ -51,7 +53,7 @@ const IndexDataChart = (props: { indexDataList: IIndexData[] }) => {
     });
   });
 
-  return <div style={{ height: "500px" }} ref={chartRef!}></div>;
+  return <div style={{ height: "500px" }} ref={chartRef}></div>;
 };
 
 export default IndexDataChart;

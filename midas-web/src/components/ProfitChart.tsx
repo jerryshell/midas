@@ -3,14 +3,16 @@ import { createEffect, createSignal } from "solid-js";
 import IProfit from "../interfaces/IProfit";
 
 const ProfitChart = (props: { profitList: IProfit[] }) => {
-  let chartRef: HTMLDivElement;
+  let chartRef: HTMLDivElement | undefined;
 
   const [profitChart, setProfitChart] = createSignal<echarts.ECharts | null>(
     null
   );
+
   createEffect(() => {
     setProfitChart(echarts.init(chartRef, "dark"));
   });
+
   createEffect(() => {
     profitChart()?.setOption({
       backgroundColor: "black",
@@ -57,7 +59,7 @@ const ProfitChart = (props: { profitList: IProfit[] }) => {
     });
   });
 
-  return <div style={{ height: "500px" }} ref={chartRef!}></div>;
+  return <div style={{ height: "500px" }} ref={chartRef}></div>;
 };
 
 export default ProfitChart;

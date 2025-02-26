@@ -1,11 +1,11 @@
 [package]
+edition = "2024"
 name = "midas-core"
 version = "0.1.0"
-edition = "2021"
 
 [dependencies]
-tracing = "*"
-serde = { version = "*", features = ["derive"] }
-serde_json = "*"
 chrono = "*"
 rayon = "*"
+serde = {version = "*", features = ["derive"]}
+serde_json = "*"
+tracing = "*"

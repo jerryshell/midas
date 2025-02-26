@@ -1,15 +1,15 @@
 [package]
+edition = "2024"
 name = "midas-http"
 version = "0.1.0"
-edition = "2021"
 
 [dependencies]
-midas-core = { path = "../midas-core" }
+anyhow = "*"
+axum = "*"
+chrono = "*"
+midas-core = {path = "../midas-core"}
+serde = {version = "*", features = ["derive"]}
+tokio = {version = "*", features = ["full"]}
+tower-http = {version = "*", features = ["cors"]}
 tracing = "*"
 tracing-subscriber = "*"
-axum = "*"
-tokio = { version = "*", features = ["full"] }
-tower-http = { version = "*", features = ["cors"] }
-serde = { version = "*", features = ["derive"] }
-chrono = "*"
-anyhow = "*"
