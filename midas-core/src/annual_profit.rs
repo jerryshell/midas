@@ -3,7 +3,7 @@ use rayon::prelude::*;
 pub fn list(profit_list: &[crate::model::Profit]) -> Vec<crate::model::AnnualProfit> {
     let year_list = profit_list
         .par_iter()
-        .map(|item| item.date.clone().split('-').next().unwrap().to_string())
+        .map(|item| item.date.split('-').next().unwrap().to_string())
         .collect::<std::collections::BTreeSet<String>>();
 
     year_list
