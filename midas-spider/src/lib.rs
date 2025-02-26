@@ -26,7 +26,10 @@ struct EastmoneyResponseData {
 pub async fn fetch_data(index_code: &midas_core::model::IndexCode, client: &reqwest::Client) {
     tracing::info!("fetch {} date -> begin", index_code.code);
 
-    let url = format!("https://push2his.eastmoney.com/api/qt/stock/kline/get?secid={}&fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61&klt=101&fqt=1&beg=0&end=20500101&lmt=120", index_code.secid);
+    let url = format!(
+        "https://push2his.eastmoney.com/api/qt/stock/kline/get?secid={}&fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61&klt=101&fqt=1&beg=0&end=20500101&lmt=120",
+        index_code.secid
+    );
 
     let response = client.get(url).send().await.unwrap();
 

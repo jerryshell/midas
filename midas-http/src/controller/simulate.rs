@@ -1,3 +1,5 @@
+use crate::*;
+
 #[derive(serde::Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct SimulateForm {
@@ -13,7 +15,7 @@ pub struct SimulateForm {
 
 pub async fn simulate(form: axum::Json<SimulateForm>) -> impl axum::response::IntoResponse {
     match midas_core::index_data::list_by_code(form.code.trim()) {
-        Err(e) => Err(crate::error::AppError::FailedWithMessage(e.to_string())),
+        Err(e) => Err(error::AppError::FailedWithMessage(e.to_string())),
         Ok(mut index_data_list) => {
             let date_begin = match &form.date_begin {
                 None => "",

@@ -1,6 +1,7 @@
+use crate::*;
 use rayon::prelude::*;
 
-pub fn list(profit_list: &[crate::model::Profit]) -> Vec<crate::model::AnnualProfit> {
+pub fn list(profit_list: &[model::Profit]) -> Vec<model::AnnualProfit> {
     let year_list = profit_list
         .par_iter()
         .map(|item| item.date.split('-').next().unwrap().to_string())
@@ -11,7 +12,7 @@ pub fn list(profit_list: &[crate::model::Profit]) -> Vec<crate::model::AnnualPro
         .map(|year| {
             let mut iter = profit_list.iter().filter(|item| item.date.contains(year));
             if iter.clone().count() < 2 {
-                return crate::model::AnnualProfit {
+                return model::AnnualProfit {
                     year: year.to_string(),
                     index_profit: 0.0,
                     ma_profit: 0.0,
@@ -19,7 +20,7 @@ pub fn list(profit_list: &[crate::model::Profit]) -> Vec<crate::model::AnnualPro
             }
             let first = iter.next().unwrap();
             let last = iter.last().unwrap();
-            crate::model::AnnualProfit {
+            model::AnnualProfit {
                 year: year.to_string(),
                 index_profit: last.close_point - first.close_point,
                 ma_profit: last.value - first.value,

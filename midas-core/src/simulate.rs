@@ -1,3 +1,4 @@
+use crate::*;
 use rayon::prelude::*;
 
 pub fn simulate(
@@ -6,9 +7,9 @@ pub fn simulate(
     sell_ratio: f64,
     buy_ratio: f64,
     service_charge: f64,
-    index_data_list: &[crate::model::IndexData],
-) -> crate::model::SimulateResult {
-    let mut simulate_result = crate::model::SimulateResult::default();
+    index_data_list: &[model::IndexData],
+) -> model::SimulateResult {
+    let mut simulate_result = model::SimulateResult::default();
 
     if index_data_list.is_empty() {
         return simulate_result;
@@ -44,15 +45,12 @@ pub fn simulate(
         (1.0 + simulate_result.ma_final_profit_loss_ratio).powf(1.0 / simulate_result.years) - 1.0;
 
     // annual_profit_list
-    simulate_result.annual_profit_list = crate::annual_profit::list(&simulate_result.profit_list);
+    simulate_result.annual_profit_list = annual_profit::list(&simulate_result.profit_list);
 
     simulate_result
 }
 
-fn fill_years(
-    index_data_list: &[crate::model::IndexData],
-    simulate_result: &mut crate::model::SimulateResult,
-) {
+fn fill_years(index_data_list: &[model::IndexData], simulate_result: &mut model::SimulateResult) {
     let date_begin = &index_data_list.first().unwrap().date;
     let date_end = &index_data_list.last().unwrap().date;
     let date_begin = chrono::NaiveDate::parse_from_str(date_begin, "%Y-%m-%d").unwrap();
@@ -62,18 +60,15 @@ fn fill_years(
     simulate_result.years = years;
 }
 
-fn fill_ma_final_profit_loss_ratio(
-    init_cash: f64,
-    simulate_result: &mut crate::model::SimulateResult,
-) {
+fn fill_ma_final_profit_loss_ratio(init_cash: f64, simulate_result: &mut model::SimulateResult) {
     let last_value = simulate_result.profit_list.last().unwrap().value;
     let ma_final_profit_loss_ratio = (last_value - init_cash) / init_cash;
     simulate_result.ma_final_profit_loss_ratio = ma_final_profit_loss_ratio;
 }
 
 fn fill_index_final_profit_loss_ratio(
-    index_data_list: &[crate::model::IndexData],
-    simulate_result: &mut crate::model::SimulateResult,
+    index_data_list: &[model::IndexData],
+    simulate_result: &mut model::SimulateResult,
 ) {
     let first_close_point = index_data_list.first().unwrap().close_point;
     let last_close_point = index_data_list.last().unwrap().close_point;
@@ -87,8 +82,8 @@ fn fill_profit_list_and_trade_list(
     sell_ratio: f64,
     buy_ratio: f64,
     service_charge: f64,
-    index_data_list: &[crate::model::IndexData],
-    simulate_result: &mut crate::model::SimulateResult,
+    index_data_list: &[model::IndexData],
+    simulate_result: &mut model::SimulateResult,
 ) {
     let mut cash = init_cash;
     let mut shares = 0.0;
@@ -116,7 +111,7 @@ fn fill_profit_list_and_trade_list(
                             // buy
                             shares = cash / close_point;
                             cash = 0.0;
-                            let trade = crate::model::Trade {
+                            let trade = model::Trade {
                                 buy_date: index_data.date.clone(),
                                 sell_date: r"N/A".to_owned(),
                                 buy_close_point: index_data.close_point,
@@ -154,7 +149,7 @@ fn fill_profit_list_and_trade_list(
                 close_point * shares
             };
 
-            crate::model::Profit {
+            model::Profit {
                 date: index_data.date.clone(),
                 close_point,
                 value,
@@ -165,11 +160,7 @@ fn fill_profit_list_and_trade_list(
     simulate_result.profit_list = profit_list;
 }
 
-fn get_max(
-    target_index: usize,
-    days: usize,
-    index_data_list: &[crate::model::IndexData],
-) -> Option<f64> {
+fn get_max(target_index: usize, days: usize, index_data_list: &[model::IndexData]) -> Option<f64> {
     if days == 0 || days > target_index {
         return None;
     }
@@ -183,11 +174,7 @@ fn get_max(
         .max_by(|a, b| a.partial_cmp(b).unwrap())
 }
 
-fn get_ma(
-    target_index: usize,
-    days: usize,
-    index_data_list: &[crate::model::IndexData],
-) -> Option<f64> {
+fn get_ma(target_index: usize, days: usize, index_data_list: &[model::IndexData]) -> Option<f64> {
     if days == 0 || days > target_index {
         return None;
     }
@@ -205,39 +192,34 @@ fn get_ma(
 
 #[cfg(test)]
 mod tests {
-    fn get_test_index_data_list() -> Vec<crate::model::IndexData> {
-        crate::index_data::list_by_code("000300").unwrap()
+    use crate::*;
+
+    fn get_test_index_data_list() -> Vec<model::IndexData> {
+        index_data::list_by_code("000300").unwrap()
     }
 
-    mod simulate {
-        #[test]
-        fn test() {
-            let index_data_list = crate::simulate::tests::get_test_index_data_list();
-            let simulate_result =
-                crate::simulate::simulate(1000.0, 30, 0.95, 1.05, 0.0, &index_data_list);
-            assert_eq!(index_data_list.len(), simulate_result.profit_list.len());
-            assert_eq!(
-                9449.059143002818,
-                simulate_result.profit_list.last().unwrap().value
-            );
-        }
+    #[test]
+    fn test_simulate() {
+        let index_data_list = simulate::tests::get_test_index_data_list();
+        let simulate_result = simulate::simulate(1000.0, 30, 0.95, 1.05, 0.0, &index_data_list);
+        assert_eq!(index_data_list.len(), simulate_result.profit_list.len());
+        assert_eq!(
+            9449.059143002818,
+            simulate_result.profit_list.last().unwrap().value
+        );
     }
 
-    mod get_max {
-        #[test]
-        fn test() {
-            let index_data_list = crate::simulate::tests::get_test_index_data_list();
-            let max = crate::simulate::get_max(100, 30, &index_data_list);
-            assert_eq!(Some(943.98), max);
-        }
+    #[test]
+    fn test_get_max() {
+        let index_data_list = simulate::tests::get_test_index_data_list();
+        let max = simulate::get_max(100, 30, &index_data_list);
+        assert_eq!(Some(943.98), max);
     }
 
-    mod get_ma {
-        #[test]
-        fn test() {
-            let index_data_list = crate::simulate::tests::get_test_index_data_list();
-            let ma = crate::simulate::get_ma(100, 30, &index_data_list);
-            assert_eq!(Some(884.3420000000001), ma);
-        }
+    #[test]
+    fn test_get_ma() {
+        let index_data_list = simulate::tests::get_test_index_data_list();
+        let ma = simulate::get_ma(100, 30, &index_data_list);
+        assert_eq!(Some(884.3420000000001), ma);
     }
 }
