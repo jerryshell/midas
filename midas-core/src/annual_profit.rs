@@ -19,7 +19,7 @@ pub fn list(profit_list: &[model::Profit]) -> Vec<model::AnnualProfit> {
                 };
             }
             let first = iter.next().unwrap();
-            let last = iter.last().unwrap();
+            let last = iter.next_back().unwrap();
             model::AnnualProfit {
                 year: year.to_string(),
                 index_profit: last.close_point - first.close_point,

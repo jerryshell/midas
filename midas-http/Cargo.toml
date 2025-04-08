@@ -7,9 +7,9 @@ version = "0.1.0"
 anyhow = "*"
 axum = "*"
 chrono = "*"
-midas-core = {path = "../midas-core"}
-serde = {version = "*", features = ["derive"]}
-tokio = {version = "*", features = ["full"]}
-tower-http = {version = "*", features = ["cors"]}
+midas-core = { path = "../midas-core" }
+serde = { version = "*", features = ["derive"] }
+tokio = { version = "*", features = ["full"] }
+tower-http = { version = "*", features = ["cors"] }
 tracing = "*"
 tracing-subscriber = "*"

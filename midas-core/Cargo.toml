@@ -6,6 +6,6 @@ version = "0.1.0"
 [dependencies]
 chrono = "*"
 rayon = "*"
-serde = {version = "*", features = ["derive"]}
+serde = { version = "*", features = ["derive"] }
 serde_json = "*"
 tracing = "*"
