@@ -8,13 +8,13 @@
     "serve": "vite preview"
   },
   "devDependencies": {
-    "typescript": "^5.8.3",
+    "typescript": "^5.9.2",
     "vite": "^5.4.19",
-    "vite-plugin-solid": "^2.11.6"
+    "vite-plugin-solid": "^2.11.8"
   },
   "dependencies": {
-    "axios": "^1.9.0",
+    "axios": "^1.11.0",
     "echarts": "^5.6.0",
-    "solid-js": "^1.9.7"
+    "solid-js": "^1.9.9"
   }
 }
