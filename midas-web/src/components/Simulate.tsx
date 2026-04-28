@@ -15,8 +15,10 @@ const Simulate = () => {
   const [serviceCharge, setServiceCharge] = createSignal(0.01);
   const [dateBegin, setDateBegin] = createSignal("");
   const [dateEnd, setDateEnd] = createSignal("");
+  const [loading, setLoading] = createSignal(false);
 
   const fetchSimulateResult = async (code: string) => {
+    setLoading(true);
     const postData = {
       code,
       initCash: initCash(),
@@ -35,10 +37,14 @@ const Simulate = () => {
       })
       .catch((e) => {
         alert(e.response?.data ?? e.message);
+      })
+      .finally(() => {
+        setLoading(false);
       });
   };
 
   const handleSimulateBtnClick = () => {
+    if (loading()) return;
     const code = currentIndexCode()?.code;
     if (code) {
       fetchSimulateResult(code);
@@ -131,7 +137,9 @@ const Simulate = () => {
         </div>
       </div>
 
-      <button onClick={handleSimulateBtnClick}>回测模拟</button>
+      <button onClick={handleSimulateBtnClick} disabled={loading()}>
+        {loading() ? "加载中..." : "回测模拟"}
+      </button>
 
       <Show when={simulateResult()}>
         <ProfitChart profitList={simulateResult()!.profitList} />
