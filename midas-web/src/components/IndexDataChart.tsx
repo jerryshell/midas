@@ -3,7 +3,7 @@ import { createEffect, createSignal } from "solid-js";
 import IIndexData from "../interfaces/IIndexData";
 
 const IndexDataChart = (props: { indexDataList: IIndexData[] }) => {
-  let chartRef: HTMLDivElement | undefined;
+  let chartRef = undefined as HTMLDivElement | undefined;
 
   const [indexDataChart, setIndexDataChart] = createSignal<echarts.ECharts | null>(null);
 

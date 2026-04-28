@@ -3,7 +3,7 @@ import { createEffect, createSignal } from "solid-js";
 import IProfit from "../interfaces/IProfit";
 
 const ProfitChart = (props: { profitList: IProfit[] }) => {
-  let chartRef: HTMLDivElement | undefined;
+  let chartRef = undefined as HTMLDivElement | undefined;
 
   const [profitChart, setProfitChart] = createSignal<echarts.ECharts | null>(null);
 
