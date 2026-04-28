@@ -32922,5 +32922,385 @@
   {
     "date": "2025-12-03",
     "closePoint": 249.86
+  },
+  {
+    "date": "2025-12-04",
+    "closePoint": 250.81
+  },
+  {
+    "date": "2025-12-05",
+    "closePoint": 251.78
+  },
+  {
+    "date": "2025-12-08",
+    "closePoint": 251.56
+  },
+  {
+    "date": "2025-12-09",
+    "closePoint": 248.69
+  },
+  {
+    "date": "2025-12-10",
+    "closePoint": 248.86
+  },
+  {
+    "date": "2025-12-11",
+    "closePoint": 248.77
+  },
+  {
+    "date": "2025-12-12",
+    "closePoint": 249.55
+  },
+  {
+    "date": "2025-12-15",
+    "closePoint": 248.63
+  },
+  {
+    "date": "2025-12-16",
+    "closePoint": 246.8
+  },
+  {
+    "date": "2025-12-17",
+    "closePoint": 246.66
+  },
+  {
+    "date": "2025-12-18",
+    "closePoint": 243.21
+  },
+  {
+    "date": "2025-12-19",
+    "closePoint": 244.15
+  },
+  {
+    "date": "2025-12-22",
+    "closePoint": 248.23
+  },
+  {
+    "date": "2025-12-23",
+    "closePoint": 249.17
+  },
+  {
+    "date": "2025-12-24",
+    "closePoint": 250.75
+  },
+  {
+    "date": "2025-12-25",
+    "closePoint": 252.53
+  },
+  {
+    "date": "2025-12-26",
+    "closePoint": 252.87
+  },
+  {
+    "date": "2025-12-29",
+    "closePoint": 253.42
+  },
+  {
+    "date": "2025-12-30",
+    "closePoint": 254.11
+  },
+  {
+    "date": "2025-12-31",
+    "closePoint": 253.82
+  },
+  {
+    "date": "2026-01-05",
+    "closePoint": 256.03
+  },
+  {
+    "date": "2026-01-06",
+    "closePoint": 256.99
+  },
+  {
+    "date": "2026-01-07",
+    "closePoint": 256.98
+  },
+  {
+    "date": "2026-01-08",
+    "closePoint": 257.36
+  },
+  {
+    "date": "2026-01-09",
+    "closePoint": 258.29
+  },
+  {
+    "date": "2026-01-12",
+    "closePoint": 258.43
+  },
+  {
+    "date": "2026-01-13",
+    "closePoint": 257.77
+  },
+  {
+    "date": "2026-01-14",
+    "closePoint": 258.05
+  },
+  {
+    "date": "2026-01-15",
+    "closePoint": 258.96
+  },
+  {
+    "date": "2026-01-16",
+    "closePoint": 259.05
+  },
+  {
+    "date": "2026-01-19",
+    "closePoint": 260.51
+  },
+  {
+    "date": "2026-01-20",
+    "closePoint": 260.24
+  },
+  {
+    "date": "2026-01-21",
+    "closePoint": 261.81
+  },
+  {
+    "date": "2026-01-22",
+    "closePoint": 262.5
+  },
+  {
+    "date": "2026-01-23",
+    "closePoint": 264.34
+  },
+  {
+    "date": "2026-01-26",
+    "closePoint": 264.44
+  },
+  {
+    "date": "2026-01-27",
+    "closePoint": 263.24
+  },
+  {
+    "date": "2026-01-28",
+    "closePoint": 266.07
+  },
+  {
+    "date": "2026-01-29",
+    "closePoint": 265.86
+  },
+  {
+    "date": "2026-01-30",
+    "closePoint": 264.39
+  },
+  {
+    "date": "2026-02-02",
+    "closePoint": 259.52
+  },
+  {
+    "date": "2026-02-03",
+    "closePoint": 263.11
+  },
+  {
+    "date": "2026-02-04",
+    "closePoint": 264.65
+  },
+  {
+    "date": "2026-02-05",
+    "closePoint": 263.67
+  },
+  {
+    "date": "2026-02-06",
+    "closePoint": 262.93
+  },
+  {
+    "date": "2026-02-09",
+    "closePoint": 265.23
+  },
+  {
+    "date": "2026-02-10",
+    "closePoint": 265.31
+  },
+  {
+    "date": "2026-02-11",
+    "closePoint": 266.39
+  },
+  {
+    "date": "2026-02-12",
+    "closePoint": 267.39
+  },
+  {
+    "date": "2026-02-13",
+    "closePoint": 267.15
+  },
+  {
+    "date": "2026-02-24",
+    "closePoint": 267.92
+  },
+  {
+    "date": "2026-02-25",
+    "closePoint": 268.29
+  },
+  {
+    "date": "2026-02-26",
+    "closePoint": 268.75
+  },
+  {
+    "date": "2026-02-27",
+    "closePoint": 269.39
+  },
+  {
+    "date": "2026-03-02",
+    "closePoint": 269.33
+  },
+  {
+    "date": "2026-03-03",
+    "closePoint": 264.66
+  },
+  {
+    "date": "2026-03-04",
+    "closePoint": 263.91
+  },
+  {
+    "date": "2026-03-05",
+    "closePoint": 266.0
+  },
+  {
+    "date": "2026-03-06",
+    "closePoint": 267.02
+  },
+  {
+    "date": "2026-03-09",
+    "closePoint": 267.06
+  },
+  {
+    "date": "2026-03-10",
+    "closePoint": 266.81
+  },
+  {
+    "date": "2026-03-11",
+    "closePoint": 268.13
+  },
+  {
+    "date": "2026-03-12",
+    "closePoint": 267.39
+  },
+  {
+    "date": "2026-03-13",
+    "closePoint": 266.31
+  },
+  {
+    "date": "2026-03-16",
+    "closePoint": 264.48
+  },
+  {
+    "date": "2026-03-17",
+    "closePoint": 263.36
+  },
+  {
+    "date": "2026-03-18",
+    "closePoint": 264.86
+  },
+  {
+    "date": "2026-03-19",
+    "closePoint": 263.62
+  },
+  {
+    "date": "2026-03-20",
+    "closePoint": 259.96
+  },
+  {
+    "date": "2026-03-23",
+    "closePoint": 256.03
+  },
+  {
+    "date": "2026-03-24",
+    "closePoint": 259.31
+  },
+  {
+    "date": "2026-03-25",
+    "closePoint": 262.19
+  },
+  {
+    "date": "2026-03-26",
+    "closePoint": 261.61
+  },
+  {
+    "date": "2026-03-27",
+    "closePoint": 263.81
+  },
+  {
+    "date": "2026-03-30",
+    "closePoint": 264.47
+  },
+  {
+    "date": "2026-03-31",
+    "closePoint": 262.14
+  },
+  {
+    "date": "2026-04-01",
+    "closePoint": 265.47
+  },
+  {
+    "date": "2026-04-02",
+    "closePoint": 264.9
+  },
+  {
+    "date": "2026-04-03",
+    "closePoint": 263.65
+  },
+  {
+    "date": "2026-04-07",
+    "closePoint": 263.58
+  },
+  {
+    "date": "2026-04-08",
+    "closePoint": 265.59
+  },
+  {
+    "date": "2026-04-09",
+    "closePoint": 265.42
+  },
+  {
+    "date": "2026-04-10",
+    "closePoint": 266.26
+  },
+  {
+    "date": "2026-04-13",
+    "closePoint": 265.01
+  },
+  {
+    "date": "2026-04-14",
+    "closePoint": 266.44
+  },
+  {
+    "date": "2026-04-15",
+    "closePoint": 267.18
+  },
+  {
+    "date": "2026-04-16",
+    "closePoint": 269.4
+  },
+  {
+    "date": "2026-04-17",
+    "closePoint": 269.27
+  },
+  {
+    "date": "2026-04-20",
+    "closePoint": 269.47
+  },
+  {
+    "date": "2026-04-21",
+    "closePoint": 269.74
+  },
+  {
+    "date": "2026-04-22",
+    "closePoint": 271.28
+  },
+  {
+    "date": "2026-04-23",
+    "closePoint": 269.87
+  },
+  {
+    "date": "2026-04-24",
+    "closePoint": 271.92
+  },
+  {
+    "date": "2026-04-27",
+    "closePoint": 273.31
+  },
+  {
+    "date": "2026-04-28",
+    "closePoint": 274.45
   }
 ]
