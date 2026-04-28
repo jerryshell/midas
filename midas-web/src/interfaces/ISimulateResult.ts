@@ -1,11 +1,11 @@
-import IAnuualProfit from "./IAnnualProfit";
+import IAnnualProfit from "./IAnnualProfit";
 import IProfit from "./IProfit";
 import ITrade from "./ITrade";
 
 export default interface ISimulateResult {
   profitList: IProfit[];
   tradeList: ITrade[];
-  annualProfitList: IAnuualProfit[];
+  annualProfitList: IAnnualProfit[];
   indexFinalProfitLossRatio: number;
   maFinalProfitLossRatio: number;
   indexApr: number;

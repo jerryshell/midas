@@ -13,32 +13,34 @@ import {
   setIndexDataList,
 } from "./GlobalSignal";
 
+const fetchIndexCodeList = async () => {
+  return indexCodeApi
+    .list()
+    .then((data) => {
+      setIndexCodeList(data);
+    })
+    .catch((e) => {
+      alert(e.response?.data ?? e.message);
+    });
+};
+
+const fetchIndexDataList = async (code: string) => {
+  return indexDataApi
+    .list_by_code(code)
+    .then((data) => {
+      setIndexDataList(data);
+    })
+    .catch((e) => alert(e.response?.data ?? e.message));
+};
+
 const App = () => {
   createEffect(() => {
-    const fetchIndexCodeList = async () => {
-      return indexCodeApi
-        .list()
-        .then((data) => {
-          setIndexCodeList(data);
-        })
-        .catch((e) => {
-          alert(e.response?.data ?? e.message);
-        });
-    };
     fetchIndexCodeList().then(() => {
       setCurrentIndexCode(indexCodeList()[0]);
     });
   });
 
   createEffect(() => {
-    const fetchIndexDataList = async (code: string) => {
-      return indexDataApi
-        .list_by_code(code)
-        .then((data) => {
-          setIndexDataList(data);
-        })
-        .catch((e) => alert(e.response?.data ?? e.message));
-    };
     const code = currentIndexCode()?.code;
     if (code) {
       fetchIndexDataList(code);

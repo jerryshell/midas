@@ -1,8 +1,8 @@
 import * as echarts from "echarts";
 import { createEffect, createSignal } from "solid-js";
-import IAnuualProfit from "../interfaces/IAnnualProfit";
+import IAnnualProfit from "../interfaces/IAnnualProfit";
 
-const AnnualProfitChart = (props: { annualProfitList: IAnuualProfit[] }) => {
+const AnnualProfitChart = (props: { annualProfitList: IAnnualProfit[] }) => {
   let chartRef = undefined as HTMLDivElement | undefined;
 
   const [annualProfitChart, setAnnualProfitChart] = createSignal<echarts.ECharts | null>(null);

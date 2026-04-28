@@ -143,17 +143,9 @@ const Simulate = () => {
 
       <Show when={simulateResult()}>
         <ProfitChart profitList={simulateResult()!.profitList} />
-      </Show>
-      <Show when={simulateResult()}>
         <ProfitOverview simulateResult={simulateResult()!} />
-      </Show>
-      <Show when={simulateResult()}>
         <AnnualProfitChart annualProfitList={simulateResult()!.annualProfitList} />
-      </Show>
-      <Show when={simulateResult()}>
         <TradeOverview tradeList={simulateResult()!.tradeList} />
-      </Show>
-      <Show when={simulateResult()}>
         <TradeDetailTable tradeList={simulateResult()!.tradeList} />
       </Show>
     </fieldset>
