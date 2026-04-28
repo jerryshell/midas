@@ -5,9 +5,7 @@ import IProfit from "../interfaces/IProfit";
 const ProfitChart = (props: { profitList: IProfit[] }) => {
   let chartRef: HTMLDivElement | undefined;
 
-  const [profitChart, setProfitChart] = createSignal<echarts.ECharts | null>(
-    null
-  );
+  const [profitChart, setProfitChart] = createSignal<echarts.ECharts | null>(null);
 
   createEffect(() => {
     setProfitChart(echarts.init(chartRef, "dark"));

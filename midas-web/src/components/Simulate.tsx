@@ -1,10 +1,6 @@
 import { createSignal, Show } from "solid-js";
 import simulateApi from "../api/simulateApi";
-import {
-  currentIndexCode,
-  setSimulateResult,
-  simulateResult,
-} from "../GlobalSignal";
+import { currentIndexCode, setSimulateResult, simulateResult } from "../GlobalSignal";
 import AnnualProfitChart from "./AnnualProfitChart";
 import ProfitChart from "./ProfitChart";
 import ProfitOverview from "./ProfitOverview";
@@ -144,9 +140,7 @@ const Simulate = () => {
         <ProfitOverview simulateResult={simulateResult()!} />
       </Show>
       <Show when={simulateResult()}>
-        <AnnualProfitChart
-          annualProfitList={simulateResult()!.annualProfitList}
-        />
+        <AnnualProfitChart annualProfitList={simulateResult()!.annualProfitList} />
       </Show>
       <Show when={simulateResult()}>
         <TradeOverview tradeList={simulateResult()!.tradeList} />

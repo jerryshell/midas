@@ -5,8 +5,7 @@ import IIndexData from "../interfaces/IIndexData";
 const IndexDataChart = (props: { indexDataList: IIndexData[] }) => {
   let chartRef: HTMLDivElement | undefined;
 
-  const [indexDataChart, setIndexDataChart] =
-    createSignal<echarts.ECharts | null>(null);
+  const [indexDataChart, setIndexDataChart] = createSignal<echarts.ECharts | null>(null);
 
   createEffect(() => {
     setIndexDataChart(echarts.init(chartRef, "dark"));

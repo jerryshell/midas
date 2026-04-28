@@ -5,8 +5,7 @@ import IAnuualProfit from "../interfaces/IAnnualProfit";
 const AnnualProfitChart = (props: { annualProfitList: IAnuualProfit[] }) => {
   let chartRef: HTMLDivElement | undefined;
 
-  const [annualProfitChart, setAnnualProfitChart] =
-    createSignal<echarts.ECharts | null>(null);
+  const [annualProfitChart, setAnnualProfitChart] = createSignal<echarts.ECharts | null>(null);
 
   createEffect(() => {
     setAnnualProfitChart(echarts.init(chartRef, "dark"));
@@ -52,9 +51,7 @@ const AnnualProfitChart = (props: { annualProfitList: IAnuualProfit[] }) => {
           emphasis: {
             focus: "series",
           },
-          data: props.annualProfitList.map((item) =>
-            item.indexProfit.toFixed(2)
-          ),
+          data: props.annualProfitList.map((item) => item.indexProfit.toFixed(2)),
         },
         {
           name: "均线收益",

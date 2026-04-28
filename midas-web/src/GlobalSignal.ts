@@ -7,12 +7,9 @@ const [indexCodeList, setIndexCodeList] = createSignal<IIndexCode[]>([]);
 
 const [indexDataList, setIndexDataList] = createSignal<IIndexData[]>([]);
 
-const [currentIndexCode, setCurrentIndexCode] = createSignal<IIndexCode | null>(
-  null
-);
+const [currentIndexCode, setCurrentIndexCode] = createSignal<IIndexCode | null>(null);
 
-const [simulateResult, setSimulateResult] =
-  createSignal<ISimulateResult | null>(null);
+const [simulateResult, setSimulateResult] = createSignal<ISimulateResult | null>(null);
 
 export {
   indexCodeList,

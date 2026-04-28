@@ -3,11 +3,11 @@ import ITrade from "../interfaces/ITrade";
 
 const TradeOverview = (props: { tradeList: ITrade[] }) => {
   const profitTradeList = createMemo(() =>
-    props.tradeList.filter((item) => item.profitLossRatio > 0)
+    props.tradeList.filter((item) => item.profitLossRatio > 0),
   );
 
   const lossTradeList = createMemo(() =>
-    props.tradeList.filter((item) => item.profitLossRatio < 0)
+    props.tradeList.filter((item) => item.profitLossRatio < 0),
   );
 
   return (
