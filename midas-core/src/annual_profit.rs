@@ -17,7 +17,7 @@ pub fn list(profit_list: &[model::Profit]) -> Vec<model::AnnualProfit> {
         .par_iter()
         .map(|year| {
             let mut iter = profit_list.iter().filter(|item| item.date.contains(year));
-            if iter.clone().count() < 2 {
+            if profit_list.iter().filter(|item| item.date.contains(year)).count() < 2 {
                 return model::AnnualProfit {
                     year: year.to_string(),
                     index_profit: 0.0,

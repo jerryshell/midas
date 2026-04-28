@@ -116,12 +116,11 @@ fn fill_profit_list_and_trade_list(
             let ma = get_ma(current_index, ma_days, index_data_list);
             let max = get_max(current_index, ma_days, index_data_list);
             if let (Some(ma), Some(max)) = (ma, max) {
-                let increse_ratio = close_point / ma;
-                let decrese_ratio = close_point / max;
+                let increase_ratio = close_point / ma;
+                let decrease_ratio = close_point / max;
 
-                if increse_ratio >= buy_ratio {
-                    // time to buy
-                    if 0.0 == shares {
+                if increase_ratio >= buy_ratio {
+                    if shares == 0.0 {
                         // buy
                         shares = cash / close_point;
                         cash = 0.0;
@@ -133,29 +132,19 @@ fn fill_profit_list_and_trade_list(
                             profit_loss_ratio: 0.0,
                         };
                         simulate_result.trade_list.push(trade);
-                    } else {
-                        // hold shares, do nothing
                     }
-                } else if decrese_ratio <= sell_ratio {
-                    // time to sell
-                    if 0.0 == shares {
-                        // no shares, do nothing
-                    } else {
-                        // sell
-                        cash = close_point * shares * (1.0 - service_charge);
-                        shares = 0.0;
-                        let trade = simulate_result
-                            .trade_list
-                            .last_mut()
-                            .expect("trade_list should have at least one entry when selling");
-                        trade.sell_date = index_data.date.clone();
-                        trade.sell_close_point = index_data.close_point;
-                        trade.profit_loss_ratio = (trade.sell_close_point
-                            - trade.buy_close_point)
-                            / trade.buy_close_point;
-                    }
-                } else {
-                    // do nothing
+                } else if decrease_ratio <= sell_ratio && shares > 0.0 {
+                    // sell
+                    cash = close_point * shares * (1.0 - service_charge);
+                    shares = 0.0;
+                    let trade = simulate_result
+                        .trade_list
+                        .last_mut()
+                        .expect("trade_list should have at least one entry when selling");
+                    trade.sell_date = index_data.date.clone();
+                    trade.sell_close_point = index_data.close_point;
+                    trade.profit_loss_ratio =
+                        (trade.sell_close_point - trade.buy_close_point) / trade.buy_close_point;
                 }
             }
 

@@ -17,14 +17,8 @@ pub async fn simulate(form: axum::Json<SimulateForm>) -> impl axum::response::In
     match midas_core::index_data::list_by_code(form.code.trim()) {
         Err(e) => Err(error::AppError::FailedWithMessage(e.to_string())),
         Ok(mut index_data_list) => {
-            let date_begin = match &form.date_begin {
-                None => "",
-                Some(date_begin) => date_begin,
-            };
-            let date_end = match &form.date_end {
-                None => "",
-                Some(date_end) => date_end,
-            };
+            let date_begin = form.date_begin.as_deref().unwrap_or("");
+            let date_end = form.date_end.as_deref().unwrap_or("");
             index_data_list_retain_by_date_range(&mut index_data_list, date_begin, date_end);
             let simulate_result = midas_core::simulate::simulate(
                 form.init_cash,
