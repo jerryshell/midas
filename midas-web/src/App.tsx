@@ -18,11 +18,11 @@ const App = () => {
     const fetchIndexCodeList = async () => {
       return indexCodeApi
         .list()
-        .then((response) => {
-          setIndexCodeList(response.data);
+        .then((data) => {
+          setIndexCodeList(data);
         })
         .catch((e) => {
-          alert(e.response.data);
+          alert(e.response?.data ?? e.message);
         });
     };
     fetchIndexCodeList().then(() => {
@@ -34,10 +34,10 @@ const App = () => {
     const fetchIndexDataList = async (code: string) => {
       return indexDataApi
         .list_by_code(code)
-        .then((response) => {
-          setIndexDataList(response.data);
+        .then((data) => {
+          setIndexDataList(data);
         })
-        .catch((e) => alert(e.response.data));
+        .catch((e) => alert(e.response?.data ?? e.message));
     };
     const code = currentIndexCode()?.code;
     if (code) {

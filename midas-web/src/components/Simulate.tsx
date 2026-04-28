@@ -34,11 +34,11 @@ const Simulate = () => {
 
     return simulateApi
       .simulate(postData)
-      .then((response) => {
-        setSimulateResult(response.data);
+      .then((data) => {
+        setSimulateResult(data);
       })
       .catch((e) => {
-        alert(e.response.data);
+        alert(e.response?.data ?? e.message);
       });
   };
 
