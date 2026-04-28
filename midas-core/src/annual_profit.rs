@@ -4,7 +4,13 @@ use rayon::prelude::*;
 pub fn list(profit_list: &[model::Profit]) -> Vec<model::AnnualProfit> {
     let year_set = profit_list
         .par_iter()
-        .map(|item| item.date.split('-').next().unwrap().to_string())
+        .map(|item| {
+            item.date
+                .split('-')
+                .next()
+                .expect("date should contain at least one segment")
+                .to_string()
+        })
         .collect::<std::collections::BTreeSet<String>>();
 
     year_set
@@ -18,8 +24,12 @@ pub fn list(profit_list: &[model::Profit]) -> Vec<model::AnnualProfit> {
                     ma_profit: 0.0,
                 };
             }
-            let first = iter.next().unwrap();
-            let last = iter.next_back().unwrap();
+            let first = iter
+                .next()
+                .expect("iterator should have at least two elements");
+            let last = iter
+                .next_back()
+                .expect("iterator should have at least two elements");
             model::AnnualProfit {
                 year: year.to_string(),
                 index_profit: last.close_point - first.close_point,

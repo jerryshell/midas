@@ -23,7 +23,10 @@ struct EastmoneyResponseData {
     pub klines: Vec<String>,
 }
 
-pub async fn fetch_data(index_code: &midas_core::model::IndexCode, client: &reqwest::Client) {
+pub async fn fetch_data(
+    index_code: &midas_core::model::IndexCode,
+    client: &reqwest::Client,
+) -> Result<(), Box<dyn std::error::Error>> {
     tracing::info!("fetch {} date -> begin", index_code.code);
 
     let url = format!(
@@ -31,9 +34,9 @@ pub async fn fetch_data(index_code: &midas_core::model::IndexCode, client: &reqw
         index_code.secid
     );
 
-    let response = client.get(url).send().await.unwrap();
+    let response = client.get(url).send().await?;
 
-    let eastmoney_response = response.json::<EastmoneyResponse>().await.unwrap();
+    let eastmoney_response = response.json::<EastmoneyResponse>().await?;
 
     let index_data_list = eastmoney_response
         .data
@@ -53,18 +56,18 @@ pub async fn fetch_data(index_code: &midas_core::model::IndexCode, client: &reqw
             // let chg = item_split_vec[9];
             // let turnover_rate = item_split_vec[10];
 
-            midas_core::model::IndexData {
+            close_point.parse::<f64>().map(|v| midas_core::model::IndexData {
                 date: date.to_string(),
-                close_point: close_point.parse().unwrap(),
-            }
+                close_point: v,
+            })
         })
-        .collect::<Vec<midas_core::model::IndexData>>();
+        .collect::<Result<Vec<midas_core::model::IndexData>, _>>()?;
 
     std::fs::write(
         format!("index-data/{}.json", eastmoney_response.data.code),
-        serde_json::to_string_pretty(&index_data_list).unwrap(),
-    )
-    .unwrap();
+        serde_json::to_string_pretty(&index_data_list)?,
+    )?;
 
     tracing::info!("fetch {} date <- end", index_code.code);
+    Ok(())
 }
