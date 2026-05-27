@@ -12,14 +12,14 @@
     "fmt:check": "oxfmt --check"
   },
   "dependencies": {
-    "echarts": "^5.6.0",
-    "solid-js": "^1.9.12"
+    "echarts": "^6.1.0",
+    "solid-js": "^1.9.13"
   },
   "devDependencies": {
-    "oxfmt": "^0.47.0",
-    "oxlint": "^1.62.0",
-    "typescript": "^5.9.3",
-    "vite": "^8.0.10",
+    "oxfmt": "^0.52.0",
+    "oxlint": "^1.67.0",
+    "typescript": "^6.0.3",
+    "vite": "^8.0.14",
     "vite-plugin-solid": "^2.11.12"
   }
 }

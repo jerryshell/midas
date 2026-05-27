@@ -26,8 +26,8 @@ cargo run --bin midas-http
 
 ```bash
 cd midas-web
-npm install
-npm run dev
+bun install
+bun run dev
 ```
 
 ### ?. Optional
