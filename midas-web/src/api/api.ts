@@ -7,43 +7,36 @@ interface ApiError extends Error {
   };
 }
 
-async function request(path: string, options: RequestInit = {}): Promise<any> {
-  const url = `${baseURL}${path}`;
+function buildHeaders(hasBody: boolean, extra?: HeadersInit): HeadersInit {
+  const headers: Record<string, string> = hasBody ? { "Content-Type": "application/json" } : {};
+  return { ...headers, ...(extra as Record<string, string>) };
+}
 
-  const defaultHeaders: Record<string, string> = {};
-
-  if (options.body && typeof options.body === "string") {
-    defaultHeaders["Content-Type"] = "application/json";
+async function parseError(response: Response): Promise<never> {
+  let errorData: any;
+  try {
+    errorData = await response.text();
+  } catch {
+    errorData = response.statusText;
   }
+  const error = new Error(`Request failed with status ${response.status}`) as ApiError;
+  error.response = { data: errorData, status: response.status };
+  throw error;
+}
 
-  const response = await fetch(url, {
+async function parseBody(response: Response): Promise<any> {
+  const contentType = response.headers.get("content-type");
+  return contentType?.includes("application/json") ? response.json() : response.text();
+}
+
+async function request(path: string, options: RequestInit = {}): Promise<any> {
+  const response = await fetch(`${baseURL}${path}`, {
     ...options,
-    headers: {
-      ...defaultHeaders,
-      ...options.headers,
-    },
+    headers: buildHeaders(typeof options.body === "string", options.headers),
   });
 
-  if (!response.ok) {
-    let errorData: any;
-    try {
-      errorData = await response.text();
-    } catch {
-      errorData = response.statusText;
-    }
-    const error = new Error(`Request failed with status ${response.status}`) as ApiError;
-    error.response = {
-      data: errorData,
-      status: response.status,
-    };
-    throw error;
-  }
-
-  const contentType = response.headers.get("content-type");
-  if (contentType && contentType.includes("application/json")) {
-    return response.json();
-  }
-  return response.text();
+  if (!response.ok) return parseError(response);
+  return parseBody(response);
 }
 
 const api = {
