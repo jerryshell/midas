@@ -163,6 +163,19 @@ fn fill_profit_list_and_trade_list(
         .collect();
 
     simulate_result.profit_list = profit_list;
+
+    // If the last trade is still open (sellDate == "N/A"), use the latest close point
+    if let Some(last_trade) = simulate_result.trade_list.last_mut() {
+        if last_trade.sell_date == "N/A" {
+            let last_close_point = index_data_list
+                .last()
+                .expect("index_data_list should not be empty")
+                .close_point;
+            last_trade.sell_close_point = last_close_point;
+            last_trade.profit_loss_ratio =
+                (last_close_point - last_trade.buy_close_point) / last_trade.buy_close_point;
+        }
+    }
 }
 
 fn get_max(target_index: usize, days: usize, index_data_list: &[model::IndexData]) -> Option<f64> {
