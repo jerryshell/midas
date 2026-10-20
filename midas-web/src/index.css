@@ -1,7 +1,22 @@
 @import "./dark.min.css";
 
+html,
 body {
-  font-family: Monaco;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 12px 40px;
+  box-sizing: border-box;
+}
+
+fieldset,
+details {
+  min-width: 0;
 }
 
 :root {
@@ -10,9 +25,181 @@ body {
 }
 
 .profit {
-  color: green;
+  color: #35d07f;
 }
 
 .loss {
-  color: red;
+  color: #ff5c5c;
+}
+
+.form-section {
+  border-top: 1px solid #2a2a2a;
+  margin-top: 18px;
+  padding-top: 10px;
+}
+
+.form-section h3 {
+  margin: 6px 0 12px;
+  font-size: 0.95rem;
+  color: #bbb;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 12px 18px;
+}
+
+.form-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form-grid label > span {
+  font-size: 0.82rem;
+  color: #ccc;
+}
+
+.form-grid input,
+.form-grid select {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.form-grid small,
+.hint {
+  color: #888;
+  font-size: 0.72rem;
+  line-height: 1.4;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin: 14px 0;
+}
+
+.form-actions button {
+  margin: 0;
+}
+
+button.secondary {
+  background: #1c1c1c;
+  color: #ddd;
+  border: 1px solid #444;
+}
+
+label.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 4px 0 12px;
+}
+
+label.checkbox input {
+  width: auto;
+  margin: 0;
+}
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+  margin: 14px 0;
+}
+
+.metric-grid.compact {
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.metric {
+  background: #111;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.metric-label {
+  font-size: 0.72rem;
+  color: #888;
+}
+
+.metric strong {
+  font-size: 1.25rem;
+  line-height: 1.3;
+}
+
+.metric small {
+  font-size: 0.68rem;
+  color: #777;
+}
+
+.table-scroll {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table-scroll table {
+  min-width: 560px;
+}
+
+.compare-table {
+  width: 100% !important;
+  min-width: 0 !important;
+  table-layout: fixed;
+  font-size: 0.78rem;
+}
+
+.compare-table th,
+.compare-table td {
+  padding: 6px 4px;
+  word-break: break-word;
+}
+
+.chart {
+  width: 100%;
+  height: 460px;
+  margin: 12px 0 18px;
+}
+
+.chart.tall {
+  height: 520px;
+}
+
+details > summary {
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+@media (max-width: 640px) {
+  .chart {
+    height: 360px;
+  }
+
+  .chart.tall {
+    height: 440px;
+  }
+
+  .metric strong {
+    font-size: 1.1rem;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 420px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
 }

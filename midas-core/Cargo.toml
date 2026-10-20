@@ -5,7 +5,9 @@ version = "0.1.0"
 
 [dependencies]
 chrono = "*"
+ndarray = "0.17"
 rayon = "*"
 serde = { version = "*", features = ["derive"] }
 serde_json = "*"
+stochastic-rs-stats = "3.0.0-rc.4"
 tracing = "*"

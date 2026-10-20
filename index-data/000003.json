@@ -33374,5 +33374,393 @@
   {
     "date": "2026-05-27",
     "closePoint": 280.27
+  },
+  {
+    "date": "2026-05-28",
+    "closePoint": 280.68
+  },
+  {
+    "date": "2026-05-29",
+    "closePoint": 275.82
+  },
+  {
+    "date": "2026-06-01",
+    "closePoint": 277.16
+  },
+  {
+    "date": "2026-06-02",
+    "closePoint": 272.75
+  },
+  {
+    "date": "2026-06-03",
+    "closePoint": 277.51
+  },
+  {
+    "date": "2026-06-04",
+    "closePoint": 278.1
+  },
+  {
+    "date": "2026-06-05",
+    "closePoint": 274.52
+  },
+  {
+    "date": "2026-06-08",
+    "closePoint": 274.24
+  },
+  {
+    "date": "2026-06-09",
+    "closePoint": 272.73
+  },
+  {
+    "date": "2026-06-10",
+    "closePoint": 267.25
+  },
+  {
+    "date": "2026-06-11",
+    "closePoint": 262.88
+  },
+  {
+    "date": "2026-06-12",
+    "closePoint": 267.44
+  },
+  {
+    "date": "2026-06-15",
+    "closePoint": 271.17
+  },
+  {
+    "date": "2026-06-16",
+    "closePoint": 271.0
+  },
+  {
+    "date": "2026-06-17",
+    "closePoint": 268.41
+  },
+  {
+    "date": "2026-06-18",
+    "closePoint": 274.14
+  },
+  {
+    "date": "2026-06-22",
+    "closePoint": 278.72
+  },
+  {
+    "date": "2026-06-23",
+    "closePoint": 275.84
+  },
+  {
+    "date": "2026-06-24",
+    "closePoint": 275.69
+  },
+  {
+    "date": "2026-06-25",
+    "closePoint": 270.58
+  },
+  {
+    "date": "2026-06-26",
+    "closePoint": 268.12
+  },
+  {
+    "date": "2026-06-29",
+    "closePoint": 269.0
+  },
+  {
+    "date": "2026-06-30",
+    "closePoint": 269.76
+  },
+  {
+    "date": "2026-07-01",
+    "closePoint": 272.2
+  },
+  {
+    "date": "2026-07-02",
+    "closePoint": 270.84
+  },
+  {
+    "date": "2026-07-03",
+    "closePoint": 274.28
+  },
+  {
+    "date": "2026-07-06",
+    "closePoint": 275.69
+  },
+  {
+    "date": "2026-07-07",
+    "closePoint": 274.16
+  },
+  {
+    "date": "2026-07-08",
+    "closePoint": 274.15
+  },
+  {
+    "date": "2026-07-09",
+    "closePoint": 275.0
+  },
+  {
+    "date": "2026-07-10",
+    "closePoint": 274.54
+  },
+  {
+    "date": "2026-07-13",
+    "closePoint": 273.47
+  },
+  {
+    "date": "2026-07-14",
+    "closePoint": 273.58
+  },
+  {
+    "date": "2026-07-15",
+    "closePoint": 273.73
+  },
+  {
+    "date": "2026-07-16",
+    "closePoint": 273.21
+  },
+  {
+    "date": "2026-07-17",
+    "closePoint": 269.26
+  },
+  {
+    "date": "2026-07-20",
+    "closePoint": 270.46
+  },
+  {
+    "date": "2026-07-21",
+    "closePoint": 271.71
+  },
+  {
+    "date": "2026-07-22",
+    "closePoint": 271.52
+  },
+  {
+    "date": "2026-07-23",
+    "closePoint": 275.54
+  },
+  {
+    "date": "2026-07-24",
+    "closePoint": 274.24
+  },
+  {
+    "date": "2026-07-27",
+    "closePoint": 276.12
+  },
+  {
+    "date": "2026-07-28",
+    "closePoint": 275.65
+  },
+  {
+    "date": "2026-07-29",
+    "closePoint": 278.49
+  },
+  {
+    "date": "2026-07-30",
+    "closePoint": 279.46
+  },
+  {
+    "date": "2026-07-31",
+    "closePoint": 280.78
+  },
+  {
+    "date": "2026-08-03",
+    "closePoint": 278.69
+  },
+  {
+    "date": "2026-08-04",
+    "closePoint": 280.02
+  },
+  {
+    "date": "2026-08-05",
+    "closePoint": 281.22
+  },
+  {
+    "date": "2026-08-06",
+    "closePoint": 280.64
+  },
+  {
+    "date": "2026-08-07",
+    "closePoint": 281.13
+  },
+  {
+    "date": "2026-08-10",
+    "closePoint": 282.5
+  },
+  {
+    "date": "2026-08-11",
+    "closePoint": 282.1
+  },
+  {
+    "date": "2026-08-12",
+    "closePoint": 283.05
+  },
+  {
+    "date": "2026-08-13",
+    "closePoint": 282.2
+  },
+  {
+    "date": "2026-08-14",
+    "closePoint": 282.02
+  },
+  {
+    "date": "2026-08-17",
+    "closePoint": 281.58
+  },
+  {
+    "date": "2026-08-18",
+    "closePoint": 281.88
+  },
+  {
+    "date": "2026-08-19",
+    "closePoint": 280.63
+  },
+  {
+    "date": "2026-08-20",
+    "closePoint": 281.47
+  },
+  {
+    "date": "2026-08-21",
+    "closePoint": 280.77
+  },
+  {
+    "date": "2026-08-24",
+    "closePoint": 282.8
+  },
+  {
+    "date": "2026-08-25",
+    "closePoint": 285.05
+  },
+  {
+    "date": "2026-08-26",
+    "closePoint": 288.81
+  },
+  {
+    "date": "2026-08-27",
+    "closePoint": 290.51
+  },
+  {
+    "date": "2026-08-28",
+    "closePoint": 292.0
+  },
+  {
+    "date": "2026-08-31",
+    "closePoint": 296.08
+  },
+  {
+    "date": "2026-09-01",
+    "closePoint": 288.31
+  },
+  {
+    "date": "2026-09-02",
+    "closePoint": 291.17
+  },
+  {
+    "date": "2026-09-03",
+    "closePoint": 294.01
+  },
+  {
+    "date": "2026-09-04",
+    "closePoint": 296.6
+  },
+  {
+    "date": "2026-09-07",
+    "closePoint": 295.21
+  },
+  {
+    "date": "2026-09-08",
+    "closePoint": 297.48
+  },
+  {
+    "date": "2026-09-09",
+    "closePoint": 297.72
+  },
+  {
+    "date": "2026-09-10",
+    "closePoint": 294.66
+  },
+  {
+    "date": "2026-09-11",
+    "closePoint": 292.55
+  },
+  {
+    "date": "2026-09-14",
+    "closePoint": 295.97
+  },
+  {
+    "date": "2026-09-15",
+    "closePoint": 294.84
+  },
+  {
+    "date": "2026-09-16",
+    "closePoint": 295.62
+  },
+  {
+    "date": "2026-09-17",
+    "closePoint": 295.45
+  },
+  {
+    "date": "2026-09-18",
+    "closePoint": 295.61
+  },
+  {
+    "date": "2026-09-21",
+    "closePoint": 297.58
+  },
+  {
+    "date": "2026-09-22",
+    "closePoint": 299.32
+  },
+  {
+    "date": "2026-09-23",
+    "closePoint": 302.59
+  },
+  {
+    "date": "2026-09-24",
+    "closePoint": 302.65
+  },
+  {
+    "date": "2026-09-28",
+    "closePoint": 300.46
+  },
+  {
+    "date": "2026-09-29",
+    "closePoint": 304.41
+  },
+  {
+    "date": "2026-09-30",
+    "closePoint": 306.56
+  },
+  {
+    "date": "2026-10-08",
+    "closePoint": 309.19
+  },
+  {
+    "date": "2026-10-09",
+    "closePoint": 310.68
+  },
+  {
+    "date": "2026-10-12",
+    "closePoint": 305.0
+  },
+  {
+    "date": "2026-10-13",
+    "closePoint": 309.1
+  },
+  {
+    "date": "2026-10-14",
+    "closePoint": 304.46
+  },
+  {
+    "date": "2026-10-15",
+    "closePoint": 294.99
+  },
+  {
+    "date": "2026-10-16",
+    "closePoint": 300.39
+  },
+  {
+    "date": "2026-10-19",
+    "closePoint": 299.03
+  },
+  {
+    "date": "2026-10-20",
+    "closePoint": 297.3
   }
 ]

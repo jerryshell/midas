@@ -11,4 +11,17 @@ export default interface ISimulateResult {
   indexApr: number;
   maApr: number;
   years: number;
+  maVolatility: number;
+  maSharpe: number;
+  maMaxDrawdown: number;
+  maCalmar: number;
+  maExposure: number;
+  indexSharpe: number;
+  indexMaxDrawdown: number;
+  tradeCount: number;
+  winRate: number;
+  profitFactor: number;
+  totalFees: number;
+  totalDividends: number;
+  totalInterest: number;
 }

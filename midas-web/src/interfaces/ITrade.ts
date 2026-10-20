@@ -3,5 +3,7 @@ export default interface ITrade {
   sellDate: string;
   buyClosePoint: number;
   sellClosePoint: number;
+  buyWeight: number;
   profitLossRatio: number;
+  netProfitLossRatio: number;
 }

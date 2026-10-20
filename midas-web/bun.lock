@@ -5,15 +5,15 @@
     "": {
       "name": "midas-web",
       "dependencies": {
-        "echarts": "latest",
-        "solid-js": "latest",
+        "echarts": "^6.1.0",
+        "solid-js": "^1.9.13",
       },
       "devDependencies": {
-        "oxfmt": "latest",
-        "oxlint": "latest",
-        "typescript": "latest",
-        "vite": "latest",
-        "vite-plugin-solid": "latest",
+        "oxfmt": "^0.52.0",
+        "oxlint": "^1.67.0",
+        "typescript": "^6.0.3",
+        "vite": "^8.0.14",
+        "vite-plugin-solid": "^2.11.12",
       },
     },
   },
