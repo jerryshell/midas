@@ -6,7 +6,6 @@ version = "0.1.0"
 [dependencies]
 futures = "*"
 midas-core = { path = "../midas-core" }
-rayon = "*"
 reqwest = { version = "*", default-features = false, features = ["json", "rustls-tls"] }
 serde = { version = "*", features = ["derive"] }
 serde_json = "*"

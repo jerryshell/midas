@@ -10,4 +10,3 @@ rayon = "*"
 serde = { version = "*", features = ["derive"] }
 serde_json = "*"
 stochastic-rs-stats = "3.0.0-rc.4"
-tracing = "*"

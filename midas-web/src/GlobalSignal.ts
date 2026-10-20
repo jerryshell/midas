@@ -11,7 +11,7 @@ const [currentIndexCode, setCurrentIndexCode] = createSignal<IIndexCode | null>(
 
 const [simulateResult, setSimulateResult] = createSignal<ISimulateResult | null>(null);
 
-export type AppMode = "simple" | "research";
+type AppMode = "simple" | "research";
 
 const initialMode =
   new URLSearchParams(window.location.search).get("mode") === "research" ? "research" : "simple";

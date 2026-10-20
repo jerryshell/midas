@@ -1226,7 +1226,6 @@ dependencies = [
  "serde",
  "serde_json",
  "stochastic-rs-stats",
- "tracing",
 ]
 
 [[package]]
@@ -1250,7 +1249,6 @@ version = "0.1.0"
 dependencies = [
  "futures",
  "midas-core",
- "rayon",
  "reqwest",
  "serde",
  "serde_json",
