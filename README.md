@@ -1,79 +1,77 @@
 <p align="center">
-<img src="images/midas.jpg" alt="midas image" />
+  <img src="images/midas.jpg" alt="Midas" width="220" />
 </p>
 
-<p align="center">
-<i>Midas</i> is a free and open source <i>Moving Average Trading</i> backtest simulator
-</p>
+<h1 align="center">Midas</h1>
 
-Bilibili Video: [https://www.bilibili.com/video/BV11o4y1B7fL](https://www.bilibili.com/video/BV11o4y1B7fL)
+<p align="center">国内指数基金 MA 策略回测与周频跟盘工具</p>
 
 > [!CAUTION]
+> 本项目仅供交流编程技术使用，不构成投资建议。投资有风险，入市需谨慎。
 >
-> Investment risks should be considered carefully when entering the market.
->
-> This project does NOT provide investment advice to anyone.
+> 示例 ETF 代码仅用于说明对应关系，请自行核对基金代码、规模、费率与跟踪误差。
 
-## How to run
+![简单跟盘](images/screenshot.webp)
 
-### 1. Run `midas-http`
+## 定位
 
-```bash
-cargo run --bin midas-http
-```
+- 只做**国内指数基金 / ETF**，不做主动基金筛选。
+- 不做任何选基建议，不构成投资建议。
+- 默认是**简单跟盘**：低频、少操作、全仓/空仓；需要研究参数时再切到**研究回测**。
 
-### 2. Run `midas-web`
+## 功能
 
-```bash
-cd midas-web
-bun install
-bun run dev
-```
+### 简单跟盘
 
-### ?. Optional
+- 只保留 4 个宽基指数：沪深300、上证50、创业板指、科创50。
+- 固定经典 MA30 / 买入 `1.05` / 卖出 `0.95`，不要求用户调参。
+- **周频**：每周五收盘后检查，信号变化时下一个交易日执行。
+- 页面只显示：当前持有/空仓、策略信号、示例 ETF、下次检查日、最近交易。
+- 信号按对应指数的日线收盘计算；示例 ETF 只用于说明跟踪关系。
+- 不启用部分仓位、杠杆、多基金轮动。
+- 示例 ETF：`510300`、`510050`、`159915`、`588000`；仅作对应关系示例。
 
-You can update Index Data using `midas-spider`
+### 研究回测
+
+- 策略模式：经典突破、强度仓位。
+- 决策频率：日频、周频、月频。
+- 双边费率、滑点、T+1 成交、现金收益、股息再投资。
+- EWMA 波动率目标仓位（`stochastic-rs-stats`，RiskMetrics λ=0.94）。
+- 指标：年化、Sharpe、最大回撤、Calmar、平均仓位、胜率、盈亏比、费用/股息/利息拆解。
+- 日期区间只影响模拟区间，均线和滚动最高价仍使用区间前的完整历史。
+
+### 回测口径
+
+- 简单跟盘默认：ETF 双边 `2bp` + 单边滑点 `2bp`，现金年化 `2%`，股息年化 `2%`，T+1 收盘成交。
+- 研究回测可单独调整买入/卖出费率、滑点、现金收益、股息、成交延迟、波动率目标、杠杆和调仓阈值。
+- 指数数据是价格指数，股息为近似估算；实际基金收益还会受到管理费、托管费、跟踪误差和申赎费影响。
+
+## 数据
+
+- `index-data/`：8 个国内指数的日线收盘数据。
+- `midas-spider`：从东方财富拉取；失败时自动切换腾讯接口，并与本地历史合并。
+- 更新数据：
 
 ```bash
 cargo run --bin midas-spider
 ```
 
+- `midas-core/index-data/` 是单元测试使用的固定历史数据，不会被 spider 覆盖。
 
-## 回测口径（v2）
+## 快速开始
 
-`simulate` 现在支持更接近真实组合的参数，旧接口保持兼容：
-
-- **双边成本**：买入费率、卖出费率分开；可再加单边滑点。
-- **成交延迟**：`0` = 当日收盘成交，`1` = T 日收盘信号、T+1 收盘成交。
-- **现金收益**：空仓现金按年化收益率逐日计息。
-- **股息**：持仓期间按年化股息率逐日计提并按收盘价再投资，近似全收益指数。
-- **波动率目标**：用 `stochastic-rs-stats` 的 EWMA（RiskMetrics λ=0.94）预测年化波动率，按 `目标波动率 / 预测波动率` 调整仓位；支持最大杠杆、融资成本和调仓阈值。
-- **风险指标**：Sharpe、最大回撤、Calmar、平均仓位、交易次数、胜率、盈亏比、费用/股息/利息拆解。
-- **策略模式**：
-  - `classic`：经典 Midas，突破买入、从 N 日高点回撤卖出、全仓/空仓。
-  - `strength`：强度仓位，突破越强仓位越高（`minWeight` 到 1），收盘跌破 MA 离场。
-- **快速参数预设**：`MA30 / 买入 1.03 / 卖出 0.98`。在深证成指、创业板等指数上历史上优于 `1.05/0.95`，但在沪深300全历史上不一定；请用不同指数和区间验证。
-
-日期区间只影响模拟区间，均线和滚动最高价仍使用区间之前的完整历史，避免区间开头没有暖机数据。
-
-
-### 简单跟盘
-
-简单模式默认只保留 4 个宽基指数（沪深300、上证50、创业板指、科创50），固定使用：
-
-- 经典 MA30，买入阈值 `1.05`，卖出阈值 `0.95`
-- 全仓/空仓，不做部分仓位、不加杠杆
-- **周频**：每周五收盘后检查，信号变化时下一个交易日执行
-- ETF 双边成本 + 滑点，现金收益/股息按年化估算
-- 页面只展示：当前持有/空仓、策略信号、示例 ETF、金额、下次检查日、最近交易
-
-示例 ETF 仅用于说明对应关系，不构成投资建议；请自行核对基金代码、规模、费率和跟踪误差。研究模式保留完整参数、成本、波动率目标和回测指标。
-
-### 本地开发
+### 开发
 
 ```bash
 cargo run --bin midas-http
-cd midas-web && bun install && bun run dev
+```
+
+另开一个终端：
+
+```bash
+cd midas-web
+bun install
+bun run dev
 ```
 
 `midas-web/.env` 默认留空，开发时由 Vite 代理到 `127.0.0.1:8000`。
@@ -83,23 +81,29 @@ cd midas-web && bun install && bun run dev
 ```bash
 cargo build --release
 cd midas-web && bun run build
-BIND_ADDR=127.0.0.1:8000 STATIC_DIR=midas-web/dist ./target/release/midas-http
+BIND_ADDR=127.0.0.1:8000 \
+STATIC_DIR=midas-web/dist \
+./target/release/midas-http
 ```
 
-前端由同一个进程托管，API 路径优先，其余回退到 `index.html`。
+前端由同一个进程托管：API 路由优先，其余回退到 `index.html`。
 
-> 回测结果依赖数据区间、成本和现金/股息假设；不构成投资建议。
-
-## Test
+## 测试
 
 ```bash
 cargo test
+cd midas-web
+bun run build
+bun run typecheck
+bun run lint
+bun run fmt:check
 ```
+
+## 相关链接
+
+- GitHub: <https://github.com/jerryshell/midas>
+- 早期演示视频（旧版 UI）: <https://www.bilibili.com/video/BV11o4y1B7fL>
 
 ## License
 
-[GNU Affero General Public License v3.0](https://choosealicense.com/licenses/agpl-3.0)
-
-## Screenshot
-
-![screenshot](images/screenshot.jpg)
+[GNU Affero General Public License v3.0](LICENSE)
