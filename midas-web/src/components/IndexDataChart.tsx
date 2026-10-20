@@ -80,7 +80,7 @@ const IndexDataChart = (props: { indexDataList: IIndexData[] }) => {
     );
   });
 
-  return <div class="chart" ref={chartRef}></div>;
+  return <div class="chart" role="img" aria-label="指数收盘价走势图" ref={chartRef}></div>;
 };
 
 export default IndexDataChart;

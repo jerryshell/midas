@@ -101,7 +101,7 @@ const AnnualProfitChart = (props: { annualProfitList: IAnnualProfit[] }) => {
     );
   });
 
-  return <div class="chart tall" ref={chartRef}></div>;
+  return <div class="chart tall" role="img" aria-label="年度收益分布图" ref={chartRef}></div>;
 };
 
 export default AnnualProfitChart;

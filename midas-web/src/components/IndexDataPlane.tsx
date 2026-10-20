@@ -27,7 +27,7 @@ const IndexDataPlane = () => {
   return (
     <fieldset>
       <legend>选择指数</legend>
-      <select onChange={(e) => handleSelectChange(e.currentTarget.value)}>
+      <select aria-label="选择指数" onChange={(e) => handleSelectChange(e.currentTarget.value)}>
         <For each={visibleIndexCodes()} fallback={<div>Loading...</div>}>
           {(item) => (
             <option
@@ -37,7 +37,7 @@ const IndexDataPlane = () => {
           )}
         </For>
       </select>
-      <Show when={indexDataList().length > 0}>
+      <Show when={appMode() === "research" && indexDataList().length > 0}>
         <IndexDataChart indexDataList={indexDataList()} />
       </Show>
     </fieldset>

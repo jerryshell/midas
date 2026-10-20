@@ -90,7 +90,7 @@ const ProfitChart = (props: { profitList: IProfit[] }) => {
     );
   });
 
-  return <div class="chart" ref={chartRef}></div>;
+  return <div class="chart" role="img" aria-label="指数与策略净值对比图" ref={chartRef}></div>;
 };
 
 export default ProfitChart;

@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import IndexDataPlane from "./components/IndexDataPlane";
 import Simulate from "./components/Simulate";
 import {
+  appMode,
   setCurrentIndexCode,
   currentIndexCode,
   indexCodeList,
@@ -42,7 +43,7 @@ const App = () => {
 
   createEffect(() => {
     const code = currentIndexCode()?.code;
-    if (code) {
+    if (code && appMode() === "research") {
       fetchIndexDataList(code);
     }
   });

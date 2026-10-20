@@ -146,9 +146,6 @@ const SimulateForm = () => {
         <button type="button" class="secondary" onClick={() => applyPreset("strength")}>
           强度仓位
         </button>
-        <button type="button" class="secondary" onClick={() => applyPreset("risk")}>
-          波动率目标
-        </button>
       </div>
 
       <div class="form-section">
@@ -268,8 +265,8 @@ const SimulateForm = () => {
         </div>
       </div>
 
-      <div class="form-section">
-        <h3>成本与现金收益</h3>
+      <details class="form-section-details">
+        <summary>成本与现金收益</summary>
         <div class="form-grid">
           <label>
             <span>买入费率</span>
@@ -336,10 +333,10 @@ const SimulateForm = () => {
             <small>价格指数不含分红，0.02 近似全收益；按收盘价再投资</small>
           </label>
         </div>
-      </div>
+      </details>
 
-      <div class="form-section">
-        <h3>风险管理</h3>
+      <details class="form-section-details">
+        <summary>风险管理</summary>
         <label class="checkbox">
           <input
             type="checkbox"
@@ -405,13 +402,7 @@ const SimulateForm = () => {
             </label>
           </div>
         </Show>
-      </div>
-
-      <div class="form-actions">
-        <button onClick={handleSubmit} disabled={loading()}>
-          {loading() ? "回测中..." : "回测模拟"}
-        </button>
-      </div>
+      </details>
       <p class="hint">
         默认按 T+1 收盘成交、双边成本、2% 现金收益和 2% 股息估算。波动率目标使用 EWMA(RiskMetrics
         λ=0.94) 预测年化波动率。
