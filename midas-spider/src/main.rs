@@ -1,9 +1,9 @@
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    // init tracing
+    // 初始化日志
     tracing_subscriber::fmt::init();
 
-    // init client
+    // 初始化 HTTP 客户端
     let client = reqwest::Client::builder().build()?;
 
     let index_code_list = midas_core::index_code::list()?;

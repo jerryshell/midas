@@ -3,10 +3,10 @@ const DEFAULT_STATIC_DIR: &str = "midas-web/dist";
 
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
-    // init tracing
+    // 初始化日志
     tracing_subscriber::fmt::init();
 
-    // cors
+    // 允许跨域
     let cors = tower_http::cors::CorsLayer::new()
         .allow_origin(tower_http::cors::Any)
         .allow_methods(tower_http::cors::Any)
@@ -18,7 +18,7 @@ async fn main() -> anyhow::Result<()> {
     let static_service = tower_http::services::ServeDir::new(static_dir)
         .not_found_service(tower_http::services::ServeFile::new(index_file));
 
-    // init route
+    // 初始化路由
     let app = axum::Router::new()
         .route("/health", axum::routing::get(|| async { "ok" }))
         .route(
@@ -45,7 +45,7 @@ async fn main() -> anyhow::Result<()> {
 
     let tcp_listener = tokio::net::TcpListener::bind(&bind_addr).await?;
 
-    // run app
+    // 启动服务
     let app = app.into_make_service_with_connect_info::<std::net::SocketAddr>();
     axum::serve(tcp_listener, app).await?;
 

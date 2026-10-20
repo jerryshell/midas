@@ -124,15 +124,6 @@ address,
 blockquote cite {
   font-style: normal;
 }
-a[href^="mailto\:"]:before {
-  content: "📧 ";
-}
-a[href^="tel\:"]:before {
-  content: "📞 ";
-}
-a[href^="sms\:"]:before {
-  content: "💬 ";
-}
 mark {
   background-color: #efdb43;
   background-color: var(--highlight);

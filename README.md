@@ -93,6 +93,6 @@ bun run lint
 bun run fmt:check
 ```
 
-## License
+## 许可协议
 
 [GNU Affero General Public License v3.0](LICENSE)
