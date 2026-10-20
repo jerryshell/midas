@@ -1,4 +1,4 @@
-#[derive(serde::Serialize)]
+#[derive(Clone, serde::Serialize)]
 #[serde(rename_all = "camelCase")]
 pub struct Trade {
     pub buy_date: String,

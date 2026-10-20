@@ -33,6 +33,10 @@ async fn main() -> anyhow::Result<()> {
             "/simulate",
             axum::routing::post(midas_http::controller::simulate::simulate),
         )
+        .route(
+            "/signal",
+            axum::routing::post(midas_http::controller::signal::signal),
+        )
         .fallback_service(static_service)
         .layer(cors);
 

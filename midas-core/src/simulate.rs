@@ -21,6 +21,24 @@ impl StrategyMode {
     }
 }
 
+/// 决策频率。日频用于研究；周频/月频用于降低跟盘操作量。
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum DecisionFrequency {
+    Daily,
+    Weekly,
+    Monthly,
+}
+
+impl DecisionFrequency {
+    pub fn parse(value: &str) -> Self {
+        match value.trim().to_ascii_lowercase().as_str() {
+            "weekly" | "week" => Self::Weekly,
+            "monthly" | "month" => Self::Monthly,
+            _ => Self::Daily,
+        }
+    }
+}
+
 /// 一次回测的完整参数。
 ///
 /// `simulate` 保留旧接口；新接口通过 [`simulate_with_options`] 传入这些参数。
@@ -60,6 +78,8 @@ pub struct SimulateOptions {
     pub strength_full: f64,
     /// 强度仓位模式下持仓期间的最低仓位。
     pub min_weight: f64,
+    /// 决策频率。周频/月频只在周期最后一个交易日更新目标。
+    pub decision_frequency: DecisionFrequency,
 }
 
 impl SimulateOptions {
@@ -92,6 +112,7 @@ impl SimulateOptions {
             strategy: StrategyMode::Classic,
             strength_full: 0.10,
             min_weight: 0.20,
+            decision_frequency: DecisionFrequency::Daily,
         }
     }
 
@@ -173,6 +194,7 @@ pub fn simulate_with_options(
     let mut cash = options.init_cash;
     let mut shares = 0.0_f64;
     let mut holding = false;
+    let mut effective_target = 0.0_f64;
     let mut pending_target: Option<f64> = None;
     let mut entry: Option<Entry> = None;
     let mut profit_list: Vec<model::Profit> = Vec::with_capacity(end_index - begin_index + 1);
@@ -248,6 +270,16 @@ pub fn simulate_with_options(
                 0.0
             };
         }
+
+        // 周频/月频只在周期最后一个交易日更新目标，降低跟盘操作量。
+        let target = if options.decision_frequency == DecisionFrequency::Daily {
+            target
+        } else {
+            if is_period_end(index_data_list, i, options.decision_frequency) {
+                effective_target = target;
+            }
+            effective_target
+        };
 
         if options.execution_delay == 0 {
             rebalance(
@@ -357,6 +389,39 @@ pub fn simulate_with_options(
     simulate_result.annual_profit_list = annual_profit::list(&simulate_result.profit_list);
 
     simulate_result
+}
+
+fn is_period_end(data: &[model::IndexData], index: usize, frequency: DecisionFrequency) -> bool {
+    use chrono::Datelike;
+
+    if frequency == DecisionFrequency::Daily {
+        return true;
+    }
+    let current = chrono::NaiveDate::parse_from_str(&data[index].date, "%Y-%m-%d").ok();
+    let Some(current) = current else {
+        return false;
+    };
+
+    if let Some(next) = data
+        .get(index + 1)
+        .and_then(|item| chrono::NaiveDate::parse_from_str(&item.date, "%Y-%m-%d").ok())
+    {
+        return match frequency {
+            DecisionFrequency::Weekly => current.iso_week() != next.iso_week(),
+            DecisionFrequency::Monthly => current.month() != next.month(),
+            DecisionFrequency::Daily => true,
+        };
+    }
+
+    // 最后一个数据点：周五视为周收盘；月末视为月收盘。
+    match frequency {
+        DecisionFrequency::Weekly => current.weekday() == chrono::Weekday::Fri,
+        DecisionFrequency::Monthly => current
+            .succ_opt()
+            .map(|next| next.month() != current.month())
+            .unwrap_or(true),
+        DecisionFrequency::Daily => true,
+    }
 }
 
 fn date_range(options: &SimulateOptions, data: &[model::IndexData]) -> Option<(usize, usize)> {
@@ -703,7 +768,11 @@ fn max_drawdown(values: &[f64]) -> Option<f64> {
     Some(mdd)
 }
 
-fn get_max(target_index: usize, days: usize, index_data_list: &[model::IndexData]) -> Option<f64> {
+pub fn get_max(
+    target_index: usize,
+    days: usize,
+    index_data_list: &[model::IndexData],
+) -> Option<f64> {
     if days == 0 || days > target_index {
         return None;
     }
@@ -717,7 +786,11 @@ fn get_max(target_index: usize, days: usize, index_data_list: &[model::IndexData
         .max_by(|a, b| a.partial_cmp(b).unwrap_or(std::cmp::Ordering::Equal))
 }
 
-fn get_ma(target_index: usize, days: usize, index_data_list: &[model::IndexData]) -> Option<f64> {
+pub fn get_ma(
+    target_index: usize,
+    days: usize,
+    index_data_list: &[model::IndexData],
+) -> Option<f64> {
     if days == 0 || days > target_index {
         return None;
     }
@@ -835,6 +908,20 @@ mod tests {
                 .abs()
                 > 1e-6
         );
+    }
+
+    #[test]
+    fn test_simulate_weekly_frequency() {
+        let index_data_list = simulate::tests::get_test_index_data_list();
+        let daily = simulate::simulate(1000.0, 30, 0.95, 1.05, 0.0, &index_data_list);
+        let options = simulate::SimulateOptions {
+            decision_frequency: simulate::DecisionFrequency::Weekly,
+            ..simulate::SimulateOptions::legacy(1000.0, 30, 0.95, 1.05, 0.0)
+        };
+        let weekly = simulate::simulate_with_options(&options, &index_data_list);
+        assert_eq!(weekly.profit_list.len(), daily.profit_list.len());
+        assert!(weekly.trade_count <= daily.trade_count);
+        assert!(weekly.ma_sharpe.is_finite());
     }
 
     #[test]

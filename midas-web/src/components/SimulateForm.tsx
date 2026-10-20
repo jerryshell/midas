@@ -24,6 +24,7 @@ interface SimulateFormState {
   strategy: "classic" | "strength";
   strengthFull: number;
   minWeight: number;
+  decisionFrequency: "daily" | "weekly" | "monthly";
 }
 
 const SimulateForm = () => {
@@ -50,6 +51,9 @@ const SimulateForm = () => {
   const [strategy, setStrategy] = createSignal<"classic" | "strength">("classic");
   const [strengthFull, setStrengthFull] = createSignal(0.1);
   const [minWeight, setMinWeight] = createSignal(0.2);
+  const [decisionFrequency, setDecisionFrequency] = createSignal<"daily" | "weekly" | "monthly">(
+    "daily",
+  );
 
   const [loading, setLoading] = createSignal(false);
 
@@ -103,6 +107,7 @@ const SimulateForm = () => {
       strategy: strategy(),
       strengthFull: Math.max(0.01, num(strengthFull(), 0.1)),
       minWeight: Math.max(0, Math.min(1, num(minWeight(), 0.2))),
+      decisionFrequency: decisionFrequency(),
     };
 
     return simulateApi
@@ -156,9 +161,23 @@ const SimulateForm = () => {
               onChange={(e) => setStrategy(e.currentTarget.value as "classic" | "strength")}
             >
               <option value="classic">经典突破（全仓/空仓）</option>
-              <option value="strength">强度仓位（推荐）</option>
+              <option value="strength">强度仓位</option>
             </select>
             <small>强度模式：突破越强仓位越高，收盘跌破 MA 离场</small>
+          </label>
+          <label>
+            <span>决策频率</span>
+            <select
+              value={decisionFrequency()}
+              onChange={(e) =>
+                setDecisionFrequency(e.currentTarget.value as "daily" | "weekly" | "monthly")
+              }
+            >
+              <option value="daily">日频（研究）</option>
+              <option value="weekly">周频（少操作）</option>
+              <option value="monthly">月频（更少操作）</option>
+            </select>
+            <small>周频/月频只在周期最后一个交易日更新信号</small>
           </label>
           <label>
             <span>初始现金</span>

@@ -11,6 +11,10 @@ const [currentIndexCode, setCurrentIndexCode] = createSignal<IIndexCode | null>(
 
 const [simulateResult, setSimulateResult] = createSignal<ISimulateResult | null>(null);
 
+export type AppMode = "simple" | "research";
+
+const [appMode, setAppMode] = createSignal<AppMode>("simple");
+
 export {
   indexCodeList,
   setIndexCodeList,
@@ -20,4 +24,6 @@ export {
   setCurrentIndexCode,
   simulateResult,
   setSimulateResult,
+  appMode,
+  setAppMode,
 };
