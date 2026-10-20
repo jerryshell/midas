@@ -1,4 +1,4 @@
-import { createSignal, Show } from "solid-js";
+import { createEffect, createSignal, Show } from "solid-js";
 import { currentIndexCode, setSimulateResult } from "../GlobalSignal";
 import simulateApi from "../api/simulateApi";
 
@@ -130,6 +130,17 @@ const SimulateForm = () => {
       fetchSimulateResult(code);
     }
   };
+
+  let autoRan = false;
+  createEffect(() => {
+    if (autoRan) return;
+    const shouldRun = new URLSearchParams(window.location.search).get("run") === "1";
+    const code = currentIndexCode()?.code;
+    if (shouldRun && code) {
+      autoRan = true;
+      void fetchSimulateResult(code);
+    }
+  });
 
   return (
     <>

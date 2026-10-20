@@ -159,13 +159,6 @@ const SimpleMode = () => {
               </div>
 
               <div class="simple-grid">
-                <div>
-                  <span class="simple-label">示例 ETF</span>
-                  <strong>
-                    {data().fundCode ? `${data().fundCode} ${data().fundName}` : "暂无示例 ETF"}
-                  </strong>
-                  <small>{data().exchange || "可在研究模式查看其他指数"}</small>
-                </div>
                 <Show when={data().action === "buy"}>
                   <div>
                     <span class="simple-label">金额</span>
@@ -185,13 +178,16 @@ const SimpleMode = () => {
                   <strong>{data().nextCheckDate}</strong>
                   <small>周五收盘后</small>
                 </div>
+                <div>
+                  <span class="simple-label">最近交易</span>
+                  <strong>{lastTradeText()}</strong>
+                  <small>以策略回测记录为准</small>
+                </div>
               </div>
 
               <Show when={notice()}>
                 <p class="notice">{notice()}</p>
               </Show>
-
-              <p class="simple-footnote">最近交易：{lastTradeText()}</p>
 
               <div class="simple-actions">
                 <button type="button" class="link-button" onClick={() => setAppMode("research")}>
@@ -200,7 +196,7 @@ const SimpleMode = () => {
               </div>
 
               <p class="disclaimer">
-                示例 ETF 请自行核对代码、规模和费率；本页仅为机械规则回测结果。
+                信号按指数收盘计算；实际基金收益会受费率与跟踪误差影响。本页仅为机械规则回测结果。
               </p>
             </div>
           )}

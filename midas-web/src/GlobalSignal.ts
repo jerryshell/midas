@@ -13,7 +13,10 @@ const [simulateResult, setSimulateResult] = createSignal<ISimulateResult | null>
 
 export type AppMode = "simple" | "research";
 
-const [appMode, setAppMode] = createSignal<AppMode>("simple");
+const initialMode =
+  new URLSearchParams(window.location.search).get("mode") === "research" ? "research" : "simple";
+
+const [appMode, setAppMode] = createSignal<AppMode>(initialMode);
 
 export {
   indexCodeList,

@@ -19,9 +19,6 @@ pub struct SignalForm {
 pub struct SignalResponse {
     code: String,
     name: String,
-    fund_code: String,
-    fund_name: String,
-    exchange: String,
     date: String,
     close_point: f64,
     ma: Option<f64>,
@@ -148,7 +145,6 @@ pub async fn signal(form: axum::Json<SignalForm>) -> impl axum::response::IntoRe
         })
         .unwrap_or((None, None, None));
 
-    let (fund_code, fund_name, exchange) = example_fund(code);
     let name = midas_core::index_code::list()
         .ok()
         .and_then(|list| list.into_iter().find(|x| x.code == code))
@@ -182,9 +178,6 @@ pub async fn signal(form: axum::Json<SignalForm>) -> impl axum::response::IntoRe
     Ok(axum::Json(SignalResponse {
         code: code.to_owned(),
         name,
-        fund_code: fund_code.to_owned(),
-        fund_name: fund_name.to_owned(),
-        exchange: exchange.to_owned(),
         date: last_data.date.clone(),
         close_point: close,
         ma,
@@ -246,15 +239,5 @@ fn next_friday(today: NaiveDate) -> NaiveDate {
         friday + Duration::days(7)
     } else {
         friday
-    }
-}
-
-fn example_fund(code: &str) -> (&'static str, &'static str, &'static str) {
-    match code {
-        "000300" => ("510300", "沪深300ETF", "上交所"),
-        "000016" => ("510050", "上证50ETF", "上交所"),
-        "399006" => ("159915", "创业板ETF", "深交所"),
-        "000688" => ("588000", "科创50ETF", "上交所"),
-        _ => ("", "", ""),
     }
 }

@@ -3,9 +3,6 @@ import ITrade from "./ITrade";
 export default interface ISignal {
   code: string;
   name: string;
-  fundCode: string;
-  fundName: string;
-  exchange: string;
   date: string;
   closePoint: number;
   ma: number | null;
