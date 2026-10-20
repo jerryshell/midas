@@ -28,8 +28,10 @@ const AnnualProfitChart = (props: { annualProfitList: IAnnualProfit[] }) => {
         animation: false,
         title: {
           text: "年度收益分布",
+          subtext: "红涨绿跌",
           left: 8,
           textStyle: { fontSize: 13 },
+          subtextStyle: { color: "#8a8a8a", fontSize: 10 },
         },
         tooltip: {
           trigger: "axis",
@@ -81,19 +83,31 @@ const AnnualProfitChart = (props: { annualProfitList: IAnnualProfit[] }) => {
             name: "指数收益",
             type: "bar",
             barMaxWidth: 10,
+            itemStyle: { color: "#8ab4ff" },
             emphasis: {
               focus: "series",
             },
-            data: list.map((item) => item.indexProfit.toFixed(2)),
+            data: list.map((item) => ({
+              value: item.indexProfit.toFixed(2),
+              itemStyle: {
+                color: item.indexProfit >= 0 ? "#ff5c5c" : "#35d07f",
+              },
+            })),
           },
           {
             name: "均线收益",
             type: "bar",
             barMaxWidth: 10,
+            itemStyle: { color: "#e0b35a" },
             emphasis: {
               focus: "series",
             },
-            data: list.map((item) => item.maProfit.toFixed(2)),
+            data: list.map((item) => ({
+              value: item.maProfit.toFixed(2),
+              itemStyle: {
+                color: item.maProfit >= 0 ? "#ff5c5c" : "#35d07f",
+              },
+            })),
           },
         ],
       },

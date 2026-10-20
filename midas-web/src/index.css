@@ -10,9 +10,10 @@
   --text-soft: #c4c4c4;
   --muted: #a0a0a0;
   --faint: #8a8a8a;
-  --accent: #6fe39f;
-  --accent-bg: #173222;
-  --danger: #ff7272;
+  --accent: #8ab4ff;
+  --accent-bg: #16233d;
+  --up: #ff5c5c;
+  --down: #35d07f;
   --warning: #e0b35a;
   --radius: 10px;
   color-scheme: dark;
@@ -104,16 +105,16 @@ button {
   min-height: 40px;
   padding: 0 16px;
   border-radius: 8px;
-  border: 1px solid #356b4b;
-  background: #1b3a29;
-  color: #dcf8e8;
+  border: 1px solid #355a8a;
+  background: #17243a;
+  color: #dbe8ff;
   font: inherit;
   font-size: 0.86rem;
   cursor: pointer;
 }
 
 button:hover {
-  background: #224a34;
+  background: #1d2f4a;
 }
 
 button:disabled {
@@ -144,7 +145,7 @@ button.link-button {
 
 button.link-button:hover {
   background: transparent;
-  color: #9ff0bf;
+  color: #b9d0ff;
 }
 
 input,
@@ -347,7 +348,7 @@ label.checkbox input {
 .status-badge.holding {
   background: var(--accent-bg);
   color: var(--accent);
-  border: 1px solid #2e6b49;
+  border: 1px solid #355a8a;
 }
 
 .status-badge.cash {
@@ -535,12 +536,13 @@ td {
   word-break: break-word;
 }
 
+/* 中国市场习惯：红涨绿跌 */
 .profit {
-  color: var(--accent);
+  color: var(--up);
 }
 
 .loss {
-  color: var(--danger);
+  color: var(--down);
 }
 
 .chart {

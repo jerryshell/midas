@@ -152,7 +152,14 @@ const SimpleMode = () => {
 
               <div class="simple-action">
                 <span class="simple-label">策略信号</span>
-                <strong>{actionLabel(data().action)}</strong>
+                <strong
+                  classList={{
+                    profit: data().action === "buy",
+                    loss: data().action === "sell",
+                  }}
+                >
+                  {actionLabel(data().action)}
+                </strong>
                 <Show when={data().actionDate}>
                   <span class="hint">执行日 {data().actionDate}</span>
                 </Show>
