@@ -53,6 +53,14 @@ pub async fn simulate(form: axum::Json<SimulateForm>) -> impl axum::response::In
     match midas_core::index_data::list_by_code(code) {
         Err(e) => Err(error::AppError::FailedWithMessage(e.to_string())),
         Ok(index_data_list) => {
+            let date_begin = non_empty(form.date_begin.clone());
+            let date_end = non_empty(form.date_end.clone());
+            if matches!((&date_begin, &date_end), (Some(begin), Some(end)) if begin > end) {
+                return Err(error::AppError::FailedWithMessage(
+                    "开始日期不能晚于结束日期".to_owned(),
+                ));
+            }
+
             let legacy_sell = form.service_charge.unwrap_or(0.0);
             let options = SimulateOptions {
                 init_cash: form.init_cash,
@@ -70,10 +78,15 @@ pub async fn simulate(form: axum::Json<SimulateForm>) -> impl axum::response::In
                 max_leverage: form.max_leverage.unwrap_or(1.0),
                 margin_rate: form.margin_rate.unwrap_or(0.04),
                 rebalance_band: form.rebalance_band.unwrap_or(0.05),
-                date_begin: non_empty(form.date_begin.clone()),
-                date_end: non_empty(form.date_end.clone()),
+                date_begin,
+                date_end,
             };
             let simulate_result = simulate_with_options(&options, &index_data_list);
+            if simulate_result.profit_list.is_empty() {
+                return Err(error::AppError::FailedWithMessage(
+                    "日期区间内没有可用的指数数据".to_owned(),
+                ));
+            }
             Ok(axum::Json(simulate_result))
         }
     }

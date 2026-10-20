@@ -15,7 +15,12 @@ function buildHeaders(hasBody: boolean, extra?: HeadersInit): HeadersInit {
 async function parseError(response: Response): Promise<never> {
   let errorData: any;
   try {
-    errorData = await response.text();
+    const text = await response.text();
+    try {
+      errorData = JSON.parse(text);
+    } catch {
+      errorData = text;
+    }
   } catch {
     errorData = response.statusText;
   }
