@@ -21,6 +21,9 @@ interface SimulateFormState {
   maxLeverage: number;
   marginRate: number;
   rebalanceBand: number;
+  strategy: "classic" | "strength";
+  strengthFull: number;
+  minWeight: number;
 }
 
 const SimulateForm = () => {
@@ -44,15 +47,21 @@ const SimulateForm = () => {
   const [maxLeverage, setMaxLeverage] = createSignal(1.0);
   const [marginRate, setMarginRate] = createSignal(0.04);
   const [rebalanceBand, setRebalanceBand] = createSignal(0.05);
+  const [strategy, setStrategy] = createSignal<"classic" | "strength">("classic");
+  const [strengthFull, setStrengthFull] = createSignal(0.1);
+  const [minWeight, setMinWeight] = createSignal(0.2);
 
   const [loading, setLoading] = createSignal(false);
 
   const num = (value: number, fallback: number) => (Number.isFinite(value) ? value : fallback);
 
-  const applyPreset = (kind: "classic" | "risk") => {
+  const applyPreset = (kind: "classic" | "fast" | "strength" | "risk") => {
+    setStrategy(kind === "strength" ? "strength" : "classic");
+    setStrengthFull(0.1);
+    setMinWeight(0.2);
     setMaDays(30);
-    setBuyRatio(1.05);
-    setSellRatio(0.95);
+    setBuyRatio(kind === "fast" ? 1.03 : 1.05);
+    setSellRatio(kind === "fast" ? 0.98 : 0.95);
     setBuyServiceCharge(0.0003);
     setSellServiceCharge(0.0008);
     setSlippage(0.0002);
@@ -91,6 +100,9 @@ const SimulateForm = () => {
       maxLeverage: Math.max(1, num(maxLeverage(), 1.0)),
       marginRate: Math.max(0, num(marginRate(), 0.04)),
       rebalanceBand: Math.max(0, num(rebalanceBand(), 0.05)),
+      strategy: strategy(),
+      strengthFull: Math.max(0.01, num(strengthFull(), 0.1)),
+      minWeight: Math.max(0, Math.min(1, num(minWeight(), 0.2))),
     };
 
     return simulateApi
@@ -123,14 +135,31 @@ const SimulateForm = () => {
         <button type="button" class="secondary" onClick={() => applyPreset("classic")}>
           经典参数
         </button>
+        <button type="button" class="secondary" onClick={() => applyPreset("fast")}>
+          快速 3%/2%
+        </button>
+        <button type="button" class="secondary" onClick={() => applyPreset("strength")}>
+          强度仓位
+        </button>
         <button type="button" class="secondary" onClick={() => applyPreset("risk")}>
-          启用波动率目标
+          波动率目标
         </button>
       </div>
 
       <div class="form-section">
         <h3>策略参数</h3>
         <div class="form-grid">
+          <label>
+            <span>策略模式</span>
+            <select
+              value={strategy()}
+              onChange={(e) => setStrategy(e.currentTarget.value as "classic" | "strength")}
+            >
+              <option value="classic">经典突破（全仓/空仓）</option>
+              <option value="strength">强度仓位（推荐）</option>
+            </select>
+            <small>强度模式：突破越强仓位越高，收盘跌破 MA 离场</small>
+          </label>
           <label>
             <span>初始现金</span>
             <input
@@ -166,11 +195,41 @@ const SimulateForm = () => {
             <input
               type="number"
               step="0.01"
+              disabled={strategy() === "strength"}
               value={sellRatio()}
               onInput={(e) => setSellRatio(e.currentTarget.valueAsNumber)}
             />
-            <small>0.95 = 从 N 日高点回落 5% 时卖出</small>
+            <small>
+              {strategy() === "strength"
+                ? "强度模式改为收盘跌破 MA 离场，此阈值不生效"
+                : "0.95 = 从 N 日高点回落 5% 时卖出"}
+            </small>
           </label>
+          <Show when={strategy() === "strength"}>
+            <label>
+              <span>满仓距离（高于 MA）</span>
+              <input
+                type="number"
+                min="0.01"
+                step="0.01"
+                value={strengthFull()}
+                onInput={(e) => setStrengthFull(e.currentTarget.valueAsNumber)}
+              />
+              <small>0.10 = 收盘高于 MA 10% 时满仓</small>
+            </label>
+            <label>
+              <span>最低仓位</span>
+              <input
+                type="number"
+                min="0"
+                max="1"
+                step="0.05"
+                value={minWeight()}
+                onInput={(e) => setMinWeight(e.currentTarget.valueAsNumber)}
+              />
+              <small>0.20 = 持仓期间至少保留 20% 仓位</small>
+            </label>
+          </Show>
           <label>
             <span>开始日期</span>
             <input

@@ -3,6 +3,24 @@ use ndarray::Array1;
 use rayon::prelude::*;
 use stochastic_rs_stats::realized::ewma::ewma_variance;
 
+/// 策略模式。
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum StrategyMode {
+    /// 经典 Midas：突破买入、从 N 日高点回撤卖出、全仓/空仓。
+    Classic,
+    /// 强度仓位：突破越强仓位越高；收盘跌破 MA 离场。
+    Strength,
+}
+
+impl StrategyMode {
+    pub fn parse(value: &str) -> Self {
+        match value.trim().to_ascii_lowercase().as_str() {
+            "strength" | "strong" => Self::Strength,
+            _ => Self::Classic,
+        }
+    }
+}
+
 /// 一次回测的完整参数。
 ///
 /// `simulate` 保留旧接口；新接口通过 [`simulate_with_options`] 传入这些参数。
@@ -36,6 +54,12 @@ pub struct SimulateOptions {
     pub rebalance_band: f64,
     pub date_begin: Option<String>,
     pub date_end: Option<String>,
+    /// 策略模式。
+    pub strategy: StrategyMode,
+    /// 强度仓位模式下，收盘价高于 MA 多少比例时达到满仓。
+    pub strength_full: f64,
+    /// 强度仓位模式下持仓期间的最低仓位。
+    pub min_weight: f64,
 }
 
 impl SimulateOptions {
@@ -65,6 +89,9 @@ impl SimulateOptions {
             rebalance_band: 0.0,
             date_begin: None,
             date_end: None,
+            strategy: StrategyMode::Classic,
+            strength_full: 0.10,
+            min_weight: 0.20,
         }
     }
 
@@ -85,6 +112,8 @@ impl SimulateOptions {
         out.max_leverage = out.max_leverage.clamp(1.0, 5.0);
         out.margin_rate = out.margin_rate.clamp(0.0, 1.0);
         out.rebalance_band = out.rebalance_band.clamp(0.0, 0.5);
+        out.strength_full = out.strength_full.clamp(0.01, 1.0);
+        out.min_weight = out.min_weight.clamp(0.0, 1.0);
         out
     }
 }
@@ -176,36 +205,49 @@ pub fn simulate_with_options(
             );
         }
 
-        // 与原版一致：买入条件优先于卖出条件，避免同一天既买又卖。
-        if let (Some(ma), Some(max)) = (
-            get_ma(i, options.ma_days, index_data_list),
-            get_max(i, options.ma_days, index_data_list),
-        ) {
-            let buy = price / ma >= options.buy_ratio;
-            let sell = price / max <= options.sell_ratio;
-            if buy {
-                if !holding {
-                    holding = true;
+        let ma = get_ma(i, options.ma_days, index_data_list);
+        let mut target = match options.strategy {
+            StrategyMode::Classic => {
+                // 与原版一致：买入条件优先于卖出条件，避免同一天既买又卖。
+                if let (Some(ma), Some(max)) = (ma, get_max(i, options.ma_days, index_data_list)) {
+                    let buy = price / ma >= options.buy_ratio;
+                    let sell = price / max <= options.sell_ratio;
+                    if buy {
+                        if !holding {
+                            holding = true;
+                        }
+                    } else if holding && sell {
+                        holding = false;
+                    }
                 }
-            } else if holding && sell {
-                holding = false;
+                if holding { 1.0 } else { 0.0 }
             }
-        }
-
-        let target = if holding {
-            if options.vol_target > 0.0 {
-                let sigma = vol.get(i).copied().unwrap_or(0.0);
-                if sigma > 0.0 {
-                    (options.vol_target / sigma).clamp(0.0, options.max_leverage)
+            StrategyMode::Strength => {
+                if let Some(ma) = ma {
+                    if !holding && price / ma >= options.buy_ratio {
+                        holding = true;
+                    } else if holding && price < ma {
+                        holding = false;
+                    }
+                    if holding {
+                        ((price / ma - 1.0) / options.strength_full).clamp(options.min_weight, 1.0)
+                    } else {
+                        0.0
+                    }
                 } else {
                     0.0
                 }
-            } else {
-                1.0
             }
-        } else {
-            0.0
         };
+
+        if target > 0.0 && options.vol_target > 0.0 {
+            let sigma = vol.get(i).copied().unwrap_or(0.0);
+            target = if sigma > 0.0 {
+                (target * (options.vol_target / sigma)).min(options.max_leverage)
+            } else {
+                0.0
+            };
+        }
 
         if options.execution_delay == 0 {
             rebalance(
@@ -771,6 +813,28 @@ mod tests {
         assert!(result.profit_list.len() > 400);
         assert_eq!(result.profit_list.first().unwrap().date, "2020-01-02");
         assert_eq!(result.profit_list.last().unwrap().date, "2021-12-31");
+    }
+
+    #[test]
+    fn test_simulate_strength_mode() {
+        let index_data_list = simulate::tests::get_test_index_data_list();
+        let classic = simulate::simulate(1000.0, 30, 0.95, 1.05, 0.0, &index_data_list);
+        let options = simulate::SimulateOptions {
+            strategy: simulate::StrategyMode::Strength,
+            strength_full: 0.10,
+            min_weight: 0.20,
+            ..simulate::SimulateOptions::legacy(1000.0, 30, 0.95, 1.05, 0.0)
+        };
+        let strength = simulate::simulate_with_options(&options, &index_data_list);
+        assert!(strength.ma_exposure > 0.0);
+        assert!(strength.ma_exposure <= 1.0 + 1e-9);
+        assert!(strength.ma_sharpe.is_finite());
+        assert!(
+            (strength.profit_list.last().unwrap().value
+                - classic.profit_list.last().unwrap().value)
+                .abs()
+                > 1e-6
+        );
     }
 
     #[test]

@@ -1,5 +1,5 @@
 use crate::*;
-use midas_core::simulate::{SimulateOptions, simulate_with_options};
+use midas_core::simulate::{SimulateOptions, StrategyMode, simulate_with_options};
 
 #[derive(serde::Deserialize)]
 #[serde(rename_all = "camelCase")]
@@ -36,6 +36,12 @@ pub struct SimulateForm {
     margin_rate: Option<f64>,
     #[serde(default)]
     rebalance_band: Option<f64>,
+    #[serde(default)]
+    strategy: Option<String>,
+    #[serde(default)]
+    strength_full: Option<f64>,
+    #[serde(default)]
+    min_weight: Option<f64>,
 }
 
 pub async fn simulate(form: axum::Json<SimulateForm>) -> impl axum::response::IntoResponse {
@@ -78,6 +84,9 @@ pub async fn simulate(form: axum::Json<SimulateForm>) -> impl axum::response::In
                 max_leverage: form.max_leverage.unwrap_or(1.0),
                 margin_rate: form.margin_rate.unwrap_or(0.04),
                 rebalance_band: form.rebalance_band.unwrap_or(0.05),
+                strategy: StrategyMode::parse(form.strategy.as_deref().unwrap_or("classic")),
+                strength_full: form.strength_full.unwrap_or(0.10),
+                min_weight: form.min_weight.unwrap_or(0.20),
                 date_begin,
                 date_end,
             };
